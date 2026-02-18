@@ -1,0 +1,20 @@
+<li class="block-list-item">
+  {{- 'icon-check-circle.svg' | inline_asset_content -}}
+  {{ block.settings.label }}
+</li>
+
+{% schema %}
+{
+  "name": "t:blocks.list-item.label",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "label",
+      "label": "t:blocks.list-item.settings.text.label"
+    }
+  ],
+  "presets": [
+    { "name": "t:blocks.list-item.presets.name" }
+  ]
+}
+{% endschema %}

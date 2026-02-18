@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-login",
+      "custom_css": [
+        "h1 {text-transform: capitalize;}"
+      ],
+      "settings": {
+        "subtitle": "<p>This login provides access to your account information, invoices, and payment history. It is separate from your secure results portal login.</p>",
+        "bg_color": "#f2f4fa",
+        "enable_shop_login_button": false,
+        "padding_top": 150,
+        "padding_bottom": 150,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

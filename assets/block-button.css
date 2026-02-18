@@ -1,0 +1,108 @@
+.customer button,
+.button--primary,
+.button-block {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--buttons-radius);
+  white-space: nowrap;
+  transition: all 300ms ease;
+  line-height: 1 !important;
+  cursor: pointer;
+}
+
+.customer button,
+.button--primary,
+.button-block.button--filled {
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  border: none;
+}
+
+.button-block.button--outlined {
+  background: transparent;
+  color: rgb(var(--color-secondary-button-text));
+  border: 1px solid rgb(var(--color-secondary-button));
+}
+
+.button-block.button--outlined:hover {
+  border-color: rgb(var(--color-accent));
+  color: rgb(var(--color-secondary-button-text));
+}
+
+.customer button.button--small,
+.button--primary.button--small,
+.button-block.button--small {
+  font-size: 14px;
+  padding: 1.45rem 1.72rem;
+  letter-spacing: -0.01em;
+}
+
+.customer button.button--large,
+.button--primary.button--large,
+.button-block.button--large {
+  font-size: 17px;
+  padding: 1.85rem 2.8rem;
+}
+
+.button-block.button--large.button--with-icon {
+  padding: 1.6rem 2.8rem;
+}
+
+.customer button svg,
+.button--primary svg,
+.button-block svg {
+  width: 16px;
+  height: 16px;
+}
+
+.customer button svg path,
+.button--primary svg path,
+.button-block svg path {
+  transition: var(--transition);
+  fill: rgb(var(--color-button-text));
+}
+
+.button-block.button--outlined svg path {
+  fill: rgb(var(--color-secondary-button-text));
+}
+
+.customer button:hover svg path,
+.button--primary:hover svg path,
+.button-block:hover svg path {
+  fill: rgb(var(--color-accent));
+}
+
+@media (min-width: 750px) {
+  .customer button:hover,
+  .button--primary:hover,
+  .button-block:hover {
+    transform: scale(1.06);
+    box-shadow: var(--accent-shadow);
+  }
+
+  .customer button:hover,
+  .button--primary:hover,
+  .button-block.button--filled:hover {
+    background: rgb(var(--color-accent));
+    box-shadow: var(--accent-shadow);
+  }
+
+  .button-block.button--outlined:hover svg path {
+    fill: rgb(var(--color-secondary-button-text));
+  }
+}
+
+@media (max-width: 749px) {
+  .customer button,
+  .button--primary,
+  .button-block {
+    font-size: 14px;
+    padding: 0.85rem 1rem;
+  }
+}

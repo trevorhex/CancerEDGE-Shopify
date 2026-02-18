@@ -1,0 +1,42 @@
+<div class="slide-inner">
+  {%- comment -%} Main Heading {%- endcomment -%}
+  {%- if block.settings.heading != blank -%}
+    <div class="slide-heading{% if block.settings.highlighted_text_underline != blank %} highlighted-text-underline{% endif %}">{{ block.settings.heading | replace: '[', '<span class="heading-font-highlighted">' | replace: ']', '</span>' }}</div>
+  {%- endif -%}
+
+  {%- comment -%} Author Section {%- endcomment -%}
+  {%- if block.settings.author_image != blank or block.settings.author_text != blank -%}
+    <div class="slide-author">
+      {% if block.settings.author_image != blank %}
+        <img class="author-image" src="{{ block.settings.author_image | image_url: width: 60 }}" alt="{{ block.settings.author_image.alt }}" width="{{ block.settings.author_image.width }}" height="{{ block.settings.author_image.height }}">
+      {% endif %}
+      {% if block.settings.author_info != blank %}
+        <div class="author-info">{{ block.settings.author_info }}</div>
+      {% endif %}
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} Subheading {%- endcomment -%}
+  {% if block.settings.subheading != blank %}
+    <h3 class="slide-subheading">{{ block.settings.subheading | escape }}</h3>
+  {% endif %}
+
+  {%- comment -%} Text Content {%- endcomment -%}
+  {% if block.settings.text != blank %}
+    <div class="slide-text">{{ block.settings.text }}</div>
+  {% endif %}
+
+  {%- comment -%} Button {%- endcomment -%}
+  {% if block.settings.button_label != blank %}
+    <div class="slide-button-wrapper">
+      <a href="{{ block.settings.button_link }}" class="slide-button button button--primary">
+        {{ block.settings.button_label | escape }}
+        {%- if section.settings.background_type == 'video' -%}
+        <span class="svg-wrapper">
+          {{- 'icon-play.svg' | inline_asset_content -}}
+        </span>
+        {%- endif -%}
+      </a>
+    </div>
+  {% endif %}
+</div>

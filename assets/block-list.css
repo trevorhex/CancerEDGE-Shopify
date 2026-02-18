@@ -1,0 +1,141 @@
+.tabs-content,
+.block-tab,
+.block-list {
+  width: 100%;
+  max-width: 100%;
+}
+
+.block-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  text-align: left;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.block-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.block-list > .shopify-block {
+  position: relative;
+}
+
+.block-list > .shopify-block:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(var(--color-border));
+  opacity: 0.5;
+  display: none;
+}
+
+.block-list-item p {
+  line-height: 1.4;
+  letter-spacing: var(--font-body-letter-spacing);
+  color: rgb(var(--color-foreground));
+  margin: 0;
+}
+
+.block-list-item strong {
+  font-weight: var(--font-body-weight-bold);
+}
+
+.block-list-item svg {
+  position: relative;
+  top: 2px;
+}
+
+.block-list-item svg path {
+  fill: rgb(var(--color-accent));
+}
+
+.block-list-reveal {
+  width: 100%;
+}
+
+.block-list-reveal__button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  gap: 1rem;
+}
+
+.block-list-reveal__button p {
+  line-height: 1.5;
+}
+
+.block-list-reveal__reveal-content {
+  display: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.block-list-reveal__button p,
+.block-list-reveal__reveal-content p,
+.block-list-reveal__reveal-content ul {
+  margin: 0;
+  color: rgb(var(--color-foreground));
+  letter-spacing: var(--font-body-letter-spacing);
+}
+
+.block-list-reveal__reveal-content ul {
+  margin: 1rem 0;
+  padding: 0 0 0 2.5rem;
+}
+
+.block-list-reveal__reveal-content {
+  padding: 0.6rem 0 1rem;
+}
+
+.block-list-reveal__reveal-content p,
+.block-list-reveal__reveal-content ul {
+  line-height: 1.5;
+  opacity: 0.6;
+}
+
+.block-list-reveal__reveal-content strong {
+  font-weight: var(--font-body-weight-bold);
+  font-style: normal;
+  opacity: 1;
+}
+
+.block-list-reveal__button .icon-caret {
+  width: 11px;
+}
+
+.block-list-reveal__button .icon-caret path {
+  fill: rgb(var(--color-foreground));
+}
+
+.block-list .block-list-reveal {
+  position: relative;
+}
+
+.block-list .block-list-reveal:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(var(--color-border));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+}
+
+@media (min-width: 1100px) {
+  .block-list-item p {
+    white-space: nowrap; /* fix words breaking unnecessarily in safari */
+  }
+}

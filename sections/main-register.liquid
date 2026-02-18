@@ -1,0 +1,295 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+     
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+  }
+  
+{%- endstyle -%}
+
+<div class="customer__wrapper section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+  <div class="customer register">
+    <div class="customer__form--wrapper">
+      <h1>{{ 'customer.register.title' | t }}</h1>
+
+      {%- form 'create_customer', novalidate: 'novalidate' -%}
+
+        <!-- First name -->
+        <div class="field">
+          {% render 'icon-full-name' %}
+          <input
+            type="text"
+            name="customer[first_name]"
+            id="RegisterForm-FirstName"
+            value="{{ form.first_name }}"
+            autocomplete="given-name"
+            placeholder="{{ 'customer.register.first_name' | t }}"
+          >
+          <label for="RegisterForm-FirstName">{{ 'customer.register.first_name' | t }}</label>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          {% render 'icon-email' %}
+          <input
+            type="email"
+            name="customer[email]"
+            id="RegisterForm-email"
+            value="{{ form.email }}"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="email"
+            aria-required="true"
+            placeholder="{{ 'customer.register.email' | t }}"
+          >
+          <label for="RegisterForm-email">{{ 'customer.register.email' | t }}</label>
+        </div>
+        <span id="RegisterForm-email-error" class="form__message" style="display:none;">
+          <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+          Please enter a valid email address.
+        </span>
+
+        <!-- Password -->
+        <div class="field password-field">
+          {% render 'icon-password' %}
+          <input
+            type="password"
+            name="customer[password]"
+            id="RegisterForm-password"
+            aria-required="true"
+            placeholder="{{ 'customer.register.password' | t }}">
+          <label for="RegisterForm-password">{{ 'customer.register.password' | t }}</label>
+
+          <!-- Password requirements -->
+          <div id="PasswordRequirements" class="password-requirements" style="display:none;">
+            <ul>
+              <li id="pw-length" class="invalid">At least 8 characters</li>
+              <li id="pw-uppercase" class="invalid">One uppercase letter</li>
+              <li id="pw-special" class="invalid">One special character (!@#$%^&*)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Confirm password -->
+        <div class="field password-field">
+          {% render 'icon-password' %}
+          <input
+            type="password"
+            name="customer[confirm_password]"
+            id="RegisterForm-confirm-password"
+            aria-required="true"
+            placeholder="Confirm Password"
+          >
+          <label for="RegisterForm-confirm-password">Confirm Password</label>
+          <span id="RegisterForm-confirm-password-error" class="form__message" style="display:none;">
+            Passwords do not match.
+          </span>
+        </div>
+
+        <!-- Submit -->
+        <button disabled class="button button--primary button--large" style="margin-top: 2rem; width: 100%;">
+          {{ 'customer.register.submit' | t }}
+        </button>
+      {%- endform -%}
+
+      <div class="sign__in--text account__access--text">
+        <p>{{ 'customer.register.register_text' | t }}</p>
+        <a href="/account/login">{{ 'customer.register.sign_in' | t }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('form#create_customer, form[action="/account"]');
+    const passwordInput = document.querySelector("#RegisterForm-password");
+    const confirmPasswordInput = document.querySelector("#RegisterForm-confirm-password");
+    const confirmError = document.querySelector("#RegisterForm-confirm-password-error");
+    const requirementsBox = document.querySelector("#PasswordRequirements");
+    const submitBtn = form.querySelector("button");
+
+    // disable by default
+    submitBtn.disabled = true;
+
+    let touchedPassword = false;
+    let touchedConfirm = false;
+
+    function validatePassword(password) {
+      return {
+        length: password.length >= 8,
+        uppercase: /[A-Z]/.test(password),
+        lowercase: /[a-z]/.test(password),
+        number: /[0-9]/.test(password),
+        special: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+      };
+    }
+
+    function updateChecklist() {
+      const result = validatePassword(passwordInput.value);
+      document.getElementById("pw-length").className = result.length ? "valid" : "invalid";
+      document.getElementById("pw-uppercase").className = result.uppercase ? "valid" : "invalid";
+      document.getElementById("pw-special").className = result.special ? "valid" : "invalid";
+      return Object.values(result).every(Boolean);
+    }
+
+    function checkConfirmPassword() {
+      if (!touchedConfirm) return false; // don't show error until user interacts
+      if (!confirmPasswordInput.value) {
+        confirmError.style.display = "none";
+        return false;
+      }
+      if (confirmPasswordInput.value !== passwordInput.value) {
+        confirmError.style.display = "block";
+        return false;
+      } else {
+        confirmError.style.display = "none";
+        return true;
+      }
+    }
+
+    function toggleSubmit() {
+      const passwordValid = touchedPassword ? updateChecklist() : false;
+      const confirmValid = checkConfirmPassword();
+      submitBtn.disabled = !(passwordValid && confirmValid);
+    }
+
+    // events for password
+    passwordInput.addEventListener("focus", () => {
+      // only show the box, not errors yet
+      requirementsBox.style.display = "block";
+    });
+
+    passwordInput.addEventListener("input", () => {
+      touchedPassword = true; // only after typing
+      updateChecklist();
+      toggleSubmit();
+    });
+
+    passwordInput.addEventListener("blur", () => {
+      if (!passwordInput.value) {
+        requirementsBox.style.display = "none";
+      }
+    });
+
+    // events for confirm password
+    confirmPasswordInput.addEventListener("focus", () => touchedConfirm = true);
+
+    confirmPasswordInput.addEventListener("input", () => {
+      touchedConfirm = true;
+      checkConfirmPassword();
+      toggleSubmit();
+    });
+
+    // prevent submission if invalid
+    form.addEventListener("submit", function (e) {
+      if (submitBtn.disabled) e.preventDefault();
+    });
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-register.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "pattern_before",
+      "label": "Patter Before"
+    },
+    {
+      "type": "image_picker",
+      "id": "pattern_after",
+      "label": "Patter After"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shop_login_button",
+      "label": "t:sections.main-login.shop_login_button.enable",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 50,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 50,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ]
+}
+{% endschema %}
+

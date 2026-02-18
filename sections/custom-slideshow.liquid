@@ -1,0 +1,343 @@
+{{ 'custom-slideshow.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign slideshow_height = section.settings.slideshow_height
+-%}
+{%- style -%}
+  #section--{{ section.id }} {
+    --overlay-color: {{ section.settings.overlay_color }};
+    --button-color: {{ section.settings.button_color }};
+    --button-text-color: {{ section.settings.button_text_color }};
+  }
+  {%- for block in section.blocks -%}
+    #section--{{ section.id }} #block--{{ block.id }} {
+      --highlighted-text-color: {{ block.settings.highlighted_text_color }};
+    }
+  {%- endfor -%}
+  #section--{{ section.id }}.custom-slideshow-wrapper .slide-subheading,
+  #section--{{ section.id }}.custom-slideshow-wrapper .slide-text {
+    color: {{ section.settings.font_color }};
+  }
+{%- endstyle -%}
+
+<div id="section--{{ section.id }}" class="custom-slideshow-wrapper custom-slideshow--{{ slideshow_height }} color-{{ section.settings.color_scheme }}" data-slide-count="{{ section.blocks.size }}">
+  <div class="slideshow-background">
+    {%- if section.settings.background_type == 'video' and section.settings.background_video != blank -%}
+      {{ section.settings.background_video | media_tag:
+        autoplay: true,
+        loop: true,
+        muted: true,
+        playsinline: true,
+        preload: 'metadata',
+        controls: false,
+        class: 'slideshow-bg-video'
+      }}
+    {%- elsif section.settings.background_type == 'video' -%}
+      <div class="slideshow-bg-video slideshow-bg-placeholder">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/_9VUPq3SxOc?autoplay=1&mute=1&loop=1&playlist=_9VUPq3SxOc&controls=0&showinfo=0&modestbranding=1&playsinline=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {%- endif -%}
+      
+    {%- if section.settings.background_type == 'image' and section.settings.background_image != blank -%}
+      <img class="slideshow-bg-image" src="{{ section.settings.background_image | image_url: width: 1920 }}" alt="{{ section.settings.background_image.alt }}" width="{{ section.settings.background_image.width }}" height="{{ section.settings.background_image.height }}">
+    {%- elsif section.settings.background_type == 'image' -%}
+      <div class="slideshow-bg-placeholder">{{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+    {%- endif -%}
+
+    {%- if section.settings.background_overlay != blank -%}
+      <div class="background_overlay"></div>
+    {%- endif -%}
+
+    {%- if section.settings.decorative_logo != blank -%}
+    <div class="cancer__edge--logo decorative--logo">
+      <img src="{{ section.settings.decorative_logo | image_url: width: 1920 }}" alt="{{ section.settings.decorative_logo.alt }}" class="site-logo" width="{{ section.settings.decorative_logo.width }}" height="{{ section.settings.decorative_logo.height }}">
+    </div>
+    {%- endif -%}
+    {%- if section.settings.cancer_edge_overlay != blank -%}
+    <div class="cancer__edge--logo main__logo">
+      <img src="{{ section.settings.cancer_edge_overlay | image_url: width: 1920 }}" alt="{{ section.settings.cancer_edge_overlay.alt }}" class="site-logo" width="{{ section.settings.cancer_edge_overlay.width }}" height="{{ section.settings.cancer_edge_overlay.height }}">
+    </div>
+    {%- endif -%}
+  </div>
+
+  <div class="slideshow-content-container swiper">
+    <div class="slideshow-track slideshow-marquee-trac swiper-wrapper" data-slide-speed="{{ section.settings.slide_speed }}"  aria-live="off">
+        {%- for block in section.blocks -%}
+          <div class="slide-content swiper-slide" id="block--{{ block.id }}" data-slide-index="{{ forloop.index0 }}">
+            {% render 'slideshow-slide-inner', block: block %}
+          </div>
+        {%- endfor -%}
+    </div>
+  </div>
+  {% if section.settings.button_label != blank %}
+    <div class="slide-button-wrapper">
+      <a href="{{ section.settings.button_link }}" class="slide-button button button--primary">
+        {{ section.settings.button_label | escape }}
+        {%- if section.settings.background_type == 'video' -%}
+          <span class="svg-wrapper">
+            {{- 'icon-play.svg' | inline_asset_content -}}
+          </span>
+        {%- endif -%}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+
+
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.slideshow-content-container', {
+      direction: 'horizontal',
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 1800,
+      loop: false,
+      mousewheel: {
+        invert: false, 
+        sensitivity: 1,
+        releaseOnEdges: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Slideshow",
+  "class": "section-slideshow",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "Background type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "video",
+      "id": "background_video",
+      "label": "Background video URL",
+      "info": "Use MP4 format Shopify-hosted video."
+    },
+    {
+      "type": "checkbox",
+      "id": "background_overlay",
+      "label": "Enable background overlay",
+      "default": true
+    },
+    {
+      "type": "color_background",
+      "id": "overlay_color",
+      "label": "Overlay color"
+    },
+    {
+      "type": "image_picker",
+      "id": "cancer_edge_overlay",
+      "label": "Longevity Life+ overlay image"
+    },
+    {
+      "type": "image_picker",
+      "id": "decorative_logo",
+      "label": "Decorative logo"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Slideshow Content Settings"
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font Color"
+    },
+    {
+      "type": "header",
+      "content": "Slideshow Settings"
+    },
+    {
+      "type": "select",
+      "id": "slideshow_height",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium",
+      "label": "Slideshow height"
+    },
+    {
+      "type": "range",
+      "id": "slide_speed",
+      "label": "Slide speed (seconds)",
+      "min": 0.2,
+      "max": 5,
+      "step": 0.1,
+      "default": 0.7
+    },
+    {
+      "type": "range",
+      "id": "initial_slide_speed",
+      "label": "First Slide Speed (seconds)",
+      "default": 1.6,
+      "min": 0.2,
+      "step": 0.1,
+      "max": 10
+    },
+    {
+      "type": "range",
+      "id": "slide_pause",
+      "label": "Pause time (seconds)",
+      "min": 0,
+      "max": 10,
+      "step": 0.1,
+      "default": 2.5
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#CAE1E4"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#2B2D6B"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Heading",
+          "info": "Wrap any text in square brackets [ ] to apply the highlighted text color."
+        },
+        {
+          "type": "color",
+          "id": "highlighted_text_color",
+          "label": "Highlighted text color",
+          "default": "#BD306F"
+        },
+        {
+          "type": "checkbox",
+          "id": "highlighted_text_underline",
+          "label": "Enable patterned underline for Highlighted text",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Author Information"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author image"
+        },
+        {
+          "type": "text",
+          "id": "author_info",
+          "label": "Author info"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text content"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slideshow"
+    }
+  ]
+}
+{% endschema %}
+

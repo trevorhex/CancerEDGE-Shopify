@@ -1,0 +1,385 @@
+{{ 'experts-team.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- style -%}
+  
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;  
+    {% if section.settings.bg_image != blank %}
+      background-image: url({{ section.settings.bg_image | image_url: width: auto, height: auto }});
+    {% else %}
+      background-color: {{ section.settings.bg_color }};
+    {% endif %}
+  }
+
+  .section-{{ section.id }}-padding .section-heading {
+    color: {{ section.settings.heading_color }};
+  }
+
+  .section-{{ section.id }}-padding .overview__block--items {
+    background-color: {{ section.settings.block_bg }};
+  }
+
+  @media screen and (min-width: 750px) {
+     
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  }
+
+  @media screen and (max-width: 1366px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 8%;
+      padding-bottom: 8%;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+  }
+
+  @media screen and (max-width: 749px) {
+     
+    .section-{{ section.id }}-padding {
+      background: {{ section.settings.mobile_bg_color }};
+    }
+
+   }
+
+  @media screen and (max-width: 1366px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 8%;
+      padding-bottom: 8%;
+    }
+    .experts-team-section .experts-team-swiper-container {
+      padding: 30px 0;
+    }
+  }
+
+  {% for block in section.blocks %}
+    
+    .block--{{ block.id }} {
+      background-color: {{ block.settings.background_color }};
+    }
+
+    .block--{{ block.id }} .experts-team-slide-text,
+    .block--{{ block.id }} .experts-team-slide-text p {
+      color: {{ block.settings.text_color }};
+    }
+  
+    .block--{{ block.id }} .experts-team-slide-text strong {
+      color: {{ block.settings.bold_text_color }};
+    }
+    
+    .block--{{ block.id }} .experts-team-slide-link {
+      color: {{ block.settings.link_color }};
+    }
+
+  {% endfor %}
+    
+{%- endstyle -%}
+
+<section class="experts-team-section section-{{ section.id }}-padding" data-section-id="{{ section.id }}">
+  <div class="pattern-commen-class experts-left-pattern">
+    {% render 'icon-pattern-expert-team-l' %}
+  </div>
+  <div class="page-width">
+    {% if section.settings.section_heading != blank %}
+      <h2 class="experts-team-section-title text-center" style="color: {{ section.settings.heading_color }};">
+        {{ section.settings.section_heading }}
+      </h2>
+    {% endif %}
+    <div class="experts-team-slider-container">
+      <div class="{% if section.blocks.size > 2 %}swiper{% endif %} experts-team-swiper-container experts-team-swiper-{{ section.id }}">
+        <div class="{% if section.blocks.size > 2 %}swiper-wrapper{% else %} experts-team-slider-outer{% endif %}">
+          {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+          {%- capture sizes -%}
+            (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+            (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+          {%- endcapture -%}
+          {% for block in section.blocks %}
+            <div class="{% if section.blocks.size > 2 %}swiper-slide{% else %} experts-team-slider-inner{% endif %}">
+              
+              <div class="experts-team-slider block--{{ block.id }}"data-block-id="{{ block.id }}">
+                {% if block.settings.image != blank %}
+                  <div class="experts-team-image media image-with-text__media" style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;">
+                     {{
+                        block.settings.image
+                        | image_url: width: 1500
+                        | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                      }}
+                  </div>
+                {% endif %}
+                <div class="experts-team-content text-center">
+                  {% if block.settings.title != blank %}
+                    <h3 class="experts-team-title">
+                      {{ block.settings.title }}
+                    </h3>
+                  {% endif %}
+            
+                  {% if block.settings.subtitle != blank %}
+                    <p class="experts-team-subtitle">
+                      {{ block.settings.subtitle }}
+                    </p>
+                  {% endif %}      
+
+                  {% if block.settings.text != blank %}
+                    <p>
+                      {{ block.settings.text }}
+                    </p>
+                  {% endif %} 
+                  
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% if section.blocks.size > 2 %}
+    <div class="swiper-button-next experts-team-button-next-{{ section.id }}">
+       {% render 'swiper-next-arrow' %}
+    </div>
+    <div class="swiper-button-prev experts-team-button-prev-{{ section.id }}">
+      {% render 'swiper-prev-arrow' %}
+    </div>
+    {% endif %}
+    <div class="experts-team-button text-center">
+       {%- if section.settings.button_label != blank -%}
+        <a
+          {% if section.settings.button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link }}"
+          {% endif %}
+          class="button{% if section.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+        >
+          {{- section.settings.button_label | escape -}}
+        </a>
+      {%- endif -%}
+      </div>
+  </div>
+   <div class="pattern-commen-class experts-right-pattern">
+      {% render 'icon-pattern-expert-team-r' %}
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const expertsDetectionSections = document.querySelectorAll('.experts-team-section[data-section-id]');
+    
+    expertsDetectionSections.forEach(function(section) {
+      const sectionId = section.getAttribute('data-section-id');
+      initializeExpertsDetectionSwiper(sectionId);
+    });
+  });
+
+  function initializeExpertsDetectionSwiper(sectionId) {
+    const swiperContainer = document.querySelector(`.experts-team-swiper-${sectionId}`);
+    
+    if (!swiperContainer) return;
+
+    const swiper = new Swiper(`.experts-team-swiper-${sectionId}`, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      grabCursor: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      },
+      navigation: {
+        nextEl: `.experts-team-button-next-${sectionId}`,
+        prevEl: `.experts-team-button-prev-${sectionId}`,
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      touchRatio: 1,
+      touchAngle: 45,
+      simulateTouch: true,
+      a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
+      },
+      autoHeight: false,
+      speed: 400,
+      effect: 'slide',
+      on: {
+        init: function () {
+          this.slides.forEach(slide => {
+            slide.style.height = 'auto';
+          });
+        },
+        resize: function () {
+          this.update();
+        }
+      }
+    });
+    swiperContainer.swiperInstance = swiper;
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Experts Team",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Driven by Science. Lead by Experts.Committed to You."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.image-banner.blocks.buttons.settings.button_label_1.default",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+      "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary_1",
+      "default": false,
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 110
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 50
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#2c5aa0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Dr. Brad Perkins"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Advisor"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#231F20"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#f0f4ff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Experts Team",
+      "blocks": [
+      ]
+    }
+  ]
+}
+{% endschema %}

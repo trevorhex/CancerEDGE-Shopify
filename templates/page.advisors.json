@@ -1,0 +1,85 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "bg_img": "shopify://shop_images/default-page-banner.png",
+        "show_default_content": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_zUTr3D": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_UpUi84": {
+          "type": "column",
+          "settings": {
+            "title": "Longevity Life+ One-Pager",
+            "text": "",
+            "link_label": "Download Now",
+            "link": "https://cdn.shopify.com/s/files/1/0929/8165/7902/files/LongevityLife_Member_One_Pager.pdf?v=1756401886"
+          }
+        },
+        "column_QQykG7": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Longevity Life+ Member FAQ (Print)",
+            "text": "",
+            "link_label": "Download Now",
+            "link": "https://cdn.shopify.com/s/files/1/0929/8165/7902/files/LON-25001-FAQ-V2-PRINT.pdf?v=1756402070"
+          }
+        },
+        "column_Qmzizb": {
+          "type": "column",
+          "settings": {
+            "title": "Longevity Life+ Member FAQ (Digital)",
+            "text": "",
+            "link_label": "Download Now",
+            "link": "https://cdn.shopify.com/s/files/1/0929/8165/7902/files/LON-25001-FAQ-V2-DIGITAL.pdf?v=1756402064"
+          }
+        }
+      },
+      "block_order": [
+        "column_UpUi84",
+        "column_QQykG7",
+        "column_Qmzizb"
+      ],
+      "custom_css": [
+        "div {width: 100%; text-align: center; display: inline-block; background: transparent;}",
+        ".multicolumn-card.content-container {border: 1px solid rgba(35, 31, 32, 0.1);}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Your resources",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "shopify://products/membership",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_zUTr3D"
+  ]
+}

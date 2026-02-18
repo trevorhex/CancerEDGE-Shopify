@@ -1,0 +1,49 @@
+{% style %}
+  .block-copyright-{{ block.id }} {
+    font-size: {{ block.settings.font_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.4;
+    letter-spacing: var(--font-body-letter-spacing);
+  }
+{% endstyle %}
+
+<div class="block-copyright block-copyright-{{ block.id }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}">
+  &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. All rights reserved.
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.copyright.label",
+  "settings": [
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "t:blocks.copyright.settings.font_size.label",
+      "min": 13,
+      "max": 20,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:blocks.copyright.settings.text_color.label",
+      "default": "#8C9BB8"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.all.settings.css_header.content"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "t:blocks.all.settings.css_class.label",
+      "info": "t:blocks.all.settings.css_class.info"
+    },
+  ],
+  "presets": [
+    { "name": "t:blocks.copyright.presets.name" }
+  ]
+}
+{% endschema %}

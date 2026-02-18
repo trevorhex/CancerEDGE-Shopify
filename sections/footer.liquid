@@ -1,0 +1,122 @@
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .footer__gradient {
+    --footer-gradient-color: {{ section.settings.footer_gradient_color }};
+  }
+{%- endstyle -%}
+
+<footer class="footer color-{{ section.settings.color_scheme }} gradient" tabindex="-1" aria-label="Site Footer">
+  <div class="footer__gradient" role="presentation"></div>
+
+  {% unless section.settings.testimonials_title == blank %}
+    <div class="page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <h2 class="footer__testimonials-title">{{ section.settings.testimonials_title }}</h2>
+    </div>
+  {% endunless %}
+
+  {% if section.settings.show_testimonials and metaobjects.testimonial.values.count > 0 %}
+    <div class="footer__testimonials--wrapper">
+      <div class="page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="slick-slider footer__testimonials" role="region" aria-label="Customer testimonials">
+          {%- for testimonial in metaobjects.testimonial.values -%}
+            <div class="footer__testimonial">
+              <div class="card">
+                <q class="footer__testimonial-content rte">
+                  {{ testimonial.quote.value }}
+                </q>
+                {%- if testimonial.name.value != blank -%}
+                  <cite class="footer__testimonial-author">
+                    {{ testimonial.name.value }}
+                  </cite>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="footer__main page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {% content_for 'blocks' %}
+  </div>
+  <div class="footer__disclosure page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="footer__disclosure-wrapper">
+      <button id="FooterDisclosureButton-{{ section.id }}" class="footer__disclosure-header" aria-expanded="false" aria-controls="FooterDisclosure-{{ section.id }}">
+        {% unless section.settings.disclosure_title == blank %}
+          <span class="footer__disclosure-title">{{ section.settings.disclosure_title }}</span>
+        {% endunless %}
+        {{- 'icon-caret.svg' | inline_asset_content -}}
+      </button>
+
+      {% unless section.settings.disclosure_content == blank %}
+        <div id="FooterDisclosure-{{ section.id }}" class="footer__disclosure-content rte" aria-hidden="true" aria-labelledby="FooterDisclosureButton-{{ section.id }}" role="region">
+          {{ section.settings.disclosure_content }}
+        </div>
+      {% endunless %}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "class": "footer__main",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "footer_gradient_color",
+      "label": "t:sections.footer.settings.footer_gradient_color.label",
+      "default": "#0E254E"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.testimonials_header.content"
+    },
+    {
+      "type": "text",
+      "id": "testimonials_title",
+      "label": "t:sections.footer.settings.testimonials_title.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_testimonials",
+      "label": "t:sections.footer.settings.show_testimonials.label",
+    }, 
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.disclosure_header.content"
+    },
+    {
+      "type": "text",
+      "id": "disclosure_title",
+      "label": "t:sections.footer.settings.disclosure_title.label" // "Disclosure title"
+    },
+    {
+      "type": "richtext",
+      "id": "disclosure_content",
+      "label": "t:sections.footer.settings.disclosure_content.label" // "Disclosure content"
+    }
+  ],
+  "default": {
+    "blocks": [
+
+    ]
+  }
+}
+{% endschema %}

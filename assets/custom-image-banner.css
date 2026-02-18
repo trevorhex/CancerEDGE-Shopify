@@ -1,0 +1,144 @@
+.custom__image--banner.overlay_enabled:before {
+  content: '' !important;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.8;
+}
+
+.custom__image--banner .banner__box {
+  max-width: 100% !important;
+  width: 100%;
+}
+
+.custom__image--banner .banner__content {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.banner__box .banner__testimonial {
+  margin: 50px 0 0;
+}
+
+.testimony_text {
+  margin: 22px 0 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.testimony_image {
+  display: block;
+}
+
+.testimony_image img {
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.banner__small-heading  {
+  margin: 60px 0 0;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: none;
+  font-family: var(--font-body-family);
+  letter-spacing: 0;
+}
+
+.custom__image--banner .banner__text {
+  margin: 16px 0 0;
+}
+
+.custom__image--banner .banner__buttons {
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 80%;
+}
+
+.custom__image--banner .banner__buttons a {
+  flex: 1 0 0;
+  max-width: 50%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.custom__image--banner .banner__buttons a.button--secondary {
+    color: #BD306F !important;
+}
+
+.banner__pre-heading h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.banner__pre-heading.inline-richtext h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0 0;
+}
+
+@media (max-width:1199px) {
+  
+  .custom__image--banner .banner__buttons {
+    max-width: 100%;
+  }
+  
+}
+
+@media (max-width:991px) {
+
+  .banner__content {
+    padding: 1rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .custom__image--banner .banner__buttons a {
+    max-width: 100%;
+    flex: 100% 0 0;
+  }
+
+}
+
+@media (max-width:749px) {
+  
+  .custom__image--banner.overlay_enabled:before {
+    content: '' !important;
+    display: block !important;
+  }
+
+   .custom__image--banner .banner__content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .banner__small-heading {
+    margin: 40px 0 0;
+    font-size: 28px;
+  }
+
+  .banner__box.content-container {
+    padding: 0 15px;
+  }
+  
+}
+
+@media screen and (max-width: 1366px) {
+  .custom__image--banner .banner__content {
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+}

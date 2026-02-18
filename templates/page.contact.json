@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "add_overlay": true,
+        "overlay_color": "#0b1933",
+        "overlay_opacity": 0.8,
+        "show_default_content": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "custom_css": [],
+      "settings": {
+        "bg_color": "#f4f5fa",
+        "heading": "contact us",
+        "phone": "<p><a href=\"tel:888-413-5605\" title=\"tel:888-413-5605\">888-413-5605</a></p>",
+        "address": "",
+        "heading_size": "h0",
+        "color_scheme": "scheme-2",
+        "padding_top": 160,
+        "padding_bottom": 160
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}

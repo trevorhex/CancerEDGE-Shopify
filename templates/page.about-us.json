@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "bg_img": "shopify://shop_images/default-page-banner.png",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_zUTr3D": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_UpUi84": {
+          "type": "column",
+          "settings": {
+            "title": "Hereditary DNA Testing",
+            "text": "<p>Receive cutting-edge genomic testing that analyzes more than 100 genes tied to cancer and cardiovascular conditions—far beyond what typical checkups reveal.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_t8aCKe": {
+          "type": "column",
+          "settings": {
+            "title": "Precision-Based Health Planning",
+            "text": "<p>No more generic advice. Your health recommendations are <strong>tailored to your DNA</strong>, helping you make informed decisions based on your personal genetic risk.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AQpiTC": {
+          "type": "column",
+          "settings": {
+            "title": "One-on-One Genetic Counseling",
+            "text": "<p>Your results are reviewed by certified genetic counselors who explain what your results mean and help you build a strategy for prevention or next steps.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_r8V74A": {
+          "type": "column",
+          "settings": {
+            "title": "Oncology-Trained Nurse Navigators",
+            "text": "<p>If a diagnosis occurs, you're not alone. Our nurse navigators provide <strong>specialized clinical guidance</strong>, helping you understand treatment options and coordinate care.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mN67ja": {
+          "type": "column",
+          "settings": {
+            "title": "Comprehensive Cancer Genomic Profiling",
+            "text": "<p>Should you ever need it, gain access to full genomic tumor testing—even if your insurance doesn't cover it. It’s part of your membership.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AmcV48": {
+          "type": "column",
+          "settings": {
+            "title": "Clinical Trial Navigation",
+            "text": "<p>Get help identifying and accessing <strong>cutting-edge clinical trials</strong> aligned with your genetic profile—expanding your treatment possibilities when it matters most.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UpUi84",
+        "column_t8aCKe",
+        "column_AQpiTC",
+        "column_r8V74A",
+        "column_mN67ja",
+        "column_AmcV48"
+      ],
+      "custom_css": [
+        "div {width: 100%; text-align: center; display: inline-block; background: transparent;}",
+        ".multicolumn-card.content-container {border: 1px solid rgba(35, 31, 32, 0.1);}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "What You’ll Get with Longevity Life+",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Explore our membership",
+        "button_link": "shopify://products/membership",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_mBnh6k": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rhJwzD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Longevity Life+ Is Powered By",
+            "heading_size": "h2",
+            "heading_color": "#21409a"
+          }
+        },
+        "text_XdMQV6": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body",
+            "text_color": "#231f20"
+          }
+        },
+        "image_ABwwwC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LongevityLifePlus_primary_logo_color.png"
+          }
+        },
+        "button_D3jj3T": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "https://www.longevitylifeadvisors.com/",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rhJwzD",
+        "text_XdMQV6",
+        "image_ABwwwC",
+        "button_D3jj3T"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "hide_patterns": false,
+        "bg_color": "#ffffff",
+        "bg_gradient": "",
+        "image": "shopify://shop_images/CE_11.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "mobile_padding_top": 8,
+        "mobile_padding_bottom": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_zUTr3D",
+    "image_with_text_mBnh6k"
+  ]
+}

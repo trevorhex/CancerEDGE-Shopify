@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-account",
+      "settings": {
+        "bg_color": "#f4f5fa",
+        "pattern_before": "shopify://shop_images/pattern.svg",
+        "pattern_after": "shopify://shop_images/pattern-after.svg",
+        "enable_shop_login_button": true,
+        "padding_top": 150,
+        "padding_bottom": 150,
+        "mobile_padding_top": 80,
+        "mobile_padding_bottom": 80,
+        "secure_label": "Secure Results Portal",
+        "secure_link": "https://my.dnaimpact.com/auth/welcome/",
+        "secure_tooltip": "<p><em>*Access to your secure results portal opens 5 days after completing your </em><a href=\"https://longevitylifeplus.com/pages/membership-enrollment\" target=\"_blank\" title=\"https://longevitylifeplus.com/pages/membership-enrollment\"><em>enrollment form.</em></a></p>"
+      }
+    },
+    "17581969546cc4cc58": {
+      "type": "apps",
+      "blocks": {
+        "referral_candy_join1_nCpmjJ": {
+          "type": "shopify://apps/referral-candy/blocks/join1/0258f542-988d-488e-8d98-209cecc83a8a",
+          "settings": {
+            "form_alignment": "center",
+            "show_header": true,
+            "show_offer": true
+          }
+        }
+      },
+      "block_order": [
+        "referral_candy_join1_nCpmjJ"
+      ],
+      "custom_css": [
+        ".app__section--wrapper {display: none;}"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17581969546cc4cc58"
+  ]
+}

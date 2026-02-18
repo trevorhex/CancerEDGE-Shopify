@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-addresses",
+      "settings": {
+        "bg_color": "#f4f5fa",
+        "pattern_before": "shopify://shop_images/pattern.svg",
+        "pattern_after": "shopify://shop_images/pattern-after.svg",
+        "enable_shop_login_button": true,
+        "padding_top": 150,
+        "padding_bottom": 150,
+        "mobile_padding_top": 80,
+        "mobile_padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

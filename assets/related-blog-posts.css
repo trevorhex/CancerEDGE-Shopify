@@ -1,0 +1,36 @@
+.related__blog--posts .article-card-wrapper .ratio:before {
+  padding-bottom: 81%;
+}
+
+.related__blog--posts .section-header {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 6rem;
+}
+
+.blog__button {
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+
+  .blog__button {
+    min-width: 344px;
+  }
+  
+}
+
+@media (max-width: 989px) { 
+
+
+  .related__blog--posts .title--wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+}

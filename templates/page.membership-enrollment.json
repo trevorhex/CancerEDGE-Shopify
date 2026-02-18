@@ -1,0 +1,586 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_Txy9JR": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_8ih7x7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Form-Hero-Image.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "{{ page.title }}",
+            "heading_size": "hxxl",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-3"
+          }
+        }
+      },
+      "block_order": [
+        "slide_8ih7x7"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".slideshow__text.banner__box {max-width: calc(100% - 40px); margin: 0 auto;}"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": ""
+      }
+    },
+    "custom_slideshow_i6HKee": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_6gyKE3": {
+          "type": "slide",
+          "settings": {
+            "heading": "<h1>Continue Your [Enrollment]</h1>",
+            "highlighted_text_color": "#cae1e4",
+            "highlighted_text_underline": false,
+            "author_info": "",
+            "subheading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slide_gkQyH6": {
+          "type": "slide",
+          "settings": {
+            "heading": "",
+            "highlighted_text_color": "#bd306f",
+            "highlighted_text_underline": true,
+            "author_info": "",
+            "subheading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_6gyKE3",
+        "slide_gkQyH6"
+      ],
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "name": "Custom Slideshow",
+      "settings": {
+        "background_type": "image",
+        "background_image": "shopify://shop_images/LL_Hero_Image_Edit_2_1.jpg",
+        "background_overlay": true,
+        "overlay_color": "radial-gradient(rgba(8, 2, 76, 1), rgba(8, 2, 76, 1) 100%)",
+        "cancer_edge_overlay": "shopify://shop_images/Longevity_life_Logo_f2ec83f3-6d3e-494b-aede-0db4c6ed8f72.png",
+        "button_label": "",
+        "button_link": "",
+        "font_color": "",
+        "slideshow_height": "large",
+        "slide_speed": 2,
+        "initial_slide_speed": 3.5,
+        "slide_pause": 3,
+        "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+        "button_color": "#cae1e4",
+        "button_text_color": "#2b2d6b"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        ".default__page--header.bg__img--enabled:before {background: none;}"
+      ],
+      "settings": {
+        "bg_img": "shopify://shop_images/Form-Hero-Image.jpg",
+        "show_default_content": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_slideshow_TB3kXg": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_EGrMdx": {
+          "type": "slide",
+          "settings": {
+            "heading": "<p>{{ page.title }}</p>",
+            "highlighted_text_color": "#bd306f",
+            "highlighted_text_underline": true,
+            "author_info": "",
+            "subheading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_EGrMdx"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".slide-heading p {color: #fff; line-height: normal;}"
+      ],
+      "name": "Custom Slideshow",
+      "settings": {
+        "background_type": "image",
+        "background_image": "shopify://shop_images/Form-Hero-Image.jpg",
+        "background_overlay": true,
+        "overlay_color": "",
+        "button_label": "",
+        "button_link": "",
+        "font_color": "",
+        "slideshow_height": "medium",
+        "slide_speed": 0.7,
+        "initial_slide_speed": 1.6,
+        "slide_pause": 2.5,
+        "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+        "button_color": "#cae1e4",
+        "button_text_color": "#2b2d6b"
+      }
+    },
+    "multicolumn_zUTr3D": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_UpUi84": {
+          "type": "column",
+          "settings": {
+            "title": "Hereditary DNA Testing",
+            "text": "<p>Receive cutting-edge genomic testing that analyzes more than 100 genes tied to cancer and cardiovascular conditions—far beyond what typical checkups reveal.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_t8aCKe": {
+          "type": "column",
+          "settings": {
+            "title": "Precision-Based Health Planning",
+            "text": "<p>No more generic advice. Your health recommendations are <strong>tailored to your DNA</strong>, helping you make informed decisions based on your personal genetic risk.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AQpiTC": {
+          "type": "column",
+          "settings": {
+            "title": "One-on-One Genetic Counseling",
+            "text": "<p>Your results are reviewed by certified genetic counselors who explain what your results mean and help you build a strategy for prevention or next steps.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_r8V74A": {
+          "type": "column",
+          "settings": {
+            "title": "Oncology-Trained Nurse Navigators",
+            "text": "<p>If a diagnosis occurs, you're not alone. Our nurse navigators provide <strong>specialized clinical guidance</strong>, helping you understand treatment options and coordinate care.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mN67ja": {
+          "type": "column",
+          "settings": {
+            "title": "Comprehensive Cancer Genomic Profiling",
+            "text": "<p>Should you ever need it, gain access to full genomic tumor testing—even if your insurance doesn't cover it. It’s part of your membership.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AmcV48": {
+          "type": "column",
+          "settings": {
+            "title": "Clinical Trial Navigation",
+            "text": "<p>Get help identifying and accessing <strong>cutting-edge clinical trials</strong> aligned with your genetic profile—expanding your treatment possibilities when it matters most.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UpUi84",
+        "column_t8aCKe",
+        "column_AQpiTC",
+        "column_r8V74A",
+        "column_mN67ja",
+        "column_AmcV48"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "div {width: 100%; text-align: center; display: inline-block; background: transparent;}",
+        ".multicolumn-card.content-container {border: 1px solid rgba(35, 31, 32, 0.1);}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "What You’ll Get with Longevity Life+",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Explore our membership",
+        "button_link": "shopify://products/membership",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_mBnh6k": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rhJwzD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Longevity Life+ Is Powered By",
+            "heading_size": "h2",
+            "heading_color": "#21409a"
+          }
+        },
+        "text_XdMQV6": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body",
+            "bullet_style": "checkmark",
+            "text_color": "#231f20"
+          }
+        },
+        "image_ABwwwC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LongevityLifePlus_primary_logo_color.png"
+          }
+        },
+        "button_D3jj3T": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "https://www.longevitylifeadvisors.com/",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rhJwzD",
+        "text_XdMQV6",
+        "image_ABwwwC",
+        "button_D3jj3T"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "hide_patterns": false,
+        "bg_color": "#ffffff",
+        "bg_gradient": "",
+        "image": "shopify://shop_images/CE_11.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "mobile_padding_top": 8,
+        "mobile_padding_bottom": 4
+      }
+    },
+    "member_form_UXREEC": {
+      "type": "member-form",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "name": "Member Form",
+      "settings": {
+        "form_title": "Complete this form to set up your secure portal",
+        "email_error": "A Member already exists with this email.",
+        "invalid_email_error": "Please enter the email address you used for checkout.",
+        "success_title": "Your Registration is Complete",
+        "success_subtitle": "<p>Thank you for submitting your registration. You will receive follow-ups via email with more information.</p>",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "bg_color": "rgba(0,0,0,0)",
+        "heading_color": "#08024c"
+      }
+    },
+    "product_benefits_yWYdQ9": {
+      "type": "product-benefits",
+      "blocks": {
+        "card_qDR4PK": {
+          "type": "card",
+          "settings": {
+            "heading_icon": "shopify://shop_images/Hereditary_DNA_Testing_b2ff0a09-0819-4638-9750-73fb85a9028b.png",
+            "block_heading": "Hereditary DNA Testing",
+            "block_subheading": "",
+            "block_description": "Receive cutting-edge genomic testing that analyzes more than 100 genes tied to cancer and cardiovascular conditions—far beyond what typical checkups reveal.",
+            "card_points": "",
+            "button_text": "Add to Cart",
+            "button_url": "",
+            "block_primary_color": "#39bbec"
+          }
+        },
+        "card_9aThRr": {
+          "type": "card",
+          "settings": {
+            "heading_icon": "shopify://shop_images/Precision-Based_Health_Planning.svg",
+            "block_heading": "Precision-Based Health Planning",
+            "block_subheading": "",
+            "block_description": "",
+            "card_points": "<p>No more generic advice. Your health recommendations are <strong>tailored to your DNA</strong>, helping you make informed decisions based on your personal genetic risk.</p>",
+            "button_text": "Add to Cart",
+            "button_url": "",
+            "block_primary_color": "#bd306f"
+          }
+        },
+        "card_4Ez78g": {
+          "type": "card",
+          "settings": {
+            "heading_icon": "shopify://shop_images/One-on-One_Genetic_Counseling.svg",
+            "block_heading": "One-on-One Genetic Counseling",
+            "block_subheading": "",
+            "block_description": "",
+            "card_points": "<p>Your results are reviewed by certified genetic counselors who explain what your results mean and help you build a strategy for prevention or next steps.</p>",
+            "button_text": "Add to Cart",
+            "button_url": "",
+            "block_primary_color": "#6950a1"
+          }
+        },
+        "card_VeLmnz": {
+          "type": "card",
+          "settings": {
+            "heading_icon": "shopify://shop_images/Oncology-Trained_Nurse_Navigators.svg",
+            "block_heading": "Oncology-Trained Nurse Navigators",
+            "block_subheading": "",
+            "block_description": "",
+            "card_points": "<p>If a diagnosis occurs, you're not alone. Our nurse navigators provide <strong>specialized clinical guidance</strong>, helping you understand treatment options and coordinate care</p>",
+            "button_text": "Add to Cart",
+            "button_url": "",
+            "block_primary_color": "#bd306f"
+          }
+        },
+        "card_nNLzVQ": {
+          "type": "card",
+          "settings": {
+            "heading_icon": "shopify://shop_images/Comprehensive_Cancer_Genomic_Profiling.svg",
+            "block_heading": "Comprehensive Cancer Genomic Profiling",
+            "block_subheading": "",
+            "block_description": "",
+            "card_points": "<p>Should you ever need it, gain access to full genomic tumor testing—even if your insurance doesn't cover it. It’s part of your membership.</p>",
+            "button_text": "Add to Cart",
+            "button_url": "",
+            "block_primary_color": "#6950a1"
+          }
+        },
+        "card_rGDKQe": {
+          "type": "card",
+          "settings": {
+            "heading_icon": "shopify://shop_images/Clinical_Trial_Navigation.svg",
+            "block_heading": "Clinical Trial Navigation",
+            "block_subheading": "",
+            "block_description": "",
+            "card_points": "<p>Get help identifying and accessing <strong>cutting-edge clinical trials</strong> aligned with your genetic profile—expanding your treatment possibilities when it matters most.</p>",
+            "button_text": "Add to Cart",
+            "button_url": "",
+            "block_primary_color": "#39bbec"
+          }
+        }
+      },
+      "block_order": [
+        "card_qDR4PK",
+        "card_9aThRr",
+        "card_4Ez78g",
+        "card_VeLmnz",
+        "card_nNLzVQ",
+        "card_rGDKQe"
+      ],
+      "disabled": true,
+      "name": "PDP Disclaimer",
+      "settings": {
+        "bg_image": "shopify://shop_images/BG_4.png",
+        "heading": "What You’ll Get with Longevity Life+",
+        "subheading": "",
+        "bg_color": "rgba(0,0,0,0)",
+        "heading_color": "#ffffff",
+        "block_bg": "#ffffff",
+        "slider_on_mobile": true,
+        "margin-minue": false,
+        "padding-top-0": false,
+        "small_header": false,
+        "padding_top": 150,
+        "padding_bottom": 150,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 50
+      }
+    },
+    "pdp_image_with_text_jhkPGi": {
+      "type": "pdp-image-with-text",
+      "disabled": true,
+      "name": "PDP - Image With Text",
+      "settings": {
+        "bg_color": "#ffffff",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "heading": "Image with text",
+        "heading_size": "h2",
+        "heading_color": "#21409a",
+        "caption": "Add a tagline",
+        "caption_text_style": "subtitle",
+        "text_size": "large",
+        "caption_color": "#21409a",
+        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. </p>",
+        "text_style": "body",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style_secondary": false,
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 60
+      }
+    },
+    "pdp_faqs_AVXTVW": {
+      "type": "pdp-faqs",
+      "disabled": true,
+      "name": "PDP FAQs",
+      "settings": {
+        "bg_color": "#f4f5fa",
+        "bg_image": "shopify://shop_images/FAQs.png",
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "button_text": "View All FaQ’s",
+        "button_url": "",
+        "padding_top": 150,
+        "padding_bottom": 150,
+        "mobile_padding_top": 45,
+        "mobile_padding_bottom": 45
+      }
+    },
+    "1756374097c8a17bad": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50
+      }
+    },
+    "pdp_image_text_KjpPbN": {
+      "type": "pdp-image-text",
+      "blocks": {
+        "text_apn7PA": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Longevity Life+ membership program is being offered to Prudential as a genomics and precision health enablement membership. The program is designed to help support Prudential policyholders and help their doctors better understand the molecular makeup of your cancer. This information may provide additional insights for advanced treatment and care such as immunotherapy, matched therapy, targeted therapy, and other advanced treatments.</p><p>Longevity Life+ genomics and precision health enablement program is available exclusively to Prudential, their policyholders, and referrals.</p>",
+            "text_style": "body"
+          }
+        },
+        "caption_eJQ6iL": {
+          "type": "caption",
+          "settings": {
+            "caption": "<h3>Disclaimers: </h3><p>Prudential is providing information about the Longevity Life+ program available through Longevity Life Advisors, Inc., (\"Longevity Life\") but does not administer the membership program. This program is not a recommendation to buy or sell a financial or insurance product or to adopt an investment strategy. This is a membership program. Results are subject to the program’s privacy policy. Results will not be shared with Prudential and will not increase or decrease policyholder premiums. Any third-party links are being made available as a resource only and are provided solely as a convenience and not as an endorsement of the content of the third-party site or any products or services offered on that site. Longevity Life+ is not a medical service. Longevity Life Advisors does not provide medical treatment or advice, or health care services of any type, makes no medical referrals, issues no prescriptions, is not an insurance product or service, and provides no related health care advice. Access to Longevity Life+ may also be available to individuals without a connection to Prudential. Prudential is compensated a portion of the annual membership fee from Longevity Life Advisors for its assistance in marketing and making Longevity Life+ available to its policy owners.</p>",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "caption_color": "#21409a"
+          }
+        },
+        "text_kY4wYD": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Longevity Life+ is a trademark of Longevity Life Advisors, Inc. @2025 Prudential. All rights reserved</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_apn7PA",
+        "caption_eJQ6iL",
+        "text_kY4wYD"
+      ],
+      "disabled": true,
+      "name": "PDP Disclaimer",
+      "settings": {
+        "hide_patterns": false,
+        "bg_color": "#ffffff",
+        "bg_image": "shopify://shop_images/Products.png",
+        "image": "shopify://shop_images/iStock-1400690125_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "slideshow_Txy9JR",
+    "custom_slideshow_i6HKee",
+    "main",
+    "custom_slideshow_TB3kXg",
+    "multicolumn_zUTr3D",
+    "image_with_text_mBnh6k",
+    "member_form_UXREEC",
+    "product_benefits_yWYdQ9",
+    "pdp_image_with_text_jhkPGi",
+    "pdp_faqs_AVXTVW",
+    "1756374097c8a17bad",
+    "pdp_image_text_KjpPbN"
+  ]
+}

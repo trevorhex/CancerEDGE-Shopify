@@ -1,0 +1,415 @@
+.membership__overview--section {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.pattern-commen-class.membership-left-pattern {
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.pattern-commen-class.membership-left-pattern svg {
+  height: auto;
+}
+
+.membership-overview-section .cancer__edge--logo .longevity-life-logo {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.membership__overview--section .page-width {
+  position: relative;
+  z-index: 1;
+}
+
+.membership__overview--section.margin-minue_true {
+  margin-top: -50px;
+}
+
+section.membership__overview--section {
+  position: relative;
+  overflow: hidden;
+}
+
+.membership__overview--section .section-header {
+  margin: 0 0 60px;
+}
+
+.membership__overview--section .section-heading {
+  margin: 0;
+  font-family: var(--font-body-family);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px; 
+  letter-spacing: -1.2px;
+  margin: 0 0 15px;
+}
+
+.membership__overview--section .section-description {
+  line-height: 28px;
+}
+
+.overview-blocks .block-heading em {
+    font-style: normal;
+    display: block;
+}
+
+.overview-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.overview-blocks.swiper-wrapper {
+  box-sizing: border-box;
+}
+
+.overview__block--items {
+  flex: 0 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  border: 1px solid rgba(35, 31, 32, 0.10);
+  padding: 30px 27px;
+  max-width: 380px;
+}
+
+.overview-blocks .block-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.overview-blocks .block-heading {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; 
+  letter-spacing: -0.44px;
+  margin: 0;
+  align-content: center;
+}
+
+.overview-blocks .block-subheading {
+  color: var(--black);
+  font-family: var(--font-body-family);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+.overview-blocks .block-description {
+  color: var(--black);
+  font-family: var(--font-body-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: normal;
+  margin: 20px 0 0;
+}
+
+.block-card-point ul {
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.block-card-point ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(35, 31, 32, 0.1);
+  color: var(--black);
+  font-family: var(--font-body-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: normal;
+}
+
+.tick__image--enabled.block-card-point ul {
+  list-style: none;
+}
+
+.block-card-point ul li:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.tick__image--enabled.block-card-point ul li {
+  display: flex;
+  gap: 10px;
+  padding-left: 34px;
+  position: relative;
+}
+
+.tick__image--enabled.block-card-point ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  top: 21px;
+}
+
+.overview__block--items .button {
+  margin: 30px 0 0;
+}
+
+section.membership__overview--section.small_header_true h2.section-heading.center {
+    font-size: 55px;
+    text-transform: unset;
+}
+
+section.membership__overview--section.small_header_true .section-header .section-description.rte.center {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.slider_on_mobile_false .membership__overview--section .page-width:after {
+  display: none;
+}
+
+.membership-overview-section .membership__overview--disclaimer {
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.membership-overview-section .label_subtext_outer {
+  margin-top: 40px;
+}
+
+.membership-overview-section .button__wrapper {
+  text-align: center;
+  margin: 30px 0 0;
+}
+
+.overview-blocks-slider .swiper-button-wrap {
+  margin: 0px;
+}
+
+.overview-blocks-slider .swiper-arrow {
+  background: #eae9ef;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-purple);
+}
+
+@media screen and (min-width: 990px) {
+  .overview-blocks-slider .swiper-button-wrap {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+
+  .overview-blocks {
+    margin-right: -5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-right: 5rem;
+    padding-bottom: 30px;
+  }
+
+  .overview__block--items {
+    min-width: 380px;
+  }
+
+  .overview-blocks::-webkit-scrollbar {
+    height: 3px;
+    background-color: var(--grey);
+  }
+  
+  .overview-blocks::-webkit-scrollbar-thumb {
+    background-color: var(--pink);
+  }
+
+  .membership__overview--section .page-width {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .membership__overview--section .page-width:after {
+    content: '';
+    width: 5rem;
+    height: 3px;
+    position: absolute;
+    background: #fff;
+    bottom: 0px;
+    right: 0;
+  }
+
+  .overview-blocks.swiper-wrapper {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+}
+
+@media (max-width: 1199px) {
+
+  .overview__block--items {
+    padding: 20px;
+  }
+
+  section.membership__overview--section.small_header_true h2.section-heading.center {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .overview-blocks .block-header {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+}
+
+@media screen and (max-width: 989px) {
+
+  .membership__overview--section .page-width:after {
+    width: 2rem;
+  }
+  
+  .overview-blocks {
+    gap: 18px;
+  }
+
+  .overview__block--items {
+    flex: 0 1 calc(33.33% - 12px);
+    max-width: calc(33.33% - 12px);
+  }
+
+  .overview-blocks .block-header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .overview-blocks .block-heading {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .overview-blocks .block-subheading {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .overview-blocks .block-description {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 20px 0 0;
+  }
+
+  .tick__image--enabled.block-card-point ul li {
+    gap: 5px;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px 0;
+    padding-left: 25px;
+  }
+
+  .tick__image--enabled.block-card-point ul li:before {
+    width: 20px;
+    height: 20px;
+    top: 11px;
+    background-size: 20px;
+  }
+  
+  .slider_on_mobile_false .overview-blocks {
+    flex-wrap: wrap;
+  }
+
+  .slider_on_mobile_false .overview__block--items {
+    min-width: auto;
+  }
+
+  .overview-blocks.swiper-wrapper {
+    overflow: unset;
+    margin: 0;
+    gap: 0;
+    flex-wrap: unset;
+  }
+
+  .overview-blocks.swiper-wrapper .overview__block--items {
+    max-width: 100%;
+    flex: 0 0 100%;
+    min-width: unset;
+  }
+
+}
+
+@media screen and (max-width: 749px) {
+
+  .membership__overview--section .page-width:after {
+    width: 1.5rem;
+    right: -2px;
+  }
+
+  .membership__overview--section .section-heading {
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: -1px;
+    margin: 0 0 15px;
+  }
+
+  .membership__overview--section .section-header {
+    margin: 0 0 40px;
+  }
+
+  .overview__block--items {
+    min-width: 100%;
+  }
+
+  .tick__image--enabled.block-card-point ul li:before {
+    top: 11px;
+  }
+
+  .slider_on_mobile_false .overview-blocks {
+    flex-direction: column;
+  }
+
+  .slider_on_mobile_false .overview__block--items {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .membership__overview--section .page-width:after {
+    display: none;
+  }
+
+  .overview-blocks {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .membership-overview-section .button__wrapper {
+    margin: 20px 0 0;
+  }
+  
+}
+
+@media screen and (min-width: 990px) and (max-width: 1300px) {
+  
+    .overview__block--items {
+        min-width: calc(33.33% - 20px);
+    }
+
+  .overview__block--items .button {
+      padding: 19px 30px;
+  }
+  
+}

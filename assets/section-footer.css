@@ -1,0 +1,228 @@
+.footer {
+  position: relative;
+  padding: 12rem 1.5rem 14rem;
+  overflow: hidden;
+}
+
+.footer a {
+  transition: var(--transition);
+}
+
+.footer__gradient {
+  display: block !important;
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  width: 100%;
+  height: calc(20vh + 4rem);
+  background: linear-gradient(180deg, rgba(var(--color-foreground), 0) 0%, var(--footer-gradient-color) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer__main {
+  position: relative;
+  z-index: 1;
+}
+
+.footer__main .block-text-content {
+  max-width: 360px;
+}
+
+.footer__disclosure {
+  margin-top: 8rem;
+}
+
+.footer__disclosure-wrapper {
+  border: solid rgba(209,215,234,0.2);
+  border-width: 1px 0;
+}
+
+.footer__disclosure-header {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 2.5rem 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.footer__disclosure-title {
+  color: rgb(var(--color-foreground));
+  letter-spacing: var(--font-body-letter-spacing);
+  font-weight: var(--font-body-weight);
+  font-size: 14px !important;
+  line-height: 1 !important;
+  margin: 0;
+  flex: 1;
+}
+
+.footer__disclosure-header .icon-caret {
+  width: 12px;
+}
+
+.footer__disclosure-header .icon-caret path {
+  fill: rgb(var(--color-foreground));
+}
+
+.footer__disclosure-content {
+  margin-bottom: 3rem;
+  display: none;
+}
+
+.footer__disclosure-content * {
+  color: var(--color-input-border);
+  font-size: 13px;
+  letter-spacing: var(--font-body-letter-spacing);
+  line-height: 1.6;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.footer__testimonials {
+  margin-bottom: 12rem;
+}
+
+.footer__testimonials--wrapper {
+  position: relative;
+}
+
+.footer__testimonials--wrapper::before,
+.footer__testimonials--wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(var(--color-background), 1) 0%, rgba(var(--color-background), 0) 100%);
+}
+
+.footer__testimonials--wrapper::before {
+  left: -1.5rem;
+  z-index: 1;
+}
+
+.footer__testimonials--wrapper::after {
+  right: -1.5rem;
+  transform: scaleX(-1);
+}
+
+.footer__testimonials-title {
+  font-size: 28px !important;
+  color: rgb(var(--color-foreground));
+  line-height: 1.4;
+  letter-spacing: var(--font-heading-letter-spacing);
+  margin: 0 0 4.5rem;
+  font-weight: 500;
+}
+
+.footer__testimonials .slick-list {
+  overflow: visible;
+}
+
+.footer__testimonials .slick-slide {
+  width: 320px;
+  max-width: calc(100vw - 60px);
+}
+
+.footer__testimonial {
+  padding-right: 3rem;
+}
+
+.footer__testimonial .card {
+  background: rgba(39, 55, 86, 0.4);
+  border-radius: 20px;
+  padding: 3.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.slick-slide,
+.slick-slide > div,
+.slick-slide .footer__testimonial,
+.slick-slide .card {
+  height: 100%;
+}
+
+
+.footer__testimonial q {
+  font-weight: var(--font-body-weight);
+  font-size: 16px;
+  letter-spacing: var(--font-body-letter-spacing);
+  line-height: 1.6;
+  display: block;
+}
+
+.footer__testimonial q::before,
+.footer__testimonial q::after {
+  display: none;
+}
+
+.footer__testimonial cite {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: var(--font-body-weight-bold);
+  color: rgb(var(--color-accent));
+}
+
+.footer__testimonials .slick-arrow {
+  opacity: 0;
+}
+
+.footer__testimonials:hover .slick-arrow,
+.footer__testimonials .slick-arrow:focus {
+  opacity: 1;
+}
+
+.footer__testimonials .slick-arrow.slick-prev {
+  left: -2rem;
+}
+
+.footer__testimonials .slick-arrow.slick-next {
+  right: -2rem;
+}
+
+@media (max-width: 1449px) {
+  .footer__testimonials--wrapper::before,
+  .footer__testimonials--wrapper::after {
+    width: 45px;
+  }
+}
+
+@media (max-width: 989px) {
+  .block-menu {
+    text-align: center;
+  }
+
+  .block-newsletter {
+    align-items: center !important;
+  }
+
+  .footer__testimonials--wrapper::before,
+  .footer__testimonials--wrapper::after {
+    width: 16px;
+  }
+}
+
+@media (max-width: 749px) {
+  .footer {
+    padding: 8rem 1.5rem 14rem;
+  }
+
+  .footer__testimonials-title {
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+
+  .footer__testimonials {
+    margin-bottom: 9rem;
+  }
+}

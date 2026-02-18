@@ -1,0 +1,74 @@
+.block-icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.block-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 210px;
+}
+
+.block-icons > .shopify-block:not(:last-child) .block-icon::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(var(--color-border));
+  opacity: 0.5;
+}
+
+.block-icons.direction--row > .shopify-block:not(:last-child) .block-icon::after {
+  width: 2px;
+  height: 110%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.block-icons.direction--column > .shopify-block:not(:last-child) .block-icon::after {
+  width: 110%;
+  height: 2px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.block-icon p {
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: var(--font-body-letter-spacing);
+  color: rgb(var(--color-foreground));
+}
+
+.block-icon strong {
+  font-weight: 700;
+  color: rgb(var(--color-accent));
+}
+
+.block-icon .svg-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(var(--color-shadow), 0.3);
+  border-radius: 20px;
+}
+
+.block-icon .svg-wrapper svg {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 749px) {
+  .block-icon {
+    align-items: stretch;
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,232 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faq",
+      "blocks": {
+        "collapsible_row_gBkqKK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "GENERAL",
+            "heading": "What is Longevity Life+?",
+            "row_content": "<p>Longevity Life+ is a genomic precision care membership program designed to help you better understand your illness  risk, catch signs early, and find personalized treatment when you need it for the best chance at a long, healthy life.  </p><p>The program combines advanced DNA testing with expert guidance and support for cancer and cardiovascular  diseases. There are no health questions, exclusions, or waiting periods.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dnbpyr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "Who can I contact with questions?",
+            "row_content": "<p>We are here to help.<br/>Email: <a href=\"mailto:service@longevitylifeplus.com\" target=\"_blank\" title=\"mailto:service@longevitylifeplus.com\">service@longevitylifeplus.com</a><br/>Call: 888-413-5605</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_amE3yn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "Is Longevity Life+ an insurance policy?",
+            "row_content": "<p>No. Longevity Life+ is not insurance and does not pay for or reimburse the cost of medical treatments. It is a  membership-based service that provides genomics-based insights, clinical navigation, and expert support to  complement your existing care.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CVEBmf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "ENROLLMENT AND ELIGIBILITY",
+            "heading": "How do I enroll?",
+            "row_content": "<p>Visit <a href=\"/collections/frontpage\" title=\"Home page\"><strong>www.longevitylifeplus.com</strong></a> or call <a href=\"tel:888-413-5605\" title=\"tel:888-413-5605\"><strong>888-413-5605</strong></a>. Once enrolled, you will receive a welcome letter, membership ID card, and instructions to activate your optional DNA kit or gain access to our nurse navigators for guidance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_46xzAw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "Who is eligible to join?",
+            "row_content": "<p>Anyone who lives in an approved state, is a Prudential policyholder, or has been referred by a Prudential policyholder can  enroll in the Longevity Life+ program. Eligibility is not limited by health status. Whether you are healthy, at risk, or have  already been diagnosed with cancer or heart disease, you are welcome to join. </p><p> There are no health questions, no exclusions, and no waiting periods. </p><p>The program is available to: </p><ul><li>Prudential policyholders, their family members, and friends </li><li>Dependents 26 years of age and younger at no additional cost (DNA testing not included) </li><li>Friends and extended family referred by a Prudential policyholder</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BnUn79": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "What is the cost?",
+            "row_content": "<p>The yearly membership fee is $468 per year. You can include your spouse at the same fee. Children are included  automatically at no additional cost through age 26, except for DNA testing.  </p><p>If you find cancer early or avoid heart disease, the return on your membership fee is immeasurable. </p><p>Your cost stays the same regardless of how much you use the program. </p><p>If you were to use all the services of the program, your out-of-pocket cost could total up to $30,000.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Vnqkt9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "What states is Longevity Life+ available in?",
+            "row_content": "<p>The program is currently available to residents of: Alabama, Arizona, Arkansas, Connecticut, Georgia, Illinois, Indiana,  Iowa, Kansas, Kentucky, Maryland, Minnesota, Mississippi, Nebraska, New Jersey, New Mexico, North Dakota, Ohio,  Pennsylvania, South Carolina, South Dakota, Vermont, Wisconsin, and Wyoming. </p><p>If you live outside these states, you are not currently eligible to enroll. This limitation is based on state-by-state  regulatory requirements. </p><p> We are working to expand availability and encourage you to check back soon. Stay in touch by adding your email  address to our newsletter for updates located at <a href=\"https://www.longevitylifeplus.com\" title=\"https://www.longevitylifeplus.com\"><strong>www.longevitylifeplus.com</strong></a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_arQnjT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "DNA TESTING",
+            "heading": "How does the DNA testing process work?",
+            "row_content": "<ul><li>Enroll online at <a href=\"https://www.longevitylifeplus.com\" title=\"https://www.longevitylifeplus.com\"><strong>www.longevitylifeplus.com</strong></a><strong> </strong></li><li>Read your welcome letter and keep your member ID card </li><li>Access your secure portal registration link using your unique member ID </li><li>Order a DNA test kit </li><li>Collect your saliva sample at home </li><li>Mail your kit back using the prepaid return box </li><li>Receive your results in 2 to 4 weeks </li><li>Review your results with a licensed genetic counselor</li></ul><p>The DNA test is optional. You can still access all other membership benefits without completing the test.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JeQnrd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "How is this different from other genetic tests?",
+            "row_content": "<p>The genetic testing included in your membership is clinically valid, medically actionable, and reviewed by certified  experts. </p><p>Unlike recreational tests sold online or in stores, this membership includes an end-to-end comprehensive service  designed to help you prevent disease and intervene when you need it most. </p><ul><li>Your results are reviewed by a licensed genetic counselor and aligned with the latest best-practice clinical  guidelines. </li><li>Only pathogenic (disease-causing) or likely pathogenic variants (a DNA change that strongly appears to cause  disease) are reported — so you receive clear, relevant findings without unnecessary confusion or anxiety. </li><li>The testing includes key genes such as BRCA1/2, MLH1, PALB2, FBN1, and KCNQ1, among others, associated with  hereditary cancers and cardiac conditions.  </li><li>Your membership’s cancer and cardiovascular DNA test kit includes the sequencing of over 100+ genes with  results covering 14 diseases. </li><li>This testing meets the same clinical standards used in academic medical centers and is intended to inform real  medical decisions.</li></ul><p>This approach ensures you receive results that matter and support you in taking the next steps in your health journey with  clarity and confidence.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BEeUTB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "Is there a full list of genes included in the test?",
+            "row_content": "<p>Yes. The genetic test covers a curated set of genes related to hereditary cancer and cardiac conditions. These were  selected based on clinical guidelines for medical actionability. You can request the full list of genes tested by contacting  our support team at <a href=\"mailto:service@longevitylifeplus.com\" title=\"mailto:service@longevitylifeplus.com\"><strong>service@longevitylifeplus.com</strong></a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JpN3V6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "What accreditations do your partner labs have?",
+            "row_content": "<p>All genetic testing is conducted in CLIA-certified and CAP-accredited laboratories. These accreditations ensure the  highest standards of clinical accuracy, reliability, and quality control. </p><p> This means your clinical test results are held to the same standards used in leading healthcare systems and academic  medical centers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9QrVqR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "SERVICES",
+            "heading": "What happens if I have cancer or get diagnosed during my membership?",
+            "row_content": "<p>Your membership provides access to genomic testing and personalized care services as clinically recommended,  including: </p><ul><li>At-home DNA testing to assess inherited risk for cancer and cardiovascular conditions, like heart disease </li><li>Secure member portal to privately access your test results </li><li>A genetic counselor to help explain your results and individual risk factors in simple terms, plus provide  personalized prevention strategies </li><li>Ongoing guidance based on your personal risk factors </li><li>Support from nurse navigators if you are diagnosed with a serious condition to help you find personalized care  and clinical trials </li><li>No-cost genomic profiling if not covered by your insurance </li><li>Targeted pharmacogenomic (PGx) testing to help identify the most effective medications with the least chance  of side effects </li><li>Minimal Residual Disease (MRD) testing to monitor remission and relapse risk </li><li>And access to clinical trials at a rate five times higher than the national average.</li></ul><p>There are no deductibles, no co-pays, and no delays in accessing these services. On day one of your membership, you  unlock access to all of these benefits.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_razzbf": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading_main": "",
+            "heading": "What services are included in my membership?",
+            "row_content": "<p>Your membership provides access to genomic testing and personalized care services as clinically recommended, including:</p><ul><li>At-home DNA testing to assess inherited risk for cancer and cardiovascular conditions, like heart disease</li><li>Secure member portal to privately access your test results</li><li>A genetic counselor to help explain your results and individual risk factors in simple terms, plus provide personalized prevention strategies</li><li>Ongoing guidance based on your personal risk factors</li><li>Support from nurse navigators if you are diagnosed with a serious condition to help you find personalized care and clinical trials</li><li>No-cost genomic profiling if not covered by your insurance</li><li>Targeted pharmacogenomic (PGx) testing to help identify the most effective medications with the least chance of side effects</li><li>Minimal Residual Disease (MRD) testing to monitor remission and relapse risk</li><li>And access to clinical trials at a rate five times higher than the national average.</li></ul><p>There are no deductibles, no co-pays, and no delays in accessing these services. On day one of your membership, you unlock access to all of these benefits. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rqpzb8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "What happens if I am diagnosed with a serious condition?",
+            "row_content": "<p>If you are diagnosed with cancer or heart disease during your membership, you will be connected with a dedicated nurse  navigator. They will guide you through every step of your care, including: </p><ul><li>Reviewing personalized treatment options </li><li>Accessing advanced genomic testing and clinical trials </li><li>Coordinating second opinions from top specialists </li><li>Supporting medication decisions through targeted pharmacogenomic (PGx) testing </li></ul><p>This expert navigation is designed to help you make informed, confident choices during a challenging time. If you have a diagnosis, please connect with us at <a href=\"tel:888-413-5605\" title=\"tel:888-413-5605\"><strong>888-413-5605</strong></a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wQDrxN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "What is a nurse navigator, and how do they support me?",
+            "row_content": "<p>A nurse navigator is a licensed clinical professional who provides personalized support if you are diagnosed with cancer  or heart disease during your membership.  </p><p>They serve as your primary point of contact and help you navigate the complexities of your disease so you can make  informed decisions at every stage of care. </p><p>Your nurse navigator can assist with: </p><ul><li>Explaining your diagnosis and treatment options </li><li>Coordinating advanced testing and second opinions </li><li>Identifying appropriate clinical trials </li><li>Supporting medication decisions through targeted pharmacogenomic (PGx) testing </li><li>Help you feel confident and cared for throughout your health journey </li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_y3G6ME": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "What is Targeted Pharmacogenomics (PGx) and when is it used?",
+            "row_content": "<p>Your membership includes targeted pharmacogenomics (PGx) testing, which is typically used after a diagnosis to help  guide medication optimization during treatment. </p><p>For example, if you are diagnosed with cancer, your nurse navigator may coordinate a targeted PGx test to better  understand how your genetic makeup could affect your response to specific medications during treatment. </p><p>This test helps identify which therapies are most likely to be effective and which may cause side effects, supporting  medication optimization based on your individual genetics. </p><p>PGx testing is just one part of the personalized support you receive as a member during diagnosis and treatment.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mzJxkD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "PRUDENTIAL",
+            "heading": "How is Longevity Life+ related to Prudential, and does it  affect my insurance?",
+            "row_content": "<p>Longevity Life+ is offered by Longevity Life Advisors, Inc. Prudential does not administer the program and does not  receive access to your medical information.  </p><p>Participation does not impact existing coverage, and policy premiums will not increase or decrease. </p><p>This is a membership program, not an insurance product. Any medical decisions should always be made in consultation  with your healthcare provider.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_F83p47": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "",
+            "heading": "What happens if I change an insurance product with  Prudential?",
+            "row_content": "<p>You can continue your membership even if you change your insurance products or financial planning strategy with  Prudential. This membership does not increase or decrease your insurance coverage or premiums with Prudential.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kPgq8y": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading_main": "PRIVACY",
+            "heading": "Will Prudential have access to my personal data?",
+            "row_content": "<p>Results are completely confidential. Your existing coverage is not impacted, and policy premiums will not  increase or decrease.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kHXnWK": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading_main": "",
+            "heading": "Who can I contact with questions?",
+            "row_content": "<p>We are here to help.<br/>Email: <a href=\"mailto:service@longevitylifeplus.com\" target=\"_blank\" title=\"mailto:service@longevitylifeplus.com\">service@longevitylifeplus.com</a><br/>Call: 888-413-5605</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_gBkqKK",
+        "collapsible_row_dnbpyr",
+        "collapsible_row_amE3yn",
+        "collapsible_row_CVEBmf",
+        "collapsible_row_46xzAw",
+        "collapsible_row_BnUn79",
+        "collapsible_row_Vnqkt9",
+        "collapsible_row_arQnjT",
+        "collapsible_row_JeQnrd",
+        "collapsible_row_BEeUTB",
+        "collapsible_row_JpN3V6",
+        "collapsible_row_9QrVqR",
+        "collapsible_row_razzbf",
+        "collapsible_row_rqpzb8",
+        "collapsible_row_wQDrxN",
+        "collapsible_row_y3G6ME",
+        "collapsible_row_mzJxkD",
+        "collapsible_row_F83p47",
+        "collapsible_row_kPgq8y",
+        "collapsible_row_kHXnWK"
+      ],
+      "settings": {
+        "bg_img": "shopify://shop_images/iStock-1169661256_2.png",
+        "padding_top": 160,
+        "padding_bottom": 160,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

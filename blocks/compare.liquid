@@ -1,0 +1,213 @@
+{% style %}
+  #shopify-block-{{ block.id }} {
+    width: 100%;
+  }
+{% endstyle %}
+
+<div class="block-compare block-compare-{{ block.id }}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}">
+  <div class="block-compare-card color-{{ block.settings.card_1_color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {% unless block.settings.card_1_image == blank %}
+      {{
+        block.settings.card_1_image
+        | image_url: width: 1100
+        | image_tag: fetchpriority: 'lazy', alt: '', role: 'presentation', class: 'background-image'
+      }}
+    {% endunless %}
+    <div class="block-compare-card-cost">
+      {% unless block.settings.card_1_card_cost_1 == blank %}
+        <div class="">
+          {{ block.settings.card_1_card_cost_1 }}
+        </div>
+      {% endunless %}
+      {% unless block.settings.card_1_card_cost_2 == blank %}
+        <div class="">
+          {{ block.settings.card_1_card_cost_2 }}
+        </div>
+      {% endunless %}
+    </div>
+    <div class="block-compare-card-content">
+      {{ block.settings.card_1_content }}
+    </div>
+    {%- unless block.settings.card_1_source_url == blank -%}
+      <div class="block-compare-card-source">
+        Source:&nbsp;
+        <a href="{{ block.settings.card_1_source_url }}" target="_blank" rel="noopener noreferrer">
+          {{ block.settings.card_1_source_url | truncate: 36, '…' }}
+        </a>
+      </div>
+    {%- endunless -%}
+    {%- unless block.settings.card_1_link_label == blank or block.settings.card_1_link_url == blank -%}
+      <a
+        href="{{ block.settings.card_1_link_url }}"
+        class="button-block button--filled button--large"
+        {% unless block.settings.card_1_link_url contains request.host %}target="_blank" rel="noopener noreferrer"{% endunless %}
+      >
+        {{ block.settings.card_1_link_label }}
+      </a>
+    {%- endunless -%}
+  </div>
+
+  <div class="block-compare-label{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ block.settings.comparison_label }}
+  </div>
+
+  <div class="block-compare-card color-{{ block.settings.card_2_color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {% unless block.settings.card_2_image == blank %}
+      {{
+        block.settings.card_2_image
+        | image_url: width: 1100
+        | image_tag: fetchpriority: 'lazy', alt: '', role: 'presentation', class: 'background-image'
+      }}
+    {% endunless %}
+    <div class="block-compare-card-cost">
+      {% unless block.settings.card_1_card_cost_1 == blank %}
+      <div class="">
+          {{ block.settings.card_2_card_cost_1 }}
+        </div>
+      {% endunless %}
+      {% unless block.settings.card_2_card_cost_2 == blank %}
+        <div class="">
+          {{ block.settings.card_2_card_cost_2 }}
+        </div>
+      {% endunless %}
+    </div>
+    <div class="block-compare-card-content">
+      {{ block.settings.card_2_content }}
+    </div>
+    {%- unless block.settings.card_2_source_url == blank -%}
+      <div class="block-compare-card-source">
+        Source:&nbsp;
+        <a href="{{ block.settings.card_2_source_url }}" target="_blank" rel="noopener noreferrer">
+          {{ block.settings.card_2_source_url | truncate: 36, '…' }}
+        </a>
+      </div>
+    {%- endunless -%}
+    {%- unless block.settings.card_2_link_label == blank or block.settings.card_2_link_url == blank -%}
+      <a
+        href="{{ block.settings.card_2_link_url }}"
+        class="block-button button--filled button--large"
+        {% unless block.settings.card_2_link_url contains request.host %}target="_blank" rel="noopener noreferrer"{% endunless %}
+      >
+        {{ block.settings.card_2_link_label }}
+      </a>
+    {%- endunless -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.compare.label",
+  "settings": [
+    {
+      "type": "text",
+      "id": "comparison_label",
+      "label": "t:blocks.compare.settings.comparison_label.label",
+      "default": "Vs"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.compare.settings.card_1_header.content",
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_1_color_scheme",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_image",
+      "label": "t:blocks.compare.settings.image.label"
+    },
+    {
+      "type": "richtext",
+      "id": "card_1_card_cost_1",
+      "label": "t:blocks.compare.settings.card_cost_1.label"
+    },
+    {
+      "type": "richtext",
+      "id": "card_1_card_cost_2",
+      "label": "t:blocks.compare.settings.card_cost_2.label"
+    },
+    {
+      "type": "richtext",
+      "id": "card_1_content",
+      "label": "t:blocks.compare.settings.card_content.label"
+    },
+    {
+      "type": "url",
+      "id": "card_1_source_url",
+      "label": "t:blocks.compare.settings.source_url.label",
+      "info": "t:blocks.compare.settings.source_url.info"
+    },
+    {
+      "type": "text",
+      "id": "card_1_link_label",
+      "label": "t:blocks.all.settings.link_label.label"
+    },
+    {
+      "type": "url",
+      "id": "card_1_link_url",
+      "label": "t:blocks.all.settings.link_url.label",
+      "info": "t:blocks.all.settings.link_url.info"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.compare.settings.card_2_header.content",
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_2_color_scheme",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "t:blocks.compare.settings.image.label"
+    },
+    {
+      "type": "richtext",
+      "id": "card_2_card_cost_1",
+      "label": "t:blocks.compare.settings.card_cost_1.label"
+    },
+    {
+      "type": "richtext",
+      "id": "card_2_card_cost_2",
+      "label": "t:blocks.compare.settings.card_cost_2.label"
+    },
+    {
+      "type": "richtext",
+      "id": "card_2_content",
+      "label": "t:blocks.compare.settings.card_content.label"
+    },
+    {
+      "type": "url",
+      "id": "card_2_source_url",
+      "label": "t:blocks.compare.settings.source_url.label",
+      "info": "t:blocks.compare.settings.source_url.info"
+    },
+    {
+      "type": "text",
+      "id": "card_2_link_label",
+      "label": "t:blocks.all.settings.link_label.label"
+    },
+    {
+      "type": "url",
+      "id": "card_2_link_url",
+      "label": "t:blocks.all.settings.link_url.label"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.all.settings.css_header.content"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "t:blocks.all.settings.css_class.label",
+      "info": "t:blocks.all.settings.css_class.info"
+    },
+  ],
+  "presets": [
+    { "name": "t:blocks.compare.presets.name" }
+  ]
+}
+{% endschema %}

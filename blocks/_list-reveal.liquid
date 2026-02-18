@@ -1,0 +1,30 @@
+<li class="block-list-reveal">
+  <button class="block-list-reveal__button">
+    {{ block.settings.label }}
+    {{- 'icon-caret.svg' | inline_asset_content -}}
+  </button>
+  <div class="block-list-reveal__reveal-content" aria-hidden="true">
+    {{ block.settings.reveal_text }}
+  </div>
+</li>
+
+{% schema %}
+{
+  "name": "t:blocks.list-reveal.label",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "label",
+      "label": "t:blocks.list-reveal.settings.text.label"
+    },
+    {
+      "type": "richtext",
+      "id": "reveal_text",
+      "label": "t:blocks.list-reveal.settings.reveal_text.label"
+    }
+  ],
+  "presets": [
+    { "name": "t:blocks.list-reveal.presets.name" }
+  ]
+}
+{% endschema %}

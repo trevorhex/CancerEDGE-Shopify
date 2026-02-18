@@ -1,0 +1,215 @@
+.block-compare {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.block-compare-card {
+  width: 100%;
+  flex: 1;
+  max-width: 550px;
+  border: 1px solid rgb(var(--color-border));
+  border-radius: 20px;
+  text-align: center;
+  padding: 10rem 2rem 5rem;
+  position: relative;
+}
+
+.block-compare-card .background-image {
+  border-radius: 20px;
+}
+
+.block-compare-card p {
+  margin: 0;
+  color: rgb(var(--color-foreground));
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.5;
+  letter-spacing: var(--font-body-letter-spacing);
+}
+
+.block-compare-card h2,
+.block-compare-card h3,
+.block-compare-card h4 {
+  margin: 0 0 0.75rem;
+  color: rgb(var(--color-foreground));
+  font-size: 16px;
+  font-weight: var(--font-body-weight);
+  white-space: nowrap;
+}
+
+.block-compare-card h2 strong,
+.block-compare-card h3 strong,
+.block-compare-card h3 strong {
+  font-size: 35px;
+  font-weight: var(--font-body-weight);
+}
+
+.block-compare-card h2 em,
+.block-compare-card h3 em,
+.block-compare-card h3 em {
+  font-style: normal;
+  font-size: 28px;
+  color: rgb(var(--color-accent));
+  display: inline-block;
+  transform: translateY(-2px);
+}
+
+.block-compare-card h2 em strong,
+.block-compare-card h3 em strong,
+.block-compare-card h3 em strong {
+  font-size: 28px;
+}
+
+.block-compare-card-cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.block-compare-card-cost > div {
+  border-radius: 10px;
+  background: #7383A233;
+  backdrop-filter: blur(10px);
+  padding: 2rem 2.5rem;
+  max-width: 210px;
+  flex: 1;
+}
+
+.block-compare-card-content {
+  margin-top: 2.5rem;
+}
+
+.block-compare-card-content p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: var(--font-body-letter-spacing);
+}
+
+.block-compare-card-source {
+  padding-top: 1.5rem;
+}
+
+.block-compare-card-source {
+  font-size: 11px;
+  opacity: 0.5;
+}
+
+.block-compare-card-source a {
+  color: rgb(var(--color-foreground));
+}
+
+.block-compare-card .button-block {
+  min-width: 240px;
+  transform: translateY(-3rem);
+}
+
+.block-compare-label {
+  box-shadow: 0px 2px 26px 0px #0000004A;
+  background-color: #ffffff;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #061238;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  z-index: 10;
+  margin: 0 -12px;
+  align-self: center;
+}
+
+@media (max-width: 989px) {
+  .block-compare {
+    flex-direction: column;
+  }
+
+  .block-compare-card {
+    max-width: none;
+  }
+
+  .block-compare-label {
+    margin: -16px auto;
+  }
+
+  /* .block-compare-card-info {
+    padding: 1.8rem 5rem;
+  }
+
+  .compare-card-style--negative .block-compare-card-content strong {
+    display: block;
+    margin-bottom: 3px;
+  } */
+}
+
+@media (max-width: 749px) {
+  .block-compare-card-cost  {
+    flex-direction: column;
+  }
+}
+
+/* 
+.block-compare-card-heading {
+  padding: 0 1rem 2.5rem;
+}
+
+.block-compare-card-info {
+  background: rgba(var(--color-accent), 0.5);
+  padding: 1.8rem 6.5rem;
+}
+
+.block-compare-card-content {
+  padding: 3rem 1rem 0;
+} */
+
+/* .block-compare-card-heading p {
+  font-size: 27px;
+  font-weight: 800;
+}
+.block-compare-card-info p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.block-compare-card-content p {
+  font-size: 14px;
+}
+
+.block-compare-card-content strong {
+  font-size: 38px;
+  display: block;
+}
+
+.compare-card-style--negative .block-compare-card-content p {
+  color: var(--color-error);
+}
+
+.compare-card-style--negative .block-compare-card-info {
+  background: var(--color-error-background);
+}
+
+.compare-card-style--negative .block-compare-card-content strong {
+  font-size: 27px;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.compare-card-style--positive {
+  box-shadow: 0px 10px 34px 0px rgba(var(--color-shadow), 0.35);
+}
+
+.compare-card-style--negative.block-compare-card {
+  border-color: var(--color-error-border);
+}
+
+.compare-card-style--positive .block-compare-card-content strong {
+  font-size: 38px;
+  display: block;
+  margin-bottom: 3px;
+} */

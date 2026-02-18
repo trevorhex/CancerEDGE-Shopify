@@ -1,0 +1,1801 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_8WRWwH": {
+      "type": "hero",
+      "blocks": {
+        "slide_cJbqyx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Joan-hero-2x.jpg",
+            "image_mobile": "shopify://shop_images/Joan-hero-mobile-2x.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "“Had I known earlier, I could have <em><strong>avoided</strong></em> a cancer diagnosis.”",
+            "subheading": "Know & navigate your cancer risk with <strong>CancerEDGE</strong>.",
+            "sub_text": "",
+            "author_info": "<strong>Joan Lunden</strong> Journalist, author, cancer survivor",
+            "heading_mobile": "“Had I known earlier, I could have <em><strong>avoided</strong></em> a cancer diagnosis.”",
+            "subheading_mobile": "Know & navigate your cancer risk with <strong>CancerEDGE</strong>.",
+            "button_label": "Get Started",
+            "link": "/cart/add?id=42616766398561&selling_plan=7817625697",
+            "video_url": "",
+            "button_style_secondary": false,
+            "button_label_2": "Hear From Joan",
+            "link_2": "",
+            "video_url_2": "https://vimeo.com/1164800118?fl=tl&fe=ec",
+            "button_style_secondary_2": true,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-5"
+          }
+        }
+      },
+      "block_order": [
+        "slide_cJbqyx"
+      ],
+      "name": "t:sections.hero.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "page_section_kgViW8": {
+      "type": "page-section",
+      "blocks": {
+        "list_YURyEX": {
+          "type": "list",
+          "name": "t:blocks.list.presets.name",
+          "settings": {
+            "font_size": 16,
+            "direction": "row",
+            "reverse": false,
+            "alignment_horizontal": "center",
+            "alignment_vertical": "center",
+            "gap": 4,
+            "divider": false,
+            "direction_tablet": "column",
+            "reverse_tablet": false,
+            "alignment_horizontal_tablet": "stretch",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 3,
+            "divider_tablet": true,
+            "direction_mobile": "column",
+            "reverse_mobile": false,
+            "alignment_horizontal_mobile": "stretch",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 3,
+            "divider_mobile": true,
+            "css_class": ""
+          },
+          "blocks": {
+            "list_item_yxaGE9": {
+              "type": "_list-item",
+              "name": "t:blocks.list-item.presets.name",
+              "settings": {
+                "label": "<p><strong>Cancer</strong> Prevention & Navigation</p>"
+              },
+              "blocks": {}
+            },
+            "list_item_CBHFPR": {
+              "type": "_list-item",
+              "name": "t:blocks.list-item.presets.name",
+              "settings": {
+                "label": "<p><strong>Medication Response</strong> Insight</p>"
+              },
+              "blocks": {}
+            },
+            "list_item_xwWeMq": {
+              "type": "_list-item",
+              "name": "t:blocks.list-item.presets.name",
+              "settings": {
+                "label": "<p><strong>Support Team</strong> When You Need It</p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "list_item_yxaGE9",
+            "list_item_CBHFPR",
+            "list_item_xwWeMq"
+          ]
+        }
+      },
+      "block_order": [
+        "list_YURyEX"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "",
+        "add_gradient": false,
+        "full_width": false,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5,
+        "padding_top_tablet": 2.5,
+        "padding_bottom_tablet": 2.5,
+        "padding_top_mobile": 2.5,
+        "padding_bottom_mobile": 2.5
+      }
+    },
+    "page_section_tMGBLX": {
+      "type": "page-section",
+      "blocks": {
+        "container_zTTBHf": {
+          "type": "container",
+          "name": "t:blocks.container.presets.name",
+          "settings": {
+            "direction": "row",
+            "reverse": false,
+            "alignment_horizontal": "center",
+            "alignment_vertical": "center",
+            "flex_grow": "",
+            "gap": 6,
+            "direction_tablet": "column",
+            "reverse_tablet": false,
+            "alignment_horizontal_tablet": "center",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 4,
+            "direction_mobile": "column",
+            "reverse_mobile": false,
+            "alignment_horizontal_mobile": "center",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 4,
+            "css_class": ""
+          },
+          "blocks": {
+            "image_NhGiRE": {
+              "type": "image",
+              "name": "t:blocks.image.presets.name",
+              "settings": {
+                "image": "shopify://shop_images/Paul-Billings-2x.jpg",
+                "alt_text": "Picture of a joyful Paul Billings",
+                "caption": "",
+                "sub_caption": "",
+                "max_width": "390px",
+                "add_drop_shadow": true,
+                "border_radius": 20,
+                "link": "",
+                "video_url": "https://vimeo.com/1164814723?fl=tl&fe=ec",
+                "open_in_new_window": false,
+                "link_label": "",
+                "css_class": ""
+              },
+              "blocks": {}
+            },
+            "container_nBwLrD": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "column",
+                "reverse": false,
+                "alignment_horizontal": "flex-start",
+                "alignment_vertical": "center",
+                "flex_grow": "1",
+                "gap": 3,
+                "direction_tablet": "column",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "flex-start",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 3,
+                "direction_mobile": "column",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "flex-start",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 3,
+                "css_class": ""
+              },
+              "blocks": {
+                "text_content_7YbiyN": {
+                  "type": "text-content",
+                  "name": "t:blocks.text-content.presets.name",
+                  "settings": {
+                    "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                    "heading": "<p>“For the first time, science has finally made genomics available to enable truly <strong>personalized care and prevention</strong>. This genomic precision care membership is the future of healthcare.”</p>",
+                    "heading_tag": "h2",
+                    "heading_font_size": 31,
+                    "text": "",
+                    "text_font_size": 16,
+                    "gap": 2,
+                    "text_alignment": "left",
+                    "gap_tablet": 2,
+                    "text_alignment_tablet": "left",
+                    "gap_mobile": 2,
+                    "text_alignment_mobile": "left",
+                    "rotate_heading": false,
+                    "rotate_text": "",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_content_eQCNMW": {
+                  "type": "text-content",
+                  "name": "t:blocks.text-content.presets.name",
+                  "settings": {
+                    "color_scheme": "scheme-a8a2965d-d293-4eda-bb7d-4edb4bba0711",
+                    "heading": "<p><strong>Paul Billings, MD, PhD, FACP, FACMGG</strong></p>",
+                    "heading_tag": "h3",
+                    "heading_font_size": 19,
+                    "text": "<p>Former Harvard & Stanford professor, FDA and HHS advisory board</p>",
+                    "text_font_size": 16,
+                    "gap": 0.5,
+                    "text_alignment": "left",
+                    "gap_tablet": 0.5,
+                    "text_alignment_tablet": "left",
+                    "gap_mobile": 0.5,
+                    "text_alignment_mobile": "left",
+                    "rotate_heading": false,
+                    "rotate_text": "",
+                    "css_class": "paul-billings-video"
+                  },
+                  "blocks": {}
+                },
+                "container_PWDg7L": {
+                  "type": "container",
+                  "name": "t:blocks.container.presets.name",
+                  "settings": {
+                    "direction": "row",
+                    "reverse": false,
+                    "alignment_horizontal": "center",
+                    "alignment_vertical": "center",
+                    "flex_grow": "",
+                    "gap": 2,
+                    "direction_tablet": "row",
+                    "reverse_tablet": false,
+                    "alignment_horizontal_tablet": "center",
+                    "alignment_vertical_tablet": "center",
+                    "gap_tablet": 2,
+                    "direction_mobile": "column",
+                    "reverse_mobile": false,
+                    "alignment_horizontal_mobile": "flex-start",
+                    "alignment_vertical_mobile": "center",
+                    "gap_mobile": 1.5,
+                    "css_class": ""
+                  },
+                  "blocks": {
+                    "button_na9zM8": {
+                      "type": "button",
+                      "name": "t:blocks.button.presets.name",
+                      "settings": {
+                        "button_text": "Get Started",
+                        "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                        "video_url": "",
+                        "open_faq_modal": false,
+                        "button_style": "filled",
+                        "button_size": "large",
+                        "css_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "button_8Ee7BR": {
+                      "type": "button",
+                      "name": "t:blocks.button.presets.name",
+                      "settings": {
+                        "button_text": "Hear From Dr. Billings",
+                        "button_url": "",
+                        "video_url": "https://vimeo.com/1164814723?fl=tl&fe=ec",
+                        "open_faq_modal": false,
+                        "button_style": "outlined",
+                        "button_size": "large",
+                        "css_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_na9zM8",
+                    "button_8Ee7BR"
+                  ]
+                }
+              },
+              "block_order": [
+                "text_content_7YbiyN",
+                "text_content_eQCNMW",
+                "container_PWDg7L"
+              ]
+            }
+          },
+          "block_order": [
+            "image_NhGiRE",
+            "container_nBwLrD"
+          ]
+        }
+      },
+      "block_order": [
+        "container_zTTBHf"
+      ],
+      "custom_css": [
+        "h2 {text-transform: none;}",
+        "h2 p {line-height: 1.3;}",
+        ".paul-billings-video h3 p {letter-spacing: 0.4px;}"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "scheme-2",
+        "add_gradient": false,
+        "full_width": false,
+        "padding_top": 14,
+        "padding_bottom": 8,
+        "padding_top_tablet": 12,
+        "padding_bottom_tablet": 6,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 6
+      }
+    },
+    "page_section_UAtjjA": {
+      "type": "page-section",
+      "blocks": {
+        "container_9xbAVh": {
+          "type": "container",
+          "name": "t:blocks.container.presets.name",
+          "settings": {
+            "direction": "row",
+            "reverse": false,
+            "alignment_horizontal": "center",
+            "alignment_vertical": "center",
+            "flex_grow": "",
+            "gap": 6,
+            "direction_tablet": "column",
+            "reverse_tablet": true,
+            "alignment_horizontal_tablet": "center",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 3,
+            "direction_mobile": "column",
+            "reverse_mobile": true,
+            "alignment_horizontal_mobile": "center",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 3,
+            "css_class": ""
+          },
+          "blocks": {
+            "container_wccVn4": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "column",
+                "reverse": false,
+                "alignment_horizontal": "flex-start",
+                "alignment_vertical": "center",
+                "flex_grow": "1",
+                "gap": 4,
+                "direction_tablet": "column",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "flex-start",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 4,
+                "direction_mobile": "column",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "flex-start",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 3,
+                "css_class": ""
+              },
+              "blocks": {
+                "text_content_mQRAgj": {
+                  "type": "text-content",
+                  "name": "t:blocks.text-content.presets.name",
+                  "settings": {
+                    "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                    "heading": "<p><strong>The Cost of Not Knowing</strong></p>",
+                    "heading_tag": "h2",
+                    "heading_font_size": 57,
+                    "text": "<p>Not knowing your cancer risk leads many Americans to late-stage diagnosis and financial strain.</p>",
+                    "text_font_size": 19,
+                    "gap": 3,
+                    "text_alignment": "left",
+                    "gap_tablet": 2,
+                    "text_alignment_tablet": "left",
+                    "gap_mobile": 2,
+                    "text_alignment_mobile": "left",
+                    "rotate_heading": false,
+                    "rotate_text": "",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                },
+                "slider_8XnQNQ": {
+                  "type": "slider",
+                  "name": "t:blocks.slider.presets.name",
+                  "settings": {
+                    "slider_label": "Content slider",
+                    "color_scheme": "",
+                    "auto_rotate": true,
+                    "auto_rotate_speed": 4,
+                    "css_class": "fact-slider"
+                  },
+                  "blocks": {
+                    "slide_JdN7xy": {
+                      "type": "_slide",
+                      "name": "t:blocks.slide.presets.name",
+                      "settings": {
+                        "color_scheme": "",
+                        "direction": "column",
+                        "reverse": false,
+                        "alignment_horizontal": "center",
+                        "alignment_vertical": "center",
+                        "gap": 2,
+                        "direction_tablet": "column",
+                        "reverse_tablet": false,
+                        "alignment_horizontal_tablet": "center",
+                        "alignment_vertical_tablet": "center",
+                        "gap_tablet": 2,
+                        "direction_mobile": "column",
+                        "reverse_mobile": false,
+                        "alignment_horizontal_mobile": "center",
+                        "alignment_vertical_mobile": "center",
+                        "gap_mobile": 2
+                      },
+                      "blocks": {
+                        "text_content_TNfaAQ": {
+                          "type": "text-content",
+                          "name": "t:blocks.text-content.presets.name",
+                          "settings": {
+                            "color_scheme": "",
+                            "heading": "<p>About <strong>1 out of 2</strong> men and <strong>1 out of 3</strong> women in America will be diagnosed with cancer.</p>",
+                            "heading_tag": "h3",
+                            "heading_font_size": 19,
+                            "text": "<p><em>(NCI Seer Database)</em></p>",
+                            "text_font_size": 14,
+                            "gap": 2,
+                            "text_alignment": "left",
+                            "gap_tablet": 2,
+                            "text_alignment_tablet": "left",
+                            "gap_mobile": 2,
+                            "text_alignment_mobile": "left",
+                            "rotate_heading": false,
+                            "rotate_text": "",
+                            "css_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_content_TNfaAQ"
+                      ]
+                    },
+                    "slide_eDQaNK": {
+                      "type": "_slide",
+                      "name": "t:blocks.slide.presets.name",
+                      "settings": {
+                        "color_scheme": "",
+                        "direction": "column",
+                        "reverse": false,
+                        "alignment_horizontal": "center",
+                        "alignment_vertical": "center",
+                        "gap": 2,
+                        "direction_tablet": "column",
+                        "reverse_tablet": false,
+                        "alignment_horizontal_tablet": "center",
+                        "alignment_vertical_tablet": "center",
+                        "gap_tablet": 2,
+                        "direction_mobile": "column",
+                        "reverse_mobile": false,
+                        "alignment_horizontal_mobile": "center",
+                        "alignment_vertical_mobile": "center",
+                        "gap_mobile": 2
+                      },
+                      "blocks": {
+                        "text_content_Qr79gJ": {
+                          "type": "text-content",
+                          "name": "t:blocks.text-content.presets.name",
+                          "settings": {
+                            "color_scheme": "",
+                            "heading": "<p>If you detect cancer early, about <strong>90%</strong> of people survive at least 5 year.</p>",
+                            "heading_tag": "h3",
+                            "heading_font_size": 19,
+                            "text": "<p><em>(NCI Seer Database)</em></p>",
+                            "text_font_size": 14,
+                            "gap": 2,
+                            "text_alignment": "left",
+                            "gap_tablet": 2,
+                            "text_alignment_tablet": "left",
+                            "gap_mobile": 2,
+                            "text_alignment_mobile": "left",
+                            "rotate_heading": false,
+                            "rotate_text": "",
+                            "css_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_content_Qr79gJ"
+                      ]
+                    },
+                    "slide_rx6hg6": {
+                      "type": "_slide",
+                      "name": "t:blocks.slide.presets.name",
+                      "settings": {
+                        "color_scheme": "",
+                        "direction": "column",
+                        "reverse": false,
+                        "alignment_horizontal": "center",
+                        "alignment_vertical": "center",
+                        "gap": 2,
+                        "direction_tablet": "column",
+                        "reverse_tablet": false,
+                        "alignment_horizontal_tablet": "center",
+                        "alignment_vertical_tablet": "center",
+                        "gap_tablet": 2,
+                        "direction_mobile": "column",
+                        "reverse_mobile": false,
+                        "alignment_horizontal_mobile": "center",
+                        "alignment_vertical_mobile": "center",
+                        "gap_mobile": 2
+                      },
+                      "blocks": {
+                        "text_content_NmFqFH": {
+                          "type": "text-content",
+                          "name": "t:blocks.text-content.presets.name",
+                          "settings": {
+                            "color_scheme": "",
+                            "heading": "<p>About <strong>2 out of 3</strong> people with a late-stage cancer will die within 5 years.</p>",
+                            "heading_tag": "h3",
+                            "heading_font_size": 19,
+                            "text": "<p><em>(NCI Seer Database)</em></p>",
+                            "text_font_size": 14,
+                            "gap": 2,
+                            "text_alignment": "left",
+                            "gap_tablet": 2,
+                            "text_alignment_tablet": "left",
+                            "gap_mobile": 2,
+                            "text_alignment_mobile": "left",
+                            "rotate_heading": false,
+                            "rotate_text": "",
+                            "css_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_content_NmFqFH"
+                      ]
+                    },
+                    "slide_8gzjjQ": {
+                      "type": "_slide",
+                      "name": "t:blocks.slide.presets.name",
+                      "settings": {
+                        "color_scheme": "",
+                        "direction": "column",
+                        "reverse": false,
+                        "alignment_horizontal": "center",
+                        "alignment_vertical": "center",
+                        "gap": 2,
+                        "direction_tablet": "column",
+                        "reverse_tablet": false,
+                        "alignment_horizontal_tablet": "center",
+                        "alignment_vertical_tablet": "center",
+                        "gap_tablet": 2,
+                        "direction_mobile": "column",
+                        "reverse_mobile": false,
+                        "alignment_horizontal_mobile": "center",
+                        "alignment_vertical_mobile": "center",
+                        "gap_mobile": 2
+                      },
+                      "blocks": {
+                        "text_content_BVxMKt": {
+                          "type": "text-content",
+                          "name": "t:blocks.text-content.presets.name",
+                          "settings": {
+                            "color_scheme": "",
+                            "heading": "<p>Lifetime medical costs for a cancer diagnosis can exceed <strong>$200K</strong>.</p>",
+                            "heading_tag": "h3",
+                            "heading_font_size": 19,
+                            "text": "<p><em>(National Cancer Institute, Cancer Trends Progress Report)</em></p>",
+                            "text_font_size": 14,
+                            "gap": 2,
+                            "text_alignment": "left",
+                            "gap_tablet": 2,
+                            "text_alignment_tablet": "left",
+                            "gap_mobile": 2,
+                            "text_alignment_mobile": "left",
+                            "rotate_heading": false,
+                            "rotate_text": "",
+                            "css_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_content_BVxMKt"
+                      ]
+                    },
+                    "slide_ra6t9H": {
+                      "type": "_slide",
+                      "name": "t:blocks.slide.presets.name",
+                      "settings": {
+                        "color_scheme": "",
+                        "direction": "column",
+                        "reverse": false,
+                        "alignment_horizontal": "center",
+                        "alignment_vertical": "center",
+                        "gap": 2,
+                        "direction_tablet": "column",
+                        "reverse_tablet": false,
+                        "alignment_horizontal_tablet": "center",
+                        "alignment_vertical_tablet": "center",
+                        "gap_tablet": 2,
+                        "direction_mobile": "column",
+                        "reverse_mobile": false,
+                        "alignment_horizontal_mobile": "center",
+                        "alignment_vertical_mobile": "center",
+                        "gap_mobile": 2
+                      },
+                      "blocks": {
+                        "text_content_mjzqYB": {
+                          "type": "text-content",
+                          "name": "t:blocks.text-content.presets.name",
+                          "settings": {
+                            "color_scheme": "",
+                            "heading": "<p><strong>Up to 54%</strong> of cancer patients experience financial toxicity.</p>",
+                            "heading_tag": "h3",
+                            "heading_font_size": 19,
+                            "text": "<p><em>(Sideris et al, 2025, J Can Policy)</em></p>",
+                            "text_font_size": 14,
+                            "gap": 2,
+                            "text_alignment": "left",
+                            "gap_tablet": 2,
+                            "text_alignment_tablet": "left",
+                            "gap_mobile": 2,
+                            "text_alignment_mobile": "left",
+                            "rotate_heading": false,
+                            "rotate_text": "",
+                            "css_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_content_mjzqYB"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "slide_JdN7xy",
+                    "slide_eDQaNK",
+                    "slide_rx6hg6",
+                    "slide_8gzjjQ",
+                    "slide_ra6t9H"
+                  ]
+                },
+                "text_content_y9xxKd": {
+                  "type": "text-content",
+                  "name": "t:blocks.text-content.presets.name",
+                  "settings": {
+                    "color_scheme": "",
+                    "heading": "",
+                    "heading_tag": "h2",
+                    "heading_font_size": 20,
+                    "text": "<p>If you think you’re covered, think again.</p>",
+                    "text_font_size": 19,
+                    "gap": 2,
+                    "text_alignment": "left",
+                    "gap_tablet": 2,
+                    "text_alignment_tablet": "left",
+                    "gap_mobile": 2,
+                    "text_alignment_mobile": "left",
+                    "rotate_heading": false,
+                    "rotate_text": "",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_content_mQRAgj",
+                "slider_8XnQNQ",
+                "text_content_y9xxKd"
+              ]
+            },
+            "image_tPzBDX": {
+              "type": "image",
+              "name": "t:blocks.image.presets.name",
+              "settings": {
+                "image": "shopify://shop_images/Joan-in-treatment-2x.jpg",
+                "image_mobile": "shopify://shop_images/Joan-in-treatment-mobile-2x.jpg",
+                "alt_text": "Picture of Joan Lunden smiling with no hair",
+                "caption": "<p><strong>Joan Lunden</strong> when she was going through cancer treatment</p>",
+                "sub_caption": "<p>People Staff. (2014, September 24). Joan Lunden's Breast Cancer Battle: Why I'm Taking Off My Wig. PEOPLE.</p>",
+                "max_width": "390px",
+                "add_drop_shadow": true,
+                "border_radius": 20,
+                "link": "",
+                "video_url": "",
+                "open_in_new_window": false,
+                "link_label": "",
+                "css_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "container_wccVn4",
+            "image_tPzBDX"
+          ]
+        }
+      },
+      "block_order": [
+        "container_9xbAVh"
+      ],
+      "custom_css": [
+        ".fact-testimonials h3 p {letter-spacing: 0.4px;}",
+        ".fact-slider {max-width: 560px;}"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "scheme-2",
+        "add_gradient": false,
+        "full_width": false,
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "padding_top_tablet": 6,
+        "padding_bottom_tablet": 6,
+        "padding_top_mobile": 6,
+        "padding_bottom_mobile": 6
+      }
+    },
+    "page_section_ULbLgh": {
+      "type": "page-section",
+      "blocks": {
+        "container_7t9zWq": {
+          "type": "container",
+          "name": "t:blocks.container.presets.name",
+          "settings": {
+            "direction": "row",
+            "reverse": false,
+            "alignment_horizontal": "center",
+            "alignment_vertical": "center",
+            "flex_grow": "",
+            "gap": 8,
+            "direction_tablet": "column",
+            "reverse_tablet": false,
+            "alignment_horizontal_tablet": "center",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 4,
+            "direction_mobile": "column",
+            "reverse_mobile": false,
+            "alignment_horizontal_mobile": "center",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 4,
+            "css_class": ""
+          },
+          "blocks": {
+            "animation_FABGXb": {
+              "type": "animation",
+              "name": "t:blocks.animation.presets.name",
+              "settings": {
+                "lottie_file_name": "membership-lifetime-benefits-lottie.json",
+                "max_width": "665px",
+                "animation_speed": 1,
+                "border_radius": 20,
+                "add_drop_shadow": true,
+                "css_class": ""
+              },
+              "blocks": {}
+            },
+            "container_nXKGVy": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "column",
+                "reverse": false,
+                "alignment_horizontal": "flex-start",
+                "alignment_vertical": "center",
+                "flex_grow": "1",
+                "gap": 4,
+                "direction_tablet": "column",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "flex-start",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 3,
+                "direction_mobile": "column",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "flex-start",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 3,
+                "css_class": "lifetime-partner"
+              },
+              "blocks": {
+                "text_content_tVDDyK": {
+                  "type": "text-content",
+                  "name": "t:blocks.text-content.presets.name",
+                  "settings": {
+                    "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                    "heading": "<p><strong>CancerEDGE</strong><br/>Your Lifetime Partner in Cancer Prevention</p>",
+                    "heading_tag": "h2",
+                    "heading_font_size": 57,
+                    "text": "<p>For the first time, a membership & support team that helps you know, prevent, and navigate your risk. <strong>For life.</strong></p>",
+                    "text_font_size": 19,
+                    "gap": 3,
+                    "text_alignment": "left",
+                    "gap_tablet": 2,
+                    "text_alignment_tablet": "left",
+                    "gap_mobile": 2,
+                    "text_alignment_mobile": "left",
+                    "rotate_heading": false,
+                    "rotate_text": "",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                },
+                "container_ibz4tK": {
+                  "type": "container",
+                  "name": "t:blocks.container.presets.name",
+                  "settings": {
+                    "direction": "row",
+                    "reverse": false,
+                    "alignment_horizontal": "flex-start",
+                    "alignment_vertical": "center",
+                    "flex_grow": "",
+                    "gap": 2,
+                    "direction_tablet": "row",
+                    "reverse_tablet": false,
+                    "alignment_horizontal_tablet": "flex-start",
+                    "alignment_vertical_tablet": "center",
+                    "gap_tablet": 2,
+                    "direction_mobile": "row",
+                    "reverse_mobile": false,
+                    "alignment_horizontal_mobile": "flex-start",
+                    "alignment_vertical_mobile": "center",
+                    "gap_mobile": 1.5,
+                    "css_class": ""
+                  },
+                  "blocks": {
+                    "button_yzzkTP": {
+                      "type": "button",
+                      "name": "t:blocks.button.presets.name",
+                      "settings": {
+                        "button_text": "Get Started",
+                        "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                        "video_url": "",
+                        "open_faq_modal": false,
+                        "button_style": "filled",
+                        "button_size": "large",
+                        "css_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "button_E4ef8f": {
+                      "type": "button",
+                      "name": "t:blocks.button.presets.name",
+                      "settings": {
+                        "button_text": "View FAQs",
+                        "button_url": "shopify://pages/faqs",
+                        "video_url": "",
+                        "open_faq_modal": true,
+                        "button_style": "outlined",
+                        "button_size": "large",
+                        "css_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_yzzkTP",
+                    "button_E4ef8f"
+                  ]
+                }
+              },
+              "block_order": [
+                "text_content_tVDDyK",
+                "container_ibz4tK"
+              ]
+            }
+          },
+          "block_order": [
+            "animation_FABGXb",
+            "container_nXKGVy"
+          ]
+        }
+      },
+      "block_order": [
+        "container_7t9zWq"
+      ],
+      "custom_css": [
+        ".shopify-block:has(> .lifetime-partner) {flex: 1 0 42%;}",
+        "@media (max-width: 989px) {.shopify-block:has(> .lifetime-partner) {flex: 1; } .lifetime-partner {max-width: 665px; }}"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "scheme-2",
+        "add_gradient": false,
+        "full_width": false,
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "padding_top_tablet": 6,
+        "padding_bottom_tablet": 6,
+        "padding_top_mobile": 6,
+        "padding_bottom_mobile": 6
+      }
+    },
+    "page_section_ctnkdX": {
+      "type": "page-section",
+      "blocks": {
+        "icons_KYQP3d": {
+          "type": "icons",
+          "name": "t:blocks.icons.presets.name",
+          "settings": {
+            "direction": "row",
+            "reverse": false,
+            "alignment_horizontal": "center",
+            "alignment_vertical": "center",
+            "gap": 6,
+            "font_size": 16,
+            "text_align": "center",
+            "divider": true,
+            "direction_tablet": "row",
+            "reverse_tablet": false,
+            "alignment_horizontal_tablet": "center",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 4,
+            "font_size_tablet": 16,
+            "text_align_tablet": "center",
+            "divider_tablet": false,
+            "direction_mobile": "row",
+            "reverse_mobile": false,
+            "alignment_horizontal_mobile": "flex-start",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 3,
+            "font_size_mobile": 17,
+            "text_align_mobile": "left",
+            "divider_mobile": false,
+            "css_class": ""
+          },
+          "blocks": {
+            "icon_RxjNMb": {
+              "type": "_icon",
+              "name": "t:blocks.icon.presets.name",
+              "settings": {
+                "icon": "icon-speed",
+                "label": "<p>One Cheek Swab.<br/>A Lifetime of Guidance.</p>"
+              },
+              "blocks": {}
+            },
+            "icon_qtKEi9": {
+              "type": "_icon",
+              "name": "t:blocks.icon.presets.name",
+              "settings": {
+                "icon": "icon-mag-glass",
+                "label": "<p>Personalized Disease Prevention Plan</p>"
+              },
+              "blocks": {}
+            },
+            "icon_hJgp4J": {
+              "type": "_icon",
+              "name": "t:blocks.icon.presets.name",
+              "settings": {
+                "icon": "icon-evolution",
+                "label": "<p>Ongoing Updates & Alerts As Science Evolves</p>"
+              },
+              "blocks": {}
+            },
+            "icon_GLYtAA": {
+              "type": "_icon",
+              "name": "t:blocks.icon.presets.name",
+              "settings": {
+                "icon": "icon-support",
+                "label": "<p>Support Team & Resources<br/>When You Need It</p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "icon_RxjNMb",
+            "icon_qtKEi9",
+            "icon_hJgp4J",
+            "icon_GLYtAA"
+          ]
+        }
+      },
+      "block_order": [
+        "icons_KYQP3d"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+        "add_gradient": false,
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 8,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 6,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 6
+      }
+    },
+    "page_section_dHbJaX": {
+      "type": "page-section",
+      "blocks": {
+        "container_tBfTpk": {
+          "type": "container",
+          "name": "t:blocks.container.presets.name",
+          "settings": {
+            "direction": "column",
+            "reverse": false,
+            "alignment_horizontal": "center",
+            "alignment_vertical": "center",
+            "flex_grow": "",
+            "gap": 7,
+            "direction_tablet": "column",
+            "reverse_tablet": false,
+            "alignment_horizontal_tablet": "center",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 4,
+            "direction_mobile": "column",
+            "reverse_mobile": false,
+            "alignment_horizontal_mobile": "center",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 4,
+            "css_class": ""
+          },
+          "blocks": {
+            "text_content_a4t3EA": {
+              "type": "text-content",
+              "name": "t:blocks.text-content.presets.name",
+              "settings": {
+                "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                "heading": "<p><strong>Join in Less Than 3 Minutes</strong></p>",
+                "heading_tag": "h2",
+                "heading_font_size": 57,
+                "text": "",
+                "text_font_size": 16,
+                "gap": 2,
+                "text_alignment": "left",
+                "gap_tablet": 2,
+                "text_alignment_tablet": "left",
+                "gap_mobile": 2,
+                "text_alignment_mobile": "left",
+                "rotate_heading": false,
+                "rotate_text": "",
+                "css_class": ""
+              },
+              "blocks": {}
+            },
+            "container_YnLHBN": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "row",
+                "reverse": false,
+                "alignment_horizontal": "center",
+                "alignment_vertical": "flex-start",
+                "flex_grow": "",
+                "gap": 6,
+                "direction_tablet": "column",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "center",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 4,
+                "direction_mobile": "column",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "center",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 4,
+                "css_class": ""
+              },
+              "blocks": {
+                "gallery_VPYKFp": {
+                  "type": "gallery",
+                  "name": "t:blocks.gallery.presets.name",
+                  "settings": {
+                    "max_width": "640px",
+                    "add_drop_shadow": false,
+                    "border_radius": 20,
+                    "auto_rotate": true,
+                    "auto_rotate_speed": 3,
+                    "aria_label": "",
+                    "css_class": ""
+                  },
+                  "blocks": {
+                    "gallery_image_UrTVP3": {
+                      "type": "_gallery-image",
+                      "name": "t:blocks.gallery_image.presets.name",
+                      "settings": {
+                        "image": "shopify://shop_images/img-phone.jpg",
+                        "alt_text": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "gallery_image_UrTVP3"
+                  ]
+                },
+                "container_Xj93dG": {
+                  "type": "container",
+                  "name": "t:blocks.container.presets.name",
+                  "settings": {
+                    "direction": "column",
+                    "reverse": false,
+                    "alignment_horizontal": "stretch",
+                    "alignment_vertical": "center",
+                    "flex_grow": "1",
+                    "gap": 3,
+                    "direction_tablet": "column",
+                    "reverse_tablet": false,
+                    "alignment_horizontal_tablet": "stretch",
+                    "alignment_vertical_tablet": "center",
+                    "gap_tablet": 3,
+                    "direction_mobile": "column",
+                    "reverse_mobile": false,
+                    "alignment_horizontal_mobile": "stretch",
+                    "alignment_vertical_mobile": "center",
+                    "gap_mobile": 3,
+                    "css_class": "membership-faq"
+                  },
+                  "blocks": {
+                    "text_content_ifHRkx": {
+                      "type": "text-content",
+                      "name": "t:blocks.text-content.presets.name",
+                      "settings": {
+                        "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                        "heading": "<p><strong>CancerEDGE Membership</strong></p>",
+                        "heading_tag": "h3",
+                        "heading_font_size": 31,
+                        "text": "<p>A genomic disease risk, prevention & diagnosis navigation system designed to support you for life.</p>",
+                        "text_font_size": 19,
+                        "gap": 2,
+                        "text_alignment": "left",
+                        "gap_tablet": 2,
+                        "text_alignment_tablet": "left",
+                        "gap_mobile": 2,
+                        "text_alignment_mobile": "left",
+                        "rotate_heading": false,
+                        "rotate_text": "",
+                        "css_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "tabs_4Y8nhM": {
+                      "type": "tabs",
+                      "name": "t:blocks.tabs.presets.name",
+                      "settings": {
+                        "color_scheme": "scheme-d6b3b39b-b913-496d-b058-82b4d8b5a6b0",
+                        "css_class": "faq-tabs"
+                      },
+                      "blocks": {
+                        "tab_QXhVRx": {
+                          "type": "_tab",
+                          "name": "t:blocks.tab.presets.name",
+                          "settings": {
+                            "tab_label": "What You Get",
+                            "direction": "column",
+                            "reverse": false,
+                            "alignment_horizontal": "flex-start",
+                            "alignment_vertical": "center",
+                            "gap": 2,
+                            "direction_tablet": "column",
+                            "reverse_tablet": false,
+                            "alignment_horizontal_tablet": "flex-start",
+                            "alignment_vertical_tablet": "center",
+                            "gap_tablet": 2,
+                            "direction_mobile": "column",
+                            "reverse_mobile": false,
+                            "alignment_horizontal_mobile": "flex-start",
+                            "alignment_vertical_mobile": "center",
+                            "gap_mobile": 2
+                          },
+                          "blocks": {
+                            "list_ftkAGy": {
+                              "type": "list",
+                              "name": "t:blocks.list.presets.name",
+                              "settings": {
+                                "font_size": 14,
+                                "direction": "column",
+                                "reverse": false,
+                                "alignment_horizontal": "stretch",
+                                "alignment_vertical": "center",
+                                "gap": 0,
+                                "divider": false,
+                                "direction_tablet": "column",
+                                "reverse_tablet": false,
+                                "alignment_horizontal_tablet": "stretch",
+                                "alignment_vertical_tablet": "center",
+                                "gap_tablet": 0,
+                                "divider_tablet": false,
+                                "direction_mobile": "column",
+                                "reverse_mobile": false,
+                                "alignment_horizontal_mobile": "stretch",
+                                "alignment_vertical_mobile": "center",
+                                "gap_mobile": 0,
+                                "divider_mobile": false,
+                                "css_class": ""
+                              },
+                              "blocks": {
+                                "list_reveal_Bq4Up4": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Whole-genome sequencing & genetic counseling</p>",
+                                    "reveal_text": "<p>Comprehensive sequencing and genetic counseling that help you understand your specific risks.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_6AWQGj": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Polygenics provide the most precise risk scores available</p>",
+                                    "reveal_text": "<p>Integrated polygenic risk scores look beyond single gene risks and evolve over time.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_WHHb7P": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Pharmacogenomic medication reaction insights</p>",
+                                    "reveal_text": "<p>Pharmacogenomics results that inform how you may respond to medications.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_VKBgUX": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Ongoing, personalized risk updates as science evolves</p>",
+                                    "reveal_text": "<p>Annual updates to personalized risks scores that evolve as you age and science progresses.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_3VG9qt": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>DNA-guided Prevention Plan based on your data</p>",
+                                    "reveal_text": "<p>Prevention guidance that is tailored to your genome to take preventative action and potentially avoid diseases.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_C7UxtW": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Expert health navigation and clinical support</p>",
+                                    "reveal_text": "<p>Delivery of expert navigation for personalized treatment through data analytics, AI, and PhD scientists.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_zJarfj": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Advanced guidance for disease management</p>",
+                                    "reveal_text": "<p>Access to advanced genomics for disease management such as pharmacogenomics and minimal residual disease testing.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_PQzWyV": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Dedicated nurse navigators if you get sick</p>",
+                                    "reveal_text": "<p>Nurse navigators that are available to help you understand your diagnosis and bring clarity in coordination with your healthcare team – a talented expert on your side.</p>"
+                                  },
+                                  "blocks": {}
+                                }
+                              },
+                              "block_order": [
+                                "list_reveal_Bq4Up4",
+                                "list_reveal_6AWQGj",
+                                "list_reveal_WHHb7P",
+                                "list_reveal_VKBgUX",
+                                "list_reveal_3VG9qt",
+                                "list_reveal_C7UxtW",
+                                "list_reveal_zJarfj",
+                                "list_reveal_PQzWyV"
+                              ]
+                            }
+                          },
+                          "block_order": [
+                            "list_ftkAGy"
+                          ]
+                        },
+                        "tab_itrETk": {
+                          "type": "_tab",
+                          "name": "t:blocks.tab.presets.name",
+                          "settings": {
+                            "tab_label": "What It Helps You Avoid",
+                            "direction": "column",
+                            "reverse": false,
+                            "alignment_horizontal": "flex-start",
+                            "alignment_vertical": "center",
+                            "gap": 2,
+                            "direction_tablet": "column",
+                            "reverse_tablet": false,
+                            "alignment_horizontal_tablet": "flex-start",
+                            "alignment_vertical_tablet": "center",
+                            "gap_tablet": 2,
+                            "direction_mobile": "column",
+                            "reverse_mobile": false,
+                            "alignment_horizontal_mobile": "flex-start",
+                            "alignment_vertical_mobile": "center",
+                            "gap_mobile": 2
+                          },
+                          "blocks": {
+                            "list_4p9c3q": {
+                              "type": "list",
+                              "name": "t:blocks.list.presets.name",
+                              "settings": {
+                                "font_size": 14,
+                                "direction": "column",
+                                "reverse": false,
+                                "alignment_horizontal": "stretch",
+                                "alignment_vertical": "center",
+                                "gap": 0,
+                                "divider": false,
+                                "direction_tablet": "column",
+                                "reverse_tablet": false,
+                                "alignment_horizontal_tablet": "stretch",
+                                "alignment_vertical_tablet": "center",
+                                "gap_tablet": 0,
+                                "divider_tablet": false,
+                                "direction_mobile": "column",
+                                "reverse_mobile": false,
+                                "alignment_horizontal_mobile": "stretch",
+                                "alignment_vertical_mobile": "center",
+                                "gap_mobile": 0,
+                                "divider_mobile": false,
+                                "css_class": ""
+                              },
+                              "blocks": {
+                                "list_reveal_66qBUb": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Medical debt</p>",
+                                    "reveal_text": "<p>Cancer can bring sudden bills that overwhelm families. Earlier risk awareness may help you plan ahead and avoid unexpected financial stress.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_3qL7XL": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Financial toxicity</p>",
+                                    "reveal_text": "<p>The cost of treatment can drain savings and add stress during an already difficult time. Proactive health insights may help you prepare with greater confidence and stability.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_7cJKy7": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>Loss of work</p>",
+                                    "reveal_text": "<p>Time away from work during serious illness can disrupt income and routines. Knowing your risks earlier may help you make plans that protect your livelihood and family.</p>"
+                                  },
+                                  "blocks": {}
+                                },
+                                "list_reveal_3ByK9y": {
+                                  "type": "_list-reveal",
+                                  "name": "t:blocks.list-reveal.presets.name",
+                                  "settings": {
+                                    "label": "<p>A deadly diagnosis or event</p>",
+                                    "reveal_text": "<p>A late diagnosis can change life in an instant. Understanding your personal risks may support earlier action, more options, and valuable time with the people who matter most.</p>"
+                                  },
+                                  "blocks": {}
+                                }
+                              },
+                              "block_order": [
+                                "list_reveal_66qBUb",
+                                "list_reveal_3qL7XL",
+                                "list_reveal_7cJKy7",
+                                "list_reveal_3ByK9y"
+                              ]
+                            }
+                          },
+                          "block_order": [
+                            "list_4p9c3q"
+                          ]
+                        }
+                      },
+                      "block_order": [
+                        "tab_QXhVRx",
+                        "tab_itrETk"
+                      ]
+                    },
+                    "text_content_fWYewT": {
+                      "type": "text-content",
+                      "name": "t:blocks.text-content.presets.name",
+                      "settings": {
+                        "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                        "heading": "",
+                        "heading_tag": "h2",
+                        "heading_font_size": 20,
+                        "text": "<p><strong>$1.64</strong> /day · Billed annually at $600 for first year, monthly thereafter.</p>",
+                        "text_font_size": 14,
+                        "gap": 2,
+                        "text_alignment": "left",
+                        "gap_tablet": 2,
+                        "text_alignment_tablet": "left",
+                        "gap_mobile": 2,
+                        "text_alignment_mobile": "left",
+                        "rotate_heading": false,
+                        "rotate_text": "",
+                        "css_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "container_XVfctz": {
+                      "type": "container",
+                      "name": "t:blocks.container.presets.name",
+                      "settings": {
+                        "direction": "column",
+                        "reverse": false,
+                        "alignment_horizontal": "flex-start",
+                        "alignment_vertical": "center",
+                        "flex_grow": "",
+                        "gap": 2,
+                        "direction_tablet": "column",
+                        "reverse_tablet": false,
+                        "alignment_horizontal_tablet": "flex-start",
+                        "alignment_vertical_tablet": "center",
+                        "gap_tablet": 2,
+                        "direction_mobile": "column",
+                        "reverse_mobile": false,
+                        "alignment_horizontal_mobile": "flex-start",
+                        "alignment_vertical_mobile": "center",
+                        "gap_mobile": 2,
+                        "css_class": ""
+                      },
+                      "blocks": {
+                        "button_DBTrhj": {
+                          "type": "button",
+                          "name": "t:blocks.button.presets.name",
+                          "settings": {
+                            "button_text": "Become A Member",
+                            "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                            "video_url": "",
+                            "open_faq_modal": false,
+                            "button_style": "filled",
+                            "button_size": "large",
+                            "css_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "button_DBTrhj"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "text_content_ifHRkx",
+                    "tabs_4Y8nhM",
+                    "text_content_fWYewT",
+                    "container_XVfctz"
+                  ]
+                }
+              },
+              "block_order": [
+                "gallery_VPYKFp",
+                "container_Xj93dG"
+              ]
+            }
+          },
+          "block_order": [
+            "text_content_a4t3EA",
+            "container_YnLHBN"
+          ]
+        }
+      },
+      "block_order": [
+        "container_tBfTpk"
+      ],
+      "custom_css": [
+        ".shopify-block:has(> .membership-faq) {flex: 1 0 45%;}",
+        ".block-text-content > p strong {font-size: 34px; font-weight: 300; display: inline-block; margin-right: 4px;}",
+        ".block-tab {width: 500px;}",
+        ".block-text-content > p {max-width: 500px;}",
+        ".retail-price {padding-top: 12px; margin-top: -20px; max-width: 500px;}",
+        ".retail-price p {color: #3d4a70;}",
+        "@media (max-width: 1200px) {.block-tab {width: 450px; }}",
+        "@media (max-width: 1100px) {.block-tab {width: 400px; }}",
+        "@media (max-width: 989px) {.shopify-block:has(> .membership-faq) {flex: 1; } .block-tab {width: 100%; }}"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "scheme-2",
+        "add_gradient": false,
+        "full_width": false,
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "padding_top_tablet": 6,
+        "padding_bottom_tablet": 6,
+        "padding_top_mobile": 6,
+        "padding_bottom_mobile": 6
+      }
+    },
+    "page_section_4BKNm6": {
+      "type": "page-section",
+      "blocks": {
+        "container_ULRJQt": {
+          "type": "container",
+          "name": "t:blocks.container.presets.name",
+          "settings": {
+            "direction": "column",
+            "reverse": false,
+            "alignment_horizontal": "center",
+            "alignment_vertical": "center",
+            "flex_grow": "",
+            "gap": 4,
+            "direction_tablet": "column",
+            "reverse_tablet": false,
+            "alignment_horizontal_tablet": "center",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 3,
+            "direction_mobile": "column",
+            "reverse_mobile": false,
+            "alignment_horizontal_mobile": "center",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 3,
+            "css_class": ""
+          },
+          "blocks": {
+            "text_content_qfhzPJ": {
+              "type": "text-content",
+              "name": "t:blocks.text-content.presets.name",
+              "settings": {
+                "color_scheme": "scheme-5efca1dc-197b-4d75-8ae3-4d1bcad304e8",
+                "heading": "<p>Invest In Your<strong> </strong><em><strong>Life</strong></em></p>",
+                "heading_tag": "h2",
+                "heading_font_size": 57,
+                "text": "<p>Early detection helps you act sooner—before risks become life-altering and financially devastating.</p>",
+                "text_font_size": 19,
+                "gap": 3,
+                "text_alignment": "center",
+                "gap_tablet": 2,
+                "text_alignment_tablet": "center",
+                "gap_mobile": 2,
+                "text_alignment_mobile": "left",
+                "rotate_heading": true,
+                "rotate_text": "Life,Family,Care,Health,Now",
+                "css_class": "rotating-heading"
+              },
+              "blocks": {}
+            },
+            "compare_DQBEyB": {
+              "type": "compare",
+              "name": "t:blocks.compare.presets.name",
+              "settings": {
+                "comparison_label": "Vs",
+                "card_1_color_scheme": "scheme-5",
+                "card_1_image": "shopify://shop_images/Rectangle_14.jpg",
+                "card_1_card_cost_1": "<h3><strong>$50</strong>/mo</h3><p>CancerEDGE Membership</p>",
+                "card_1_card_cost_2": "",
+                "card_1_content": "",
+                "card_1_source_url": "",
+                "card_1_link_label": "Get Started Today",
+                "card_1_link_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                "card_2_color_scheme": "scheme-5",
+                "card_2_image": "shopify://shop_images/Rectangle_14_1.jpg",
+                "card_2_card_cost_1": "<h3><strong>$150,000</strong><em><strong>+</strong></em></h3><p>Cancer<br/>Treatment</p>",
+                "card_2_card_cost_2": "",
+                "card_2_content": "<p>Plus lost wages, stress, and bankruptcy </p>",
+                "card_2_source_url": "https://www.aacr.org/about-the-aacr/newsroom/news-releases/cancer-care-costs-in-the-united-states-are-projected-to-exceed-245-billion-by-2030/",
+                "card_2_link_label": "",
+                "card_2_link_url": "",
+                "css_class": ""
+              },
+              "blocks": {}
+            },
+            "text_content_6EMz36": {
+              "type": "text-content",
+              "name": "t:blocks.text-content.presets.name",
+              "settings": {
+                "color_scheme": "",
+                "heading": "",
+                "heading_tag": "h2",
+                "heading_font_size": 20,
+                "text": "<p>The most expensive diagnosis is the one you find too late.</p>",
+                "text_font_size": 19,
+                "gap": 2,
+                "text_alignment": "left",
+                "gap_tablet": 2,
+                "text_alignment_tablet": "left",
+                "gap_mobile": 2,
+                "text_alignment_mobile": "left",
+                "rotate_heading": false,
+                "rotate_text": "",
+                "css_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_content_qfhzPJ",
+            "compare_DQBEyB",
+            "text_content_6EMz36"
+          ]
+        }
+      },
+      "block_order": [
+        "container_ULRJQt"
+      ],
+      "custom_css": [
+        ".rotating-heading h2 p {font-weight: 700;}",
+        ".rotating-heading > p {max-width: 100%;}"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "scheme-2",
+        "add_gradient": false,
+        "full_width": false,
+        "padding_top": 8,
+        "padding_bottom": 14,
+        "padding_top_tablet": 6,
+        "padding_bottom_tablet": 12,
+        "padding_top_mobile": 6,
+        "padding_bottom_mobile": 12
+      }
+    },
+    "page_section_a8KiFz": {
+      "type": "page-section",
+      "blocks": {
+        "container_qzL8GK": {
+          "type": "container",
+          "name": "t:blocks.container.presets.name",
+          "settings": {
+            "direction": "column",
+            "reverse": false,
+            "alignment_horizontal": "flex-start",
+            "alignment_vertical": "center",
+            "flex_grow": "",
+            "gap": 3,
+            "direction_tablet": "column",
+            "reverse_tablet": false,
+            "alignment_horizontal_tablet": "flex-start",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 2,
+            "direction_mobile": "column",
+            "reverse_mobile": false,
+            "alignment_horizontal_mobile": "flex-start",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 2,
+            "css_class": "footer-cta-content"
+          },
+          "blocks": {
+            "text_content_zaHtWT": {
+              "type": "text-content",
+              "name": "t:blocks.text-content.presets.name",
+              "settings": {
+                "color_scheme": "scheme-590abcec-3a7a-41bf-9cbf-f665f7d385bd",
+                "heading": "<p><strong>Finally, now you can know.</strong></p>",
+                "heading_tag": "h2",
+                "heading_font_size": 57,
+                "text": "<p>This powerful membership will give you and your family peace of mind for a lifetime.</p>",
+                "text_font_size": 19,
+                "gap": 3,
+                "text_alignment": "left",
+                "gap_tablet": 3,
+                "text_alignment_tablet": "left",
+                "gap_mobile": 2,
+                "text_alignment_mobile": "left",
+                "rotate_heading": false,
+                "rotate_text": "",
+                "css_class": "now-you-can-know"
+              },
+              "blocks": {}
+            },
+            "container_HAqK4w": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "row",
+                "reverse": false,
+                "alignment_horizontal": "flex-start",
+                "alignment_vertical": "center",
+                "flex_grow": "",
+                "gap": 2,
+                "direction_tablet": "row",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "flex-start",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 2,
+                "direction_mobile": "row",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "flex-start",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 1,
+                "css_class": ""
+              },
+              "blocks": {
+                "button_q8inky": {
+                  "type": "button",
+                  "name": "t:blocks.button.presets.name",
+                  "settings": {
+                    "button_text": "Get Started",
+                    "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                    "video_url": "",
+                    "open_faq_modal": false,
+                    "button_style": "filled",
+                    "button_size": "large",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                },
+                "button_hQpFqE": {
+                  "type": "button",
+                  "name": "t:blocks.button.presets.name",
+                  "settings": {
+                    "button_text": "View FAQs",
+                    "button_url": "shopify://pages/faqs",
+                    "video_url": "",
+                    "open_faq_modal": true,
+                    "button_style": "outlined",
+                    "button_size": "large",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_q8inky",
+                "button_hQpFqE"
+              ]
+            }
+          },
+          "block_order": [
+            "text_content_zaHtWT",
+            "container_HAqK4w"
+          ]
+        }
+      },
+      "block_order": [
+        "container_qzL8GK"
+      ],
+      "custom_css": [
+        "h2 {text-transform: none;}",
+        ".now-you-can-know > p {max-width: 440px;}",
+        "@media (max-width: 749px) {.footer-cta-content {margin-bottom: 400px; }}"
+      ],
+      "name": "t:blocks.page_section.presets.name",
+      "settings": {
+        "section_id": "",
+        "color_scheme": "scheme-72187f94-c197-4ef0-9ce7-b907030c68d8",
+        "background_image": "shopify://shop_images/bg-footer-joan.png",
+        "background_image_mobile": "shopify://shop_images/bg-footer-joan-mobile.png",
+        "add_gradient": true,
+        "full_width": false,
+        "padding_top": 18,
+        "padding_bottom": 18,
+        "padding_top_tablet": 16,
+        "padding_bottom_tablet": 16,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 10
+      }
+    }
+  },
+  "order": [
+    "hero_8WRWwH",
+    "page_section_kgViW8",
+    "page_section_tMGBLX",
+    "page_section_UAtjjA",
+    "page_section_ULbLgh",
+    "page_section_ctnkdX",
+    "page_section_dHbJaX",
+    "page_section_4BKNm6",
+    "page_section_a8KiFz"
+  ]
+}

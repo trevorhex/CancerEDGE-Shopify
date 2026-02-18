@@ -1,0 +1,66 @@
+.jdgm-write-review-modal__title, .jdgm-write-review-modal__intro, .jdgm-write-review-modal__text, 
+.jdgm-write-review-modal__product-title, .jdgm-write-review-modal__stars::before, .jdgm-write-review-modal__stars::after, 
+.jdgm-write-review-modal__field-label, .jdgm-write-review-modal__field-label-help, .jdgm-write-review-modal__chip-label, 
+.jdgm-write-review-modal__checkbox-text, .jdgm-media-input-prompt-text {
+  color: var(--black) !important;
+}
+
+.jdgm-rev-widg *,
+.jdgm-review-widget-modal * {
+  font-family: var(--font-body-family);
+}
+
+.jdgm-widget-actions-wrapper a, 
+.jdgm-write-review-modal button.jdgm-write-review-modal__nav-btn {
+  color: var(--white);
+  font-family: var(--font-body-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1.8px;
+  border-radius: 40px;
+  background: var(--pink) !important;
+  padding: 14px 24px;
+  text-transform: uppercase;
+  transition: all .3s;
+  border: none !important;
+}
+
+.jdgm-review-widget--small .jdgm-rev-widg,
+.jdgm-rev-widg {
+  padding: 0 !important;
+}
+
+.jdgm-histogram__frequency,
+.jdgm-rev__timestamp, .jdgm-rev__pinned {
+  color: var(--dark-grey) !important;
+}
+
+.jdgm-sort-dropdown:focus-visible {
+  box-shadow: none;
+  outline: none;
+} 
+
+.jdgm-write-review-modal .jdgm-write-review-modal__gdpr-statement a,
+.jdgm-write-review-modal .jdgm-write-review-modal__gdpr-statement,
+.jdgm-write-review-modal .jdgm-write-review-modal__field-help {
+  color: rgba(35, 31, 32, 0.8) !important;
+}
+
+.app__section--wrapper {
+  overflow: hidden;
+}
+
+@media (max-width: 749px) {
+
+  .jdgm-rev-widg__title {
+    font-size: 36px !important;
+    line-height: 46px;
+  }
+
+  .jdgm-widget-actions-wrapper .jdgm-write-rev-link {
+    padding: 7.6px 22px;
+  }
+  
+}

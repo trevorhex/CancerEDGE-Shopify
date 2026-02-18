@@ -1,0 +1,341 @@
+.custom-slideshow-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.custom-slideshow-wrapper {
+  min-height: unset !important;
+  flex-wrap: wrap;
+  padding: 6% 0;
+}
+
+.custom-slideshow-wrapper.custom-slideshow--large {
+  min-height: 930px;
+}
+
+.slideshow-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slideshow-bg-video,
+.slideshow-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.custom-slideshow-wrapper .background_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: block;
+  opacity: 0.8;
+  background: var(--overlay-color);
+}
+
+.custom-slideshow-wrapper .cancer__edge--logo {
+  z-index: 2;
+}
+
+.custom-slideshow-wrapper .cancer__edge--logo img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+.custom-slideshow-wrapper .cancer__edge--logo.decorative--logo {
+  right: 0;
+  top: 0;
+  bottom: unset;
+}
+
+.custom-slideshow-wrapper .slideshow-content-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  overflow: hidden;
+}
+
+.custom-slideshow-wrapper .slideshow-track {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  will-change: transform;
+}
+
+.custom-slideshow-wrapper .slide-content {
+  /* max-width: 100vw;
+  flex: 0 0 100vw;
+  width: 100vw;
+  min-width: 100vw; */
+  box-sizing: border-box;
+}
+
+.custom-slideshow-wrapper .slide-inner {
+  max-width: 1230px;
+  padding: 0 15px;
+}
+
+.custom-slideshow-wrapper .slide-heading {
+  font-size: 62px;
+  line-height: 72px;
+  font-weight: 700;
+  letter-spacing: -2.1px;
+  color: rgb(var(--color-foreground));
+  margin: 0 0 25px;
+  max-width: 1200px;
+}
+
+.custom-slideshow-wrapper .slide-heading h1,
+.custom-slideshow-wrapper .slide-heading h2 {
+  line-height: 72px;
+}
+
+.custom-slideshow-wrapper .slide-heading * {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+.custom-slideshow-wrapper .slide-heading .heading-font-highlighted {
+  color: var(--highlighted-text-color);
+  display: inline-block;
+}
+.custom-slideshow-wrapper .slide-heading.highlighted-text-underline .heading-font-highlighted {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.custom-slideshow-wrapper .slide-heading.highlighted-text-underline .heading-font-highlighted:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='502' height='29' viewBox='0 0 502 29' fill='none'><path d='M500.389 1.1938C397.067 4.31537 294.465 4.64552 191.068 9.63083C131.634 12.4965 -46.1029 21.1139 12.943 21.7935C108.043 20.0977 146.467 15.5088 306.457 13.5106C344.263 13.0385 382.778 11.178 420.439 11.4782C503.964 12.1441 446.294 16.4846 423.161 17.2545C319.914 20.6909 320.537 17.3809 113.727 23.8374C102.707 24.1814 64.1371 27.1275 64.1371 27.1275' stroke='black' stroke-width='2' stroke-linecap='round'/></svg>");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: bottom left;
+  -webkit-mask-size: 100% auto;
+}
+
+.custom-slideshow-wrapper .slide-subheading {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 0px 0 15px;
+}
+
+.custom-slideshow-wrapper .slide-text {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+  color: rgb(var(--color-foreground));
+  margin: 0 0 25px;
+}
+
+.custom-slideshow-wrapper .slide-text p {
+  margin: 0 0 15px;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.custom-slideshow-wrapper .slide-button-wrapper {
+  z-index: 1;
+  flex: 100%;
+  display: flex;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.custom-slideshow-wrapper .slide-button {
+  color: var(--button-text-color);
+  background: var(--button-color);
+  gap: 10px;
+}
+
+.custom-slideshow-wrapper .slide-author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.custom-slideshow-wrapper .author-image {
+  max-width: 60px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.custom-slideshow-wrapper .author-info {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 34px;
+  color: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 1366px) {
+
+  .custom-slideshow-wrapper .slide-inner {
+    max-width: 1230px;
+    padding: 0 50px;
+  }
+  
+  .custom-slideshow-wrapper.custom-slideshow--large {
+    min-height: 768px;
+  }
+  
+}
+
+@media screen and (max-width: 1199px) {
+  
+  .custom-slideshow-wrapper.custom-slideshow--medium {
+    min-height: 500px;
+  }
+  
+  .custom-slideshow-wrapper.custom-slideshow--large {
+    min-height: 800px;
+  }
+  
+  .custom-slideshow-wrapper .cancer__edge--logo img {
+    max-width: 70%;
+    margin-left: auto;
+  }
+  
+  .custom-slideshow-wrapper .slide-heading {
+    font-size: 50px;
+    line-height: 56px;
+  }
+
+  .custom-slideshow-wrapper .slide-heading h1,
+  .custom-slideshow-wrapper .slide-heading h2 {
+    line-height: 56px;
+  }
+  
+  .custom-slideshow-wrapper .slide-author {
+    gap: 15px;
+  }
+  
+  .custom-slideshow-wrapper .author-info {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .custom-slideshow-wrapper .slide-subheading {
+    font-size: 34px;
+    margin: 30px 0 20px;
+  }
+  
+  .custom-slideshow-wrapper .slide-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+}
+
+@media screen and (max-width: 991px) {
+  
+  .custom-slideshow-wrapper.custom-slideshow--medium {
+    min-height: 450px;
+  }
+  
+  .custom-slideshow-wrapper.custom-slideshow--large {
+    min-height: 650px;
+    padding-bottom: 90px;
+  }
+  
+  .custom-slideshow-wrapper .cancer__edge--logo img {
+    max-width: 60%;
+  }
+  
+  .custom-slideshow-wrapper .slide-inner {
+    padding: 0 20px;
+  }
+
+  .custom-slideshow-wrapper .slide-heading {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  
+  .custom-slideshow-wrapper .slide-heading h1,
+  .custom-slideshow-wrapper .slide-heading h2 {
+    line-height: 48px;
+  }
+  
+}
+
+@media screen and (max-width: 749px) {
+  
+  .custom-slideshow-wrapper.custom-slideshow--medium {
+    min-height: 300px;
+  }
+  
+  .custom-slideshow-wrapper.custom-slideshow--large {
+    min-height: 500px;
+  }
+  
+  .custom-slideshow-wrapper .cancer__edge--logo img {
+    max-width: 40%;
+  }
+
+  .custom-slideshow-wrapper .slide-inner {
+    padding: 0 15px;
+  }
+  
+  .custom-slideshow-wrapper .slide-heading {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 0 25px;
+  }
+  
+  .custom-slideshow-wrapper .slide-heading h1,
+  .custom-slideshow-wrapper .slide-heading h2 {
+    line-height: 40px;
+  }
+  
+  .custom-slideshow-wrapper .author-info {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .custom-slideshow-wrapper .slide-subheading {
+    font-size: 26px;
+    margin: 30px 0 15px;
+  }
+  
+  .custom-slideshow-wrapper .slide-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+}

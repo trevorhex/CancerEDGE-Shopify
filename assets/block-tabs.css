@@ -1,0 +1,57 @@
+.block-tabs .tabs-navigation {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.block-tabs .tab-button {
+  padding: 1.3rem 1.5rem 1.8rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  appearance: none;
+  border-radius: 6px;
+  position: relative;
+  font-size: 17px;
+  border: 1px solid rgb(var(--color-border));
+  font-weight: var(--font-body-weight-bold);
+  transition: var(--transition);
+}
+
+.block-tabs .tab-button span {
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  color: rgb(var(--color-secondary-button-text));
+}
+
+.block-tabs .tab-button:hover span {
+  color: rgb(var(--color-button-text));
+}
+
+.block-tabs .tab-button.active {
+  background: rgb(var(--color-button));
+  cursor: default;
+}
+
+.block-tabs .tab-button.active span {
+  color: rgb(var(--color-button-text));
+}
+
+.block-tabs .tab-button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  top: 1rem;
+  background-image: linear-gradient(to top, rgb(var(--color-background)), transparent);
+}
+
+.block-tabs .block-tab {
+  display: none;
+}
+
+.block-tabs .block-tab.active {
+  display: block;
+}

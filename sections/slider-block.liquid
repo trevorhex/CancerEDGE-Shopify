@@ -1,0 +1,450 @@
+{{ 'slider-block.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- style -%}
+  
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    background-color: {{ section.settings.bg_color }};
+    background-image: url({{ section.settings.bg_image | image_url: width: auto, height: auto }});
+  }
+
+  .section-{{ section.id }}-padding .section-heading {
+    color: {{ section.settings.heading_color }};
+  }
+
+  .section-{{ section.id }}-padding .overview__block--items {
+    background-color: {{ section.settings.block_bg }};
+  }
+
+  .early-detection-section .early-detection-slide-number {
+    {%- if section.settings.steps_number_gradient_color != blank -%}
+      background:{{ section.settings.steps_number_gradient_color }};
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    {%- else -%}
+      color: {{ section.settings.steps_number_color }};
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 750px) {
+     
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+  }
+
+   @media screen and (max-width: 749px) {
+     
+    .section-{{ section.id }}-padding {
+      background: {{ section.settings.mobile_bg_color }};
+    }
+
+   }
+
+  @media screen and (max-width: 1366px) {
+    
+    .section-{{ section.id }}-padding {
+      padding-top: 8%;
+      padding-bottom: 8%;
+    }
+
+  }
+
+  {% if section.settings.disable_padding_bottom != blank %}
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} .section-{{ section.id }}-padding {
+        padding-bottom: 0;
+      }
+    }
+  {% endif %}
+
+  {% for block in section.blocks %}
+    
+    .block--{{ block.id }} {
+      background-color: {{ block.settings.background_color | color_to_rgb | remove: ')' | replace: 'rgb', 'rgba' | append: ', ' | append: block.settings.background_opacity | append: ')' }};
+    }
+
+    .block--{{ block.id }} .early-detection-slide-text,
+    .block--{{ block.id }} .early-detection-slide-text p {
+      color: {{ block.settings.text_color }};
+    }
+  
+    .block--{{ block.id }} .early-detection-slide-text strong {
+      color: {{ block.settings.bold_text_color }};
+    }
+    
+    .block--{{ block.id }} .early-detection-slide-link {
+      color: {{ block.settings.link_color }};
+    }
+
+    .block--{{ block.id }}.early-detection-slide {
+      border-top: 4px solid {{ block.settings.strip_color }};
+    }
+
+  {% endfor %}
+    
+{%- endstyle -%}
+
+<section class="early-detection-section section-{{ section.id }}-padding" data-section-id="{{ section.id }}">
+  <div class="page-width">
+    <div class="early-detection-section-title text-center">
+      {% if section.settings.section_heading != blank %}
+        <h2 style="color: {{ section.settings.heading_color }};">
+          {{ section.settings.section_heading }}
+        </h2>
+      {% endif %}
+      {% if section.settings.content != blank %}
+        <p>{{ section.settings.content }}</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="page-width">
+    <div class="early-detection-slider-container">
+      <div class="swiper early-detection-swiper-{{ section.id }} {% unless section.settings.enable_slider %}early-detection-no-slider {% endunless %}">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="early-detection-slide block--{{ block.id }}" data-block-id="{{ block.id }}">
+                <div class="early-detection-slide-content">
+                  <div class="early-detection-slide-content-wrapper">
+                    {% if block.settings.content != blank %}
+                      <div class="early-detection-slide-text" style="color: {{ block.settings.text_color }};">
+                        {{ block.settings.content }}
+                      </div>
+                    {% endif %}
+                    
+                    {% if block.settings.link_text != blank and block.settings.link_url != blank %}
+                      <a href="{{ block.settings.link_url }}" aria-label="{{ block.settings.link_text }}"{% if block.settings.enable_new_tab != blank %} target="_blank"{% endif %}
+                        class="early-detection-slide-link"
+                        style="color: {{ block.settings.link_color }}"
+                        role="button";>
+                        {{ block.settings.link_text }}
+                      </a>
+                    {% endif %}
+                  </div>
+
+                  <div class="early-detection-slide-number">
+                  {{ forloop.index }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {% if section.settings.enable_slider %}
+      <div class="early-detection-prev early-detection-button-prev-{{ section.id }}">
+        {% render 'swiper-prev-arrow' %}
+      </div>
+      <div class="early-detection-next early-detection-button-next-{{ section.id }}">
+        {% render 'swiper-next-arrow' %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if section.settings.enable_slider %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const earlyDetectionSections = document.querySelectorAll('.early-detection-section[data-section-id]');
+      
+      earlyDetectionSections.forEach(function (section) {
+        const sectionId = section.getAttribute('data-section-id');
+        initializeEarlyDetectionSwiper(sectionId);
+      });
+    });
+
+    function initializeEarlyDetectionSwiper(sectionId) {
+      const swiperContainer = document.querySelector(`.early-detection-swiper-${sectionId}`);
+      const nextButton = document.querySelector('.early-detection-next');
+      const prevButton = document.querySelector('.early-detection-prev');
+
+      if (!swiperContainer) return;
+
+      const swiper = new Swiper(`.early-detection-swiper-${sectionId}`, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: false, // loop must be false for disable logic to work
+        grabCursor: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }
+        },
+        navigation: {
+          nextEl: nextButton,
+          prevEl: prevButton,
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+        },
+        touchRatio: 1,
+        touchAngle: 45,
+        simulateTouch: true,
+        a11y: {
+          prevSlideMessage: 'Previous slide',
+          nextSlideMessage: 'Next slide',
+        },
+        autoHeight: false,
+        speed: 400,
+        effect: 'slide',
+        on: {
+          init: function () {
+            updateNavButtons(this, nextButton, prevButton);
+          },
+          slideChange: function () {
+            updateNavButtons(this, nextButton, prevButton);
+          },
+          resize: function () {
+            this.update();
+          }
+        }
+      });
+
+      swiperContainer.swiperInstance = swiper;
+    }
+
+    function updateNavButtons(swiper, nextButton, prevButton) {
+      if (!swiper || !nextButton || !prevButton) return;
+
+      // Handle prev button
+      if (swiper.isBeginning) {
+        prevButton.classList.add('disabled');
+      } else {
+        prevButton.classList.remove('disabled');
+      }
+
+      // Handle next button
+      if (swiper.isEnd) {
+        nextButton.classList.add('disabled');
+      } else {
+        nextButton.classList.remove('disabled');
+      }
+    }
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Early Detection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "steps_number_color",
+      "label": "Steps Number Color",
+      "default": "#08024C",
+      "info": "This will only apply if the Steps Number Gradient Color is not set."
+    },
+    {
+      "type": "color_background",
+      "id": "steps_number_gradient_color",
+      "label": "Steps Number Gradient Color",
+      "default": "linear-gradient(135deg, #6950A1 0%, #21409A 100%)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_slider",
+      "label": "Enable slider",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 110
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_padding_bottom",
+      "label": "Disable Padding bottom",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 50
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Early Detection Saves Lives"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Section Content"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#2c5aa0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Add your content here. You can include <strong>bold text</strong> and other formatting.</p>"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "SOURCE"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_new_tab",
+          "label": "Open link in new tab",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#231F20"
+        },
+        {
+          "type": "color",
+          "id": "bold_text_color",
+          "label": "Bold Text Color",
+          "default": "#e91e63"
+        },
+        {
+          "type": "color",
+          "id": "link_color",
+          "label": "Link Color",
+          "default": "#BD306F"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#f0f4ff"
+        },
+        {
+          "type": "color",
+          "id": "strip_color",
+          "label": "Strip Color",
+          "default": "#f0f4ff"
+        },
+        {
+          "type": "range",
+          "id": "background_opacity",
+          "label": "Background Opacity",
+          "min": 0,
+          "max": 1,
+          "step": 0.1,
+          "default": 0.5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Early Detection",
+      "blocks": [
+        {
+          "type": "content_block",
+          "settings": {
+            "content": "<p>Currently, an estimated <strong>17 million cancer survivors</strong> are living in the United States, with <strong>64% of them aged 65 years or older</strong>. By 2040, the number of cancer survivors is expected to <strong>increase to 26 million</strong>, with <strong>73% of them being 65 years or older and nearly 50% aged over 75</strong>.</p>",
+            "background_color": "#f0f4ff"
+          }
+        },
+        {
+          "type": "content_block",
+          "settings": {
+            "content": "<p>In women aged 50-64, cancer incidence rates now exceed those in men, and for <strong>women under 50</strong>, these rates have <strong>increased to 82% higher</strong> than those of their male counterparts, <strong>up from 51% in 2002</strong>. This includes lung cancer, <strong>where incidence among women younger than 65 now exceeds that in men</strong>.</p>",
+            "background_color": "#fff0f5"
+          }
+        },
+        {
+          "type": "content_block",
+          "settings": {
+            "content": "<p>Regular screening and early detection can <strong>significantly improve treatment outcomes</strong> and survival rates. Studies show that <strong>early-stage cancer detection</strong> leads to <strong>5-year survival rates of over 90%</strong> for many cancer types.</p>",
+            "background_color": "#f0fff4"
+          }
+        },
+        {
+          "type": "content_block",
+          "settings": {
+            "content": "<p>Advanced diagnostic technologies and <strong>personalized screening protocols</strong> are making early detection more accessible and accurate than ever before, helping to <strong>save thousands of lives</strong> each year.</p>",
+            "background_color": "#fffbf0"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

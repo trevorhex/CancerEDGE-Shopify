@@ -1,0 +1,94 @@
+{%- liquid
+  assign is_external = false
+  if block.settings.button_url contains 'http'
+    unless block.settings.button_url contains shop.url
+      assign is_external = true
+    endunless
+  endif
+-%}
+
+{% if block.settings.button_url != blank or block.settings.video_url != blank %}
+  <a
+    href="{% if block.settings.button_url != blank %}{{ block.settings.button_url }}{% else %}{{ block.settings.video_url }}{% endif %}"
+    class="button-block button--{{ block.settings.button_size }}{% if block.settings.button_style == 'outlined' %} button--outlined{% else %} button--filled{% endif %}{% if block.settings.video_url != blank %} glightbox{% endif %}{% if block.settings.video_url != blank %} button--with-icon{% endif %}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}"
+    {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}
+    {% if block.settings.video_url != blank %}aria-label="{{ block.settings.button_text }} (opens video in lightbox)"{% elsif is_external %}aria-label="{{ block.settings.button_text }} (opens in new window)"{% endif %}
+    {% if block.settings.open_faq_modal %}data-faq-modal{% endif %}
+  >
+    {% if block.settings.video_url != blank %}<span class="svg-wrapper" aria-hidden="true">{{- 'icon-video.svg' | inline_asset_content -}}</span>{% endif %}
+    {{ block.settings.button_text }}
+    {% if is_external %}<span class="visually-hidden"> (opens in new window)</span>{% endif %}
+  </a>
+{% else %}
+  <button
+    type="button"
+    class="button-block button--{{ block.settings.button_size }}{% if block.settings.button_style == 'outlined' %} button--outlined{% else %} button--filled{% endif %}"
+    disabled
+  >
+    {{ block.settings.button_text }}
+  </button>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:blocks.button.label",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "t:blocks.button.settings.button_text.label"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "t:blocks.button.settings.button_url.label"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "t:sections.hero.blocks.slide.settings.video_url.label",
+      "info": "t:sections.hero.blocks.slide.settings.video_url.info",
+      "accept": ["youtube", "vimeo"]
+    },
+    {
+      "type": "checkbox",
+      "id": "open_faq_modal",
+      "label": "t:blocks.button.settings.open_faq_modal.label"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "t:blocks.button.settings.button_style.label",
+      "options": [
+        { "value": "filled", "label": "t:blocks.button.settings.button_style.options__1.label" },
+        { "value": "outlined", "label": "t:blocks.button.settings.button_style.options__2.label" }
+      ],
+      "default": "filled"
+    },
+    {
+      "type": "select",
+      "id": "button_size",
+      "label": "t:blocks.button.settings.button_size.label",
+      "options": [
+        { "value": "small", "label": "t:blocks.button.settings.button_size.options__1.label" },
+        { "value": "medium", "label": "t:blocks.button.settings.button_size.options__2.label" },
+        { "value": "large", "label": "t:blocks.button.settings.button_size.options__3.label" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.all.settings.css_header.content"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "t:blocks.all.settings.css_class.label",
+      "info": "t:blocks.all.settings.css_class.info"
+    },
+  ],
+  "presets": [
+    { "name": "t:blocks.button.presets.name" }
+  ]
+}
+{% endschema %}

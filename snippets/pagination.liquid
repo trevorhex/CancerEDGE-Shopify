@@ -1,0 +1,88 @@
+{% comment %}
+  Renders a set of links for paginated results. Must be used within paginate tags.
+
+  Usage:
+  {% paginate results by 2 %}
+    {% render 'pagination', paginate: paginate, anchor: '#yourID' %}
+  {% endpaginate %}
+
+  Accepts:
+  - paginate: {Object}
+  - anchor: {String} (optional) This can be added so that on page reload it takes you to wherever you've placed your anchor tag.
+{% endcomment %}
+
+{{ 'component-pagination.css' | asset_url | stylesheet_tag }}
+
+{%- if paginate.parts.size > 0 -%}
+  <div class="pagination-wrapper" data-page="{{ paginate.current_page }}">
+    <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+      <ul class="pagination__list list-unstyled" role="list">
+        {%- if paginate.previous -%}
+          <li>
+            <a
+              href="{{ paginate.previous.url }}{{ anchor }}"
+              class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce"
+              aria-label="{{ 'general.pagination.previous' | t }}"
+            >
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57" fill="none">
+                  <circle cx="28.0851" cy="28.0851" r="28.0851" transform="matrix(-1 0 0 1 56.17 0)" fill="white"/>
+                  <circle cx="28.0851" cy="28.0851" r="27.5234" transform="matrix(-1 0 0 1 56.17 0)" stroke="#231F20" stroke-opacity="0.1" stroke-width="1.1234"/>
+                  <path d="M25.4785 22.4683L20.2212 28.0853L25.4785 33.7023" stroke="#21409A" stroke-width="2.24681" stroke-miterlimit="13.33" stroke-linecap="square"/>
+                  <path d="M21.0098 28.0852H35.949" stroke="#21409A" stroke-width="2.24681" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+        {%- endif -%}
+
+        {%- for part in paginate.parts -%}
+          <li>
+            {%- if part.is_link -%}
+              <a
+                href="{{ part.url }}{{ anchor }}"
+                class="pagination__item link"
+                aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+              >
+                {{- part.title -}}
+              </a>
+            {%- else -%}
+              {%- if part.title == paginate.current_page -%}
+                <a
+                  role="link"
+                  aria-disabled="true"
+                  class="pagination__item pagination__item--current light"
+                  aria-current="page"
+                  aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+                >
+                  {{- part.title -}}
+                </a>
+              {%- else -%}
+                <span class="pagination__item">{{ part.title }}</span>
+              {%- endif -%}
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+
+        {%- if paginate.next -%}
+          <li>
+            <a
+              href="{{ paginate.next.url }}{{ anchor }}"
+              class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce"
+              aria-label="{{ 'general.pagination.next' | t }}"
+            >
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57" fill="none">
+                  <circle cx="28.0851" cy="28.0851" r="28.0851" transform="matrix(-1 0 0 1 57.0002 -0.000244141)" fill="white"/>
+                  <circle cx="28.0851" cy="28.0851" r="27.5234" transform="matrix(-1 0 0 1 57.0002 -0.000244141)" stroke="#231F20" stroke-opacity="0.1" stroke-width="1.1234"/>
+                  <path d="M31.5215 22.468L36.7788 28.085L31.5215 33.7021" stroke="#BD306F" stroke-width="2.24681" stroke-miterlimit="13.33" stroke-linecap="square"/>
+                  <path d="M35.9902 28.085H21.051" stroke="#BD306F" stroke-width="2.24681" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+        {%- endif -%}
+      </ul>
+    </nav>
+  </div>
+{%- endif -%}

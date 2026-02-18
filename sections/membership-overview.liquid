@@ -1,0 +1,428 @@
+{{ 'membership-overview.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- style -%}
+  
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    background-color: {{ section.settings.bg_color }};
+    background-image: url({{ section.settings.bg_image | image_url: width: auto, height: auto }});
+  }
+
+  .section-{{ section.id }}-padding .section-heading {
+    color: {{ section.settings.heading_color }};
+  }
+
+  .section-{{ section.id }}-padding .overview__block--items {
+    background-color: {{ section.settings.block_bg }};
+  }
+
+  .section-{{ section.id }}-padding.padding-top-0-true {
+    padding-top:0;
+  }
+
+  #shopify-section-{{ section.id }} .membership__overview--section .label_subtext_inner p {
+    font-size: {{ section.settings.label_subtext_font_size }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+     
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+  }
+
+  @media screen and (max-width: 1366px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 8%;
+      padding-bottom: 8%;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 16%;
+      padding-bottom: 16%;
+    }
+  }
+
+   @media screen and (max-width: 749px) {
+     
+    .section-{{ section.id }}-padding {
+      background: {{ section.settings.mobile_bg_color }};
+    }
+
+   }
+
+  {% for block in section.blocks %}
+    
+    .block--{{ block.id }} .block-heading {
+      color: {{ block.settings.block_primary_color }};
+    }
+
+    .block--{{ block.id }} .block-header {
+      border-color: {{ block.settings.block_primary_color }};
+    }
+
+    {% if block.settings.tick != blank %}
+    
+      .block--{{ block.id }} .block-card-point ul li:before {
+        background-image: url({{ block.settings.tick | image_url: width: auto, height: auto }});
+      }
+
+    {% endif %}
+
+  {% endfor %}
+    
+{%- endstyle -%}
+
+<section class="membership__overview--section slider_on_mobile_{{ section.settings.slider_on_mobile }} section-{{ section.id }}-padding margin-minue_{{ section.settings.margin-minue}} padding-top-0-{{ section.settings.padding-top-0 }} small_header_{{ section.settings.small_header }}">
+
+  <div class="pattern-commen-class membership-left-pattern">
+    {% comment %}{% render 'icon-pattern-expert-team-l' %}{% endcomment %}
+    {% render 'icon-pattern-membership-l' %}
+  </div>
+
+  {%- if section.settings.longevity_life_overlay != blank -%}
+    <div class="cancer__edge--logo main__logo">
+      <img src="{{ section.settings.longevity_life_overlay | image_url: width: 1920 }}" alt="{{ section.settings.longevity_life_overlay.alt }}" class="longevity-life-logo" width="{{ section.settings.longevity_life_overlay.width }}" height="{{ section.settings.longevity_life_overlay.height }}">
+    </div>
+  {%- endif -%}
+  
+  <div class="page-width">
+
+    <div class="section-header">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="section-heading center" style="color: {{ section.settings.heading_color }}">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+  
+      {%- if section.settings.subheading != blank -%}
+        <h3 class="section-description rte center">{{ section.settings.subheading }}</h3>
+      {%- endif -%}
+    </div>
+    
+    <div class="swiper overview-blocks-slider">
+      <div class="overview-blocks{% if section.settings.slider_on_mobile == true %} swiper-wrapper{% endif %}">
+        {% for block in section.blocks %}
+          <div class="overview__block--items block--{{ block.id }}{% if section.settings.slider_on_mobile == true %} swiper-slide{% endif %}">
+            <div class="block-header">
+              {% if block.settings.heading_icon %}
+                {{ block.settings.heading_icon | image_url: width: 73 | image_tag: alt: block.settings.heading_icon | default: 'Heading Icon', fetchpriority: fetch_priority, loading: 'lazy' }}
+              {% endif %}
+              <h3 class="block-heading">{{ block.settings.block_heading }}</h3>
+            </div>
+            
+            {% if block.settings.block_subheading != blank %}
+              <h4 class="block-subheading">{{ block.settings.block_subheading }}</h4>
+            {% endif %}
+
+            {% if block.settings.block_description != blank %}
+              <div class="block-description">{{ block.settings.block_description }}</div>
+            {% endif %}
+
+            {% if block.settings.card_points != blank %}
+              <div class="block-card-point {% if block.settings.tick != blank %}tick__image--enabled{% endif %}">{{ block.settings.card_points }}</div>
+            {% endif %}
+
+            {% if block.settings.button_text != blank %}
+              <a href="{{ block.settings.button_url }}" class="button button--primary">{{ block.settings.button_text }}</a>
+            {% endif %} 
+            
+          </div>
+        {% endfor %}
+      </div>
+      {%- if section.settings.slider_on_mobile == true -%}
+        <div class="swiper-button-wrap">
+          <div class="overview-card-prev swiper-arrow">
+            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.67969 2L1.99992 7L6.67969 12" stroke="currentColor" stroke-width="2" stroke-miterlimit="13.33" stroke-linecap="square"/>
+            <path d="M2.70186 7H16" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="overview-card-next swiper-arrow">
+            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.3203 2L15.0001 7L10.3203 12" stroke="currentColor" stroke-width="2" stroke-miterlimit="13.33" stroke-linecap="square"/>
+            <path d="M14.2981 7H1" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.disclaimer != blank -%}
+      <p class="membership__overview--disclaimer center">{{ section.settings.disclaimer }}</p>
+    {%- endif -%}
+
+    {% if section.settings.label_subtext != blank %}
+      <div class="label_subtext_outer">
+        <div class="label_subtext_inner center">
+          <p>{{ section.settings.label_subtext }}</p>
+        </div>
+      </div>
+    {% endif %}
+
+    {%- if section.settings.button_label != blank -%}
+    <div class="button__wrapper">
+      <a
+        {% if section.settings.button_link == blank %}
+          role="link" aria-disabled="true"
+        {% else %}
+          href="{{ section.settings.button_link }}"
+        {% endif %}
+        class="button button--primary"
+        {{ section.shopify_attributes }}
+      >
+        {{ section.settings.button_label | escape }}
+      </a>
+    </div>
+    {%- endif -%}
+    
+  </div>
+  {% comment %}
+  <div class="pattern-commen-class experts-right-pattern">
+    {% render 'icon-pattern-expert-team-r' %}
+  </div>
+  {% endcomment %}
+  
+</section>
+
+{% schema %}
+{
+  "name": "Membership Overview",
+  "tag": "section",
+  "class": "membership-overview-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Membership Overview"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Navigating your cancer risk can feel complex. Your Longevity Life+ membership is more than just a test...</p>"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer text"
+    },
+    {
+      "type": "text",
+      "id": "label_subtext",
+      "label": "Label Subtext"
+    },
+    {
+      "type": "range",
+      "id": "label_subtext_font_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 18,
+      "label": "Label subtext font size"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+      "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "longevity_life_overlay",
+      "label": "Longevity Life+ overlay image"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background",
+      "default": "#D9D9D9"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Text Color",
+      "default": "#2E3490"
+    },
+    {
+      "type": "color",
+      "id": "block_bg",
+      "label": "Block Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "slider_on_mobile",
+      "label": "Enabled slider on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "margin-minue",
+      "label": "Margin top minus enabled"
+    },
+    {
+      "type": "checkbox",
+      "id": "padding-top-0",
+      "label": "Padding top 0"
+    },
+    {
+      "type": "checkbox",
+      "id": "small_header",
+      "label": "Small Header"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 110
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Membership Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "heading_icon",
+          "label": "Heading Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_heading",
+          "label": "Heading",
+          "default": "Ongoing Navigated Support & Advocacy"
+        },
+        {
+          "type": "text",
+          "id": "block_subheading",
+          "label": "block Subheading",
+          "default": "The care you need, the moment you need it."
+        },
+        {
+          "type": "text",
+          "id": "block_description",
+          "label": "block Description",
+          "default": "Our oncologist-led care team is with you throughout your journey—you're never alone."
+        },
+        {
+          "type": "image_picker",
+          "id": "tick",
+          "label": "Bullet Point Image"
+        },
+        {
+          "type": "richtext",
+          "id": "card_points",
+          "label": "Bullet Points (one per line)",
+          "default": "<p>Access to clinically guided cancer care\nGuidance adapting your plan as new research emerges\nAccess to leading-edge clinical trials should your diagnosis change</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Add to Cart"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "header",
+            "content": "Color"
+        },
+        {
+          "type": "color",
+          "id": "block_primary_color",
+          "label": "Block Color",
+          "default": "#39BBEC",
+          "info": "It will be used for heading,border and bullet points."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Membership Overview",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+

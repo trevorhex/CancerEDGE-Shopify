@@ -1,0 +1,103 @@
+{% style %}
+  @media (min-width: 990px) {
+    #shopify-block-{{ block.id }} {
+      flex: 0 1 {% if block.settings.max_width != blank %}{{ block.settings.max_width }}{% else %}auto{% endif %};
+    }
+  }
+
+  .block-gallery-container-{{ block.id }} .block-gallery-view {
+    border-radius: {{ block.settings.border_radius }}px;
+    {%- if block.settings.add_drop_shadow == true -%}
+      box-shadow: 0 2px 54px rgba(var(--color-shadow), 0.28);
+    {%- endif -%}
+  }
+
+  .block-gallery-container-{{ block.id }} .block-gallery-view img {
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .block-gallery-container-{{ block.id }} .shopify-block:first-child .block-gallery-image-link,
+  .block-gallery-container-{{ block.id }} .shopify-block:first-child .block-gallery-image-link::after {
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+{% endstyle %}
+
+<div 
+  class="block-gallery-container block-gallery-container-{{ block.id }}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}" 
+  data-gallery="gallery-{{ block.id }}"
+  role="region"
+  aria-label="{{ block.settings.aria_label | default: 'Image Gallery' }}"
+  {% if block.settings.auto_rotate == true %}
+    data-auto-rotate="true"
+    data-auto-rotate-speed="{{ block.settings.auto_rotate_speed | times: 1000 }}"
+  {% endif %}
+>
+  <div class="block-gallery-view" data-gallery-view></div>
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.gallery.label",
+  "settings": [
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "t:blocks.gallery.settings.max_width.label",
+      "info": "t:blocks.gallery.settings.max_width.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_drop_shadow",
+      "label": "t:blocks.gallery.settings.add_drop_shadow.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:blocks.gallery.settings.border_radius.label",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "t:blocks.slider.settings.auto_rotate.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "auto_rotate_speed",
+      "label": "t:blocks.slider.settings.auto_rotate_speed.label",
+      "unit": "sec",
+      "default": 4,
+      "min": 1,
+      "max": 10,
+      "step": 0.5
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "t:blocks.gallery.settings.aria_label.label",
+      "info": "t:blocks.gallery.settings.aria_label.info"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.all.settings.css_header.content"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "t:blocks.all.settings.css_class.label",
+      "info": "t:blocks.all.settings.css_class.info"
+    },
+  ],
+  "blocks": [{ "type": "_gallery-image" }],
+  "presets": [
+    { "name": "t:blocks.gallery.presets.name" }
+  ]
+}
+{% endschema %}

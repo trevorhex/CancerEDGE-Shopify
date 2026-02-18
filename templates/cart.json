@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "custom_css": [
+        "h1 {text-transform: capitalize;}",
+        ".caption-with-letter-spacing {display: none;}",
+        ".quantity-popover-container {display: none;}",
+        ".icon.icon-remove {display: none;}"
+      ],
+      "settings": {
+        "bg_color": "#f2f4fa",
+        "button_url": "/cart/add?id=50603839652142&selling_plan=692496662830",
+        "button_text": "Join Longevity"
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "zip_code_checker_w8wEKE": {
+          "type": "zip_code_checker",
+          "settings": {
+            "title": "Check Your State Eligibility Here",
+            "description": "<p>Membership is available in select states. Please check your eligibility before completing your purchase.</p><p><em>State availability: AL, AR, AZ, CT, GA, IL, IN, IA, KS, KY, MD, MN, MS, NE, NJ, NM, ND, OH, PA, SC, SD, VT, WI, WY</em></p>",
+            "state_abbreviations": "AL, AZ, AR, CT, GA, IL, IN, IA, KS, KY, MD, MN, MS, NE, NJ, NM, ND, OH, PA, SC, SD, VT, WI, WY"
+          }
+        },
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "zip_code_checker_w8wEKE",
+        "subtotal",
+        "buttons"
+      ],
+      "custom_css": [
+        ".tax-note.caption-large.rte {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer"
+  ]
+}

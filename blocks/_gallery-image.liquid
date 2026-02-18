@@ -1,0 +1,41 @@
+{% comment %} TODO: add lightbox option {% endcomment %}
+{% comment %} <a href="{{ block.settings.image | image_url: width: 1200 }}" 
+  class="glightbox block-gallery-image-link" 
+  data-gallery="gallery-{{ section.id }}"
+  aria-label="{{ block.settings.alt_text | escape }} - Opens in lightbox"
+  role="button"
+  {% comment %} data-glightbox="description: {{ block.settings.alt_text | escape }}" {% endcomment %}
+> {% endcomment %}
+  <span class="block-gallery-image-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <img
+      class="block-gallery-image block-image block-image-gallery-{{ block.id }}"
+      width="auto"
+      height="auto"
+      loading="lazy"
+      src="{{ block.settings.image | image_url: width: 1500 }}"
+      alt="{{ block.settings.alt_text | escape | default: block.settings.image.alt | escape }}"
+    />
+  </span>
+{% comment %} </a> {% endcomment %}
+
+{% schema %}
+{
+  "name": "t:blocks.gallery_image.label",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:blocks.image.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "t:blocks.image.settings.alt_text.label",
+      "info": "t:blocks.image.settings.alt_text.info"
+    }
+  ],
+  "presets": [
+    { "name": "t:blocks.gallery_image.presets.name" }
+  ]
+}
+{% endschema %}

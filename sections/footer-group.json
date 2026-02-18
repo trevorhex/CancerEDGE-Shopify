@@ -1,0 +1,260 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "container_GPwiUP": {
+          "type": "container",
+          "name": "t:blocks.container.presets.name",
+          "settings": {
+            "direction": "row",
+            "reverse": false,
+            "alignment_horizontal": "space-between",
+            "alignment_vertical": "flex-start",
+            "flex_grow": "",
+            "gap": 8,
+            "direction_tablet": "column",
+            "reverse_tablet": true,
+            "alignment_horizontal_tablet": "center",
+            "alignment_vertical_tablet": "center",
+            "gap_tablet": 6,
+            "direction_mobile": "column",
+            "reverse_mobile": true,
+            "alignment_horizontal_mobile": "center",
+            "alignment_vertical_mobile": "center",
+            "gap_mobile": 4,
+            "css_class": ""
+          },
+          "blocks": {
+            "container_LqXDBx": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "column",
+                "reverse": false,
+                "alignment_horizontal": "flex-start",
+                "alignment_vertical": "flex-start",
+                "flex_grow": "",
+                "gap": 3.5,
+                "direction_tablet": "column",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "center",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 3,
+                "direction_mobile": "column",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "center",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 3,
+                "css_class": ""
+              },
+              "blocks": {
+                "container_nDjUVa": {
+                  "type": "container",
+                  "name": "t:blocks.container.presets.name",
+                  "settings": {
+                    "direction": "row",
+                    "reverse": false,
+                    "alignment_horizontal": "center",
+                    "alignment_vertical": "center",
+                    "flex_grow": "",
+                    "gap": 2,
+                    "direction_tablet": "column",
+                    "reverse_tablet": false,
+                    "alignment_horizontal_tablet": "center",
+                    "alignment_vertical_tablet": "center",
+                    "gap_tablet": 1,
+                    "direction_mobile": "column",
+                    "reverse_mobile": false,
+                    "alignment_horizontal_mobile": "center",
+                    "alignment_vertical_mobile": "center",
+                    "gap_mobile": 2,
+                    "css_class": ""
+                  },
+                  "blocks": {
+                    "image_FnN6WM": {
+                      "type": "image",
+                      "name": "t:blocks.image.presets.name",
+                      "settings": {
+                        "image": "shopify://shop_images/Logo---CancerEDGE---Dark-BG---RGB.png",
+                        "alt_text": "Prudential",
+                        "caption": "",
+                        "sub_caption": "",
+                        "max_width": "200px",
+                        "add_drop_shadow": false,
+                        "border_radius": 0,
+                        "link": "https://www.prudential.com",
+                        "video_url": "",
+                        "open_in_new_window": true,
+                        "link_label": "",
+                        "css_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "image_FnN6WM"
+                  ]
+                },
+                "text_content_Hznd8G": {
+                  "type": "text-content",
+                  "name": "t:blocks.text-content.presets.name",
+                  "settings": {
+                    "color_scheme": "scheme-5",
+                    "heading": "",
+                    "heading_tag": "h2",
+                    "heading_font_size": 20,
+                    "text": "<p>Our mission is to provide individuals across the U.S. with the tools, knowledge, and guidance needed to navigate cancer — before, during, and after diagnosis.</p>",
+                    "text_font_size": 14,
+                    "gap": 2,
+                    "text_alignment": "left",
+                    "gap_tablet": 2,
+                    "text_alignment_tablet": "center",
+                    "gap_mobile": 2,
+                    "text_alignment_mobile": "center",
+                    "rotate_heading": false,
+                    "rotate_text": "",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                },
+                "copyright_pJEEc7": {
+                  "type": "copyright",
+                  "name": "t:blocks.copyright.presets.name",
+                  "settings": {
+                    "font_size": 13,
+                    "text_color": "#8c9bb8",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "container_nDjUVa",
+                "text_content_Hznd8G",
+                "copyright_pJEEc7"
+              ]
+            },
+            "container_p8aikh": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "column",
+                "reverse": false,
+                "alignment_horizontal": "flex-start",
+                "alignment_vertical": "flex-start",
+                "flex_grow": "",
+                "gap": 2,
+                "direction_tablet": "column",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "center",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 2,
+                "direction_mobile": "column",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "center",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 2,
+                "css_class": ""
+              },
+              "blocks": {
+                "menu_C7CEBk": {
+                  "type": "menu",
+                  "name": "t:blocks.menu.presets.name",
+                  "settings": {
+                    "heading": "Quick Links",
+                    "heading_tag": "h2",
+                    "heading_font_size": 14,
+                    "heading_color": "#8c9bb8",
+                    "menu": "footer",
+                    "menu_font_size": 14,
+                    "gap": 1.5,
+                    "aria_label": "",
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "menu_C7CEBk"
+              ]
+            },
+            "container_iLTJYU": {
+              "type": "container",
+              "name": "t:blocks.container.presets.name",
+              "settings": {
+                "direction": "column",
+                "reverse": false,
+                "alignment_horizontal": "flex-start",
+                "alignment_vertical": "flex-start",
+                "flex_grow": "",
+                "gap": 2,
+                "direction_tablet": "column",
+                "reverse_tablet": false,
+                "alignment_horizontal_tablet": "center",
+                "alignment_vertical_tablet": "center",
+                "gap_tablet": 2,
+                "direction_mobile": "column",
+                "reverse_mobile": false,
+                "alignment_horizontal_mobile": "center",
+                "alignment_vertical_mobile": "center",
+                "gap_mobile": 2,
+                "css_class": ""
+              },
+              "blocks": {
+                "newsletter_form_P8zn7k": {
+                  "type": "newsletter-form",
+                  "name": "t:blocks.newsletter-form.presets.name",
+                  "settings": {
+                    "heading": "Stay Connected",
+                    "heading_tag": "h2",
+                    "heading_font_size": 28,
+                    "gap": 2,
+                    "css_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "newsletter_form_P8zn7k"
+              ]
+            }
+          },
+          "block_order": [
+            "container_LqXDBx",
+            "container_p8aikh",
+            "container_iLTJYU"
+          ]
+        }
+      },
+      "block_order": [
+        "container_GPwiUP"
+      ],
+      "custom_css": [
+        ".newsletter-a-symbol,.footer__disclosure {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "footer_gradient_color": "#0e254e",
+        "testimonials_title": "What Members Say",
+        "show_testimonials": true,
+        "disclosure_title": "",
+        "disclosure_content": ""
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

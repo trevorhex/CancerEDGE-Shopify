@@ -1,0 +1,61 @@
+{% style %}
+
+{% endstyle %}
+
+<div class="block-faqs block-faqs-{{ block.id }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}">
+  {% assign faqs = shop.metaobjects.faq.values %}
+  {% assign categories = shop.metaobjects.faq_category.values | sort: 'sort_order' %}
+
+  {% for category in categories %}
+    <section class="faq-modal__section" aria-labelledby="faq-category-{{ category.name | handle }}">
+      <h3 id="faq-category-{{ category.name | handle }}" class="faq-section-title">{{ category.name }}</h3>
+      <div class="faq-modal__items" role="list">
+        {% assign category_faq_count = 0 %}
+        {% for faq in faqs %}
+          {% if faq.category.value.name == category.name %}
+            {% assign category_faq_count = category_faq_count | plus: 1 %}
+            <details class="faq-item" role="listitem">
+              <summary
+                id="faq-question-{{ forloop.index }}"
+                class="faq-item__question"
+                aria-expanded="false"
+                role="button"
+                aria-controls="faq-answer-{{ forloop.index }}"
+              >
+                {{ faq.question }}
+                <span class="svg-wrapper faq-toggle-icon" aria-hidden="true">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+              </summary>
+              <div
+                id="faq-answer-{{ forloop.index }}"
+                class="faq-item__answer" 
+                aria-labelledby="faq-question-{{ forloop.index }}"
+                role="region"
+              >{{ faq.answer | metafield_tag }}</div>
+            </details>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.faqs.label",
+  "settings": [
+   {
+      "type": "header",
+      "content": "t:blocks.all.settings.css_header.content"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "t:blocks.all.settings.css_class.label",
+      "info": "t:blocks.all.settings.css_class.info"
+    },
+  ],
+  "presets": [
+    { "name": "t:blocks.faqs.presets.name" }
+  ]
+}
+{% endschema %}

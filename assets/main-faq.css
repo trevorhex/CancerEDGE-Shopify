@@ -1,0 +1,164 @@
+.template_page .faq__page-container {
+  position: relative;
+  z-index: 1;
+}
+
+.template_page .accordion {
+  margin: 0 0 25px;
+}
+.template_page .accordion summary {
+  background: #e5f0f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.accordion__content {
+  margin: 0 auto;
+  max-width: 1092px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+  margin-left: 0;
+}
+
+.template_page .accordion__content {
+  background: #e5f0f1;
+  max-width: 100%;
+  padding-bottom: 25px;
+}
+
+.accordion__content,
+.accordion__content * {
+  color: #000;
+  font-family: var(--font-body-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.accordion details div.accordion__content.rte ul li {
+  list-style: outside;
+}
+
+.template_page .accordion details:first-child {
+  border-top: none;
+}
+
+.template_page .accordion details {
+  border: none;
+  background: #e5f0f1;
+}
+
+.template_page .accordion details summary {
+  padding: 35px 40px;
+}
+
+.template_page .accordion__title {
+  margin: 0;
+  color: #08024c;
+  font-family: var(--font-body-family);
+  font-size: 24px; 
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  flex: 1;
+}
+
+summary[aria-expanded="true"] .accordion__title {
+  color: #08024c;
+}
+
+.template_page .accordion details[open] .accordion__title + svg {
+  transform: rotate(180deg);
+}
+
+.template_page .accordion__title + svg path {
+  stroke: #08024c;
+}
+
+.template_page .accordion details[open] .accordion__title + svg path {
+  stroke: #9bb8bb;
+}
+
+.template_page .accordion details[open] {
+  box-shadow: 0px 34px 100px 0px rgba(33, 64, 154, 0.07);
+  background: #e5f0f1;
+  position: relative;
+}
+
+.main_faq_heading_faq_page {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -.44px;
+    margin: 30px 0 20px;
+    align-content: center;
+}
+
+@media (max-width: 989px) {
+
+  .main-page-title, .main-page-title * {
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: normal;
+  }
+
+ .main_faq_heading_faq_page {
+    font-size: 18px;
+    line-height: 24px;
+ }
+ 
+  
+}
+
+@media (max-width: 749px) {
+
+  .template_page .accordion__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .bg__img--enabled {
+    min-height: 300px;
+  }
+
+  .template_page .accordion details summary {
+    gap: 10px;
+    padding: 25px;
+  }
+
+  .accordion__content {
+    padding: 0 25px;
+  }
+
+}
+
+@media (max-width: 579px) {
+
+  .main-page-title, .main-page-title * {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+}
+
+@media (max-width: 479px) {
+  
+  .template_page .accordion details {
+    padding: 20px;
+  }
+
+  .template_page .accordion__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .template_page .accordion__title + svg {
+    width: 16px;
+  }
+  
+}

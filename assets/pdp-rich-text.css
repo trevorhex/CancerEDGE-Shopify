@@ -1,0 +1,56 @@
+.product__rich--text .rich-text__blocks {
+  max-width: 100%;  
+}
+
+.product__rich--text .rich-text__heading {
+  text-align: center;
+  margin: 0 0 3rem;
+  color: var(--pink);
+  border-bottom: 1px solid var(--pink);
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.product__rich--text .rich-text__text.rte ul {
+  list-style-position: outside;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+.product__rich--text .rich-text__text.rte ul li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.product__rich--text .rich-text__text.rte,
+.product__rich--text .rich-text__text.rte * {
+  font-size: 16px;
+  color: var(--black);
+}
+
+.product__rich--text .rich-text__text.rte ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+  top: 6px;
+  background-image: url(//canceredge.myshopify.com/cdn/shop/files/pink-tick.svg?v=1750773920);
+  background-size: contain;
+}
+
+.product__rich--text .rich-text__caption {
+  color: var(--black);
+  letter-spacing: normal;
+  font-size: 16px;
+  text-align: center;
+  border-top: 1px solid var(--pink);
+  display: block;
+  padding-top: 30px;
+  margin-top: 30px;
+  font-weight: 500;
+}

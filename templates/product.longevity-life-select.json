@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.vendor }}</p>",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "collapsible_tab_aeE7qm": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Shipping",
+            "icon": "none",
+            "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "collapsible_tab_aeE7qm"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-d6b3b39b-b913-496d-b058-82b4d8b5a6b0",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 110,
+        "padding_bottom": 120,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "bg_image": "shopify://shop_images/Products.png",
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-d6b3b39b-b913-496d-b058-82b4d8b5a6b0",
+        "image_ratio": "landscape",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_description": true,
+        "quick_add": "standard",
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 60
+      }
+    },
+    "pdp_rich_text_tbTx9c": {
+      "type": "pdp-rich-text",
+      "blocks": {
+        "heading_zV4FeP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Disclaimer",
+            "heading_size": "h1"
+          }
+        },
+        "text_ztmJUa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Longevity Life+ membership program is being offered to Prudential as a genomics and precision health enablement membership. The program is designed to help support Prudential policyholders and help their doctors better understand the molecular makeup of your cancer. This information may provide additional insights for advanced treatment and care such as immunotherapy, matched therapy, targeted therapy, and other advanced treatments.</p><p>Longevity Life+ genomics and precision health enablement program is available exclusively to Prudential, their policyholders, and referrals.</p>"
+          }
+        },
+        "text_tCB84f": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Prudential is providing information about the Longevity Life+ program available through Longevity Life Advisors, Inc., but does not administer the program. </li><li>This program does not have eligibility restrictions and is not used in underwriting. </li><li>The policy premiums will not increase or decrease based on membership in this program. </li><li>The relationship between Prudential and Longevity Life is that of independent contractors. </li><li>Any personal information you choose to share with Longevity Life will be shared voluntarily by you and will be subject to Longevity Life's privacy policy. </li><li>Prudential makes no endorsement, representations, or warranties regarding any products or services offered by Longevity Life, a third-party vendor. </li><li>The vendor is solely responsible for the products or services offered by them. </li><li>If you have any questions regarding the program, you should contact Longevity Life directly. </li><li>Any third-party links are being made available as a resource only and are provided solely as a convenience and not as an endorsement of the content of the third-party site or any products or services offered on that site.</li><li>Prudential is not responsible for the content on any linked site, any link contained in a linked site, nor do we make any representations regarding the content or accuracy of the materials on such sites.</li></ul>"
+          }
+        },
+        "caption_BYPF8X": {
+          "type": "caption",
+          "settings": {
+            "caption": "Longevity Life+ is a trademark of Longevity Life Advisors, Inc. @2025 Prudential. All rights reserved",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zV4FeP",
+        "text_ztmJUa",
+        "text_tCB84f",
+        "caption_BYPF8X"
+      ],
+      "disabled": true,
+      "name": "PDP Richtext",
+      "settings": {
+        "bg_color": "#f4f5fa",
+        "bg_image": "shopify://shop_images/FAQs.png",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "pdp_rich_text_tbTx9c"
+  ]
+}

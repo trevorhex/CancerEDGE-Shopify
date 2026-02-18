@@ -1,0 +1,131 @@
+.block-image-caption p {
+  font-size: 16px;
+  color: #061238;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.block-image-caption strong {
+  font-weight: var(--font-body-weight-bold);
+}
+
+.block-image-subcaption p {
+  font-size: 13px;
+  color: #3D4A70;
+  margin: 0;
+  max-width: 360px;
+  letter-spacing: var(--font-body-letter-spacing);
+  line-height: 1.9;
+  margin-top: -1rem;
+}
+
+.block-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.block-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem 1rem;
+}
+
+.block-image-link {
+  flex: 0 0 auto;
+  display: inline-block;
+}
+
+.block-gallery-image {
+  display: block;
+}
+
+.block-gallery-container > .shopify-block {
+  width: 65px;
+  height: 65px;
+}
+
+.block-gallery-container > .shopify-block img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgb(var(--color-border));
+  border-radius: 6px;
+}
+
+.block-gallery-image-wrapper {
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.block-gallery-container .block-gallery-image-link {
+  width: 100%;
+  height: 100%;
+}
+
+.block-image-link,
+.block-gallery-image-link,
+.block-gallery-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  --transition-duration: 800ms;
+}
+
+.block-gallery-image-link {
+  display: block;
+}
+
+.block-image-link img,
+.block-gallery-image {
+  display: block;
+  will-change: transform;
+  transition: transform var(--transition-duration) ease;
+}
+
+.block-image-link::after,
+.block-gallery-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity var(--transition-duration) ease;
+}
+
+.block-image-link:hover::after,
+.block-gallery-image-wrapper:hover::after {
+  opacity: 1;
+}
+
+.block-image-link:hover img,
+.block-gallery-image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.block-image-link .icon-video-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.block-gallery-view {
+  width: 100%;
+}
+
+.block-gallery-view img {
+  width: 100%;
+  /* pointer-events: none; */
+}

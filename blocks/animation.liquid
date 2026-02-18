@@ -1,0 +1,109 @@
+{% style %}
+  @media (min-width: 990px) {
+    #shopify-block-{{ block.id }} {
+      flex: 0 1 {% if block.settings.max_width != blank %}{{ block.settings.max_width }}{% else %}auto{% endif %};
+    }
+  }
+
+  #block-animation-{{ block.id }} {
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+    max-width: {%- if block.settings.max_width != blank -%}{{ block.settings.max_width }}{%- else -%}400px{%- endif -%};
+    width: 100%;
+    flex-shrink: 1;
+    {% if block.settings.add_drop_shadow == true %}
+      box-shadow: 0 2px 54px rgba(var(--color-shadow), 0.28);
+    {% endif %}
+  }
+{% endstyle %}
+
+<div id="block-animation-{{ block.id }}" class="block-animation{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}">
+  <dotlottie-player
+    src="{{ block.settings.lottie_file_name | file_url }}"
+    background="transparent"
+    speed="{{ block.settings.animation_speed }}"
+  >
+  </dotlottie-player>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function (event) {
+    const player = document.querySelector('#block-animation-{{ block.id }} dotlottie-player');
+
+    player.addEventListener('ready', function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        player.play();
+        player.seek('100%');
+        return;
+      }
+
+      ScrollTrigger.create({
+        trigger: '#block-animation-{{ block.id }}',
+        start: 'top 85%',
+        endTrigger: '#block-animation-{{ block.id }}',
+        end: 'bottom 85%',
+        onEnter: function () {
+          player.play();
+        }
+      });
+    });
+  });
+ </script>
+
+{% schema %}
+{
+  "name": "t:blocks.animation.label",
+  "settings": [
+    {
+      "type": "text",
+      "id": "lottie_file_name",
+      "label": "t:blocks.animation.settings.lottie_file_name.label",
+      "info": "t:blocks.animation.settings.lottie_file_name.info"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "t:blocks.image.settings.max_width.label",
+      "info": "t:blocks.image.settings.max_width.info"
+    },
+    {
+      "type": "range",
+      "id": "animation_speed",
+      "label": "t:blocks.animation.settings.animation_speed.label",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:blocks.image.settings.border_radius.label",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_drop_shadow",
+      "label": "t:blocks.image.settings.add_drop_shadow.label",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.all.settings.css_header.content"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "t:blocks.all.settings.css_class.label",
+      "info": "t:blocks.all.settings.css_class.info"
+    },
+  ],
+  "presets": [
+    { "name": "t:blocks.animation.presets.name" }
+  ]
+}
+{% endschema %}

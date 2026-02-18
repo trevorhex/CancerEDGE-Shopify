@@ -1,0 +1,291 @@
+{% style %}
+  @media (min-width: 990px) {
+    #shopify-block-{{ block.id }} {
+      flex: 1 0 auto;
+    }
+  }
+
+  .block-text-content-{{ block.id }} {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.gap }}rem;
+    text-align: {{ block.settings.text_alignment }};
+  }
+  .block-text-content-{{ block.id }} p {
+    color: rgb(var(--color-foreground));
+    font-size: {{ block.settings.text_font_size }}px;
+    line-height: 1.6;
+    letter-spacing: var(--font-body-letter-spacing);
+    margin: 0;
+  }
+  .block-text-content-{{ block.id }} {{ block.settings.heading_tag }} p {
+    font-size: {{ block.settings.heading_font_size }}px;
+    letter-spacing: var(--font-heading-letter-spacing);
+    line-height: 1.1;
+    max-width: 730px;
+  }
+
+  .block-text-content-{{ block.id }} {{ block.settings.heading_tag }} {
+    margin: 0;
+  }
+
+  .block-text-content-{{ block.id }} > p {
+    max-width: 600px;
+  }
+
+  .block-text-content-{{ block.id }} strong {
+    color: rgb(var(--color-accent));
+    font-weight: var(--font-body-weight-bold);
+  }
+
+  {% if block.settings.rotate_heading %}
+    .block-text-content-{{ block.id }} {{ block.settings.heading_tag }} em {
+      font-style: normal;
+      color: rgb(var(--color-accent));
+    }
+    
+    .block-text-content-{{ block.id }} .rotating-text {
+      display: inline-block;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      opacity: 1;
+      will-change: transform, opacity;
+    }
+
+    .block-text-content-{{ block.id }} .rotating-text--exit {
+      -webkit-transform: translate3d(0, -5px, 0) !important;
+      transform: translate3d(0, -5px, 0) !important;
+      opacity: 0 !important;
+    }
+
+    .block-text-content-{{ block.id }} .rotating-text--enter {
+      -webkit-transform: translate3d(0, 10px, 0) !important;
+      transform: translate3d(0, 10px, 0) !important;
+      opacity: 0 !important;
+    }
+
+    @media (max-width: 749px) {
+      .block-text-content-{{ block.id }} .rotating-text {
+        display: block;
+      }
+    }
+  {% endif %}
+
+  @media (max-width: 989px) {
+    .block-text-content-{{ block.id }} {
+      gap: {{ block.settings.gap_tablet }}rem;
+      text-align: {{ block.settings.text_alignment_tablet }};
+    }
+  
+    .block-text-content-{{ block.id }} {{ block.settings.heading_tag }} p {
+      font-size: calc({{ block.settings.heading_font_size }}px * 0.9);
+    } 
+  }
+
+  @media (max-width: 749px) {
+    .block-text-content-{{ block.id }} {
+      gap: {{ block.settings.gap_mobile }}rem;
+      text-align: {{ block.settings.text_alignment_mobile }};
+    }
+
+    .block-text-content-{{ block.id }} p {
+      font-size: calc({{ block.settings.text_font_size }}px - 1px);
+    }
+
+    .block-text-content-{{ block.id }} {{ block.settings.heading_tag }} p {
+      font-size: calc({{ block.settings.heading_font_size }}px * 0.78);
+    } 
+  }
+{% endstyle %}
+
+<div class="block-text-content block-text-content-{{ block.id }} color-{{ block.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}">
+  {%- unless block.settings.heading == blank -%}
+    <{{ block.settings.heading_tag }}
+      {%- if block.settings.rotate_heading and block.settings.rotate_text != blank -%}
+        data-rotate-text="{{ block.settings.rotate_text }}"
+      {%- endif -%}
+    >
+      {{ block.settings.heading }}
+      {%- if block.settings.rotate_heading and block.settings.rotate_text != blank -%}
+        <span class="sr-only">{{ block.settings.rotate_text | split: ',' | join: ', ' }}</span>
+      {%- endif -%}
+    </{{ block.settings.heading_tag }}>
+  {%- endunless -%}
+  {%- unless block.settings.text == blank -%}
+    {{ block.settings.text }}
+  {%- endunless -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.text-content.label",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.text-content.settings.heading_header.content"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:blocks.text-content.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "t:blocks.text-content.settings.heading_tag.label",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:blocks.text-content.settings.heading_font_size.label",
+      "min": 14,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.text-content.settings.text_header.content"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:blocks.text-content.settings.text.label"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "t:blocks.text-content.settings.text_font_size.label",
+      "min": 11,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.text-content.settings.layout_header.content"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:blocks.text-content.settings.gap.label",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "rem",
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:blocks.text-content.settings.text_alignment.label",
+      "options": [
+        { "value": "left", "label": "t:blocks.text-content.settings.text_alignment.options__1.label" },
+        { "value": "center", "label": "t:blocks.text-content.settings.text_alignment.options__2.label" },
+        { "value": "right", "label": "t:blocks.text-content.settings.text_alignment.options__3.label" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.text-content.settings.layout_header_tablet.content"
+    },
+    {
+      "type": "range",
+      "id": "gap_tablet",
+      "label": "t:blocks.text-content.settings.gap.label",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "rem",
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_tablet",
+      "label": "t:blocks.text-content.settings.text_alignment.label",
+      "options": [
+        { "value": "left", "label": "t:blocks.text-content.settings.text_alignment.options__1.label" },
+        { "value": "center", "label": "t:blocks.text-content.settings.text_alignment.options__2.label" },
+        { "value": "right", "label": "t:blocks.text-content.settings.text_alignment.options__3.label" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.text-content.settings.layout_header_mobile.content"
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "t:blocks.text-content.settings.gap.label",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "rem",
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_mobile",
+      "label": "t:blocks.text-content.settings.text_alignment.label",
+      "options": [
+        { "value": "left", "label": "t:blocks.text-content.settings.text_alignment.options__1.label" },
+        { "value": "center", "label": "t:blocks.text-content.settings.text_alignment.options__2.label" },
+        { "value": "right", "label": "t:blocks.text-content.settings.text_alignment.options__3.label" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.text-content.settings.effects.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "rotate_heading",
+      "label": "t:blocks.text-content.settings.rotate_heading.label",
+      "info": "t:blocks.text-content.settings.rotate_heading.info"
+    },
+    {
+      "type": "textarea",
+      "id": "rotate_text",
+      "label": "t:blocks.text-content.settings.rotate_text.label",
+      "info": "t:blocks.text-content.settings.rotate_text.info"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.all.settings.css_header.content"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "t:blocks.all.settings.css_class.label",
+      "info": "t:blocks.all.settings.css_class.info"
+    },
+  ],
+  "presets": [
+    { "name": "t:blocks.text-content.presets.name" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,201 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{{ 'main-faq.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+     
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+  }
+
+  {% if section.settings.bg_img != blank %}
+    .default__page--header {
+      background-image: url({{ section.settings.bg_img | img_url: 'master' }});
+      background-size: cover;
+    }
+  {% endif %}
+  
+{%- endstyle -%}
+
+<div class="default__page--header {% if section.settings.bg_img != blank %}bg__img--enabled{% endif %}">
+  <div class="cancer__edge--logo decorative--logo">
+    <img src="{{ 'union.svg' | asset_url }}" alt="{{ section.settings.decorative_logo.alt }}" class="site-logo" width="{{ section.settings.decorative_logo.width }}" height="{{ section.settings.decorative_logo.height }}">
+  </div>
+
+  
+  <h1 class="main-page-title page-title page-width">
+    {% if page.metafields.custom.custom_page_title != blank %}
+      {{ page.metafields.custom.custom_page_title | metafield_tag }}
+    {% else %}
+      {{ page.title | escape }}
+    {% endif %}
+  </h1>
+</div>
+
+<div class="default__page--wrapper">
+  
+  <div class="pattern-commen-class experts-left-pattern">
+    {% render 'icon-pattern-expert-team-l' %}
+  </div>
+    
+  <div class="page-width section-{{ section.id }}-padding faq__page-container">
+    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {{ page.content }}
+    </div>
+
+    <div class="">
+      <div class="main_faq_wrap_faq_page">
+        {%- for block in section.blocks -%}
+          {% if block.settings.heading_main %}
+            <h3 class="main_faq_heading_faq_page">{{ block.settings.heading_main }}</h3>
+          {% endif %}
+          <div
+            class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            <details
+              id="Details-{{ block.id }}-{{ section.id }}"
+              {% if section.settings.open_first_collapsible_row and forloop.first %}
+                open
+              {% endif %}
+            >
+              <summary id="Summary-{{ block.id }}-{{ section.id }}" role="button" tabindex="0">
+                <h3 class="accordion__title inline-richtext h4">
+                  {{ block.settings.heading | default: block.settings.page.title | escape }}
+                </h3>
+                <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.15137L9 8.91868L16 2.15137" stroke="#21409A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div
+                class="accordion__content rte"
+                id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                role="region"
+                aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+              >
+                {{ block.settings.row_content }}
+                {{ block.settings.page.content }}
+              </div>
+            </details>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  
+  <div class="pattern-commen-class experts-right-pattern">
+    {% render 'icon-pattern-expert-team-r' %}
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 110,
+      "max": 210,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 110
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_row",
+      "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading_main",
+          "label": "Main Header of FAQ'S"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.page.label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

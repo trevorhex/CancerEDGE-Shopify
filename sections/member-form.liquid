@@ -1,0 +1,582 @@
+{%- style -%}
+.section-{{ section.id }}-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: {{ section.settings.bg_color }};
+    background-image: url({{ section.settings.bg_image | image_url: width: auto, height: auto }});
+  }
+
+  @media screen and (min-width: 750px) {
+     
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+  }
+
+  {% if section.settings.bg_img != blank %}
+    .default__page--header {
+      background-image: url({{ section.settings.bg_img | img_url: 'master' }});
+      background-size: cover;
+    }
+  {% endif %}
+  
+{%- endstyle -%}
+
+
+<style>
+  .text-error {
+    color: red;
+  }
+  .member-form-section .field,
+  .member-form-section fieldset {
+    margin-bottom: 15px;
+  }
+
+  .member-form-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pattern-commen-class.membership-left-pattern {
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  .pattern-commen-class.membership-left-pattern svg {
+    height: auto;
+  }
+
+  .member-form-section form#memberForm>button {
+   margin-top: 16px;
+  }
+
+  .member-form-section .page-width {
+    max-width: 900px;
+  }
+
+  .member-form-section fieldset .field:last-child {
+    margin-bottom: 0;
+  }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: sans-serif;
+  }
+
+  {% comment %} New style for form  {% endcomment %}
+  .member-form-section .field input,
+  .member-form-section .field select {
+    border: 1px solid rgba(35,31,32,.1);
+    background: var(--grey);
+    color: var(--dark-grey);
+    font-family: var(--font-body-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -.36px;
+    height: auto;
+    min-height: auto;
+    padding: 20px 36px 18px 36px !important;
+  }
+
+  .member-form-section .field label {
+    display:none;
+  }
+  .member-form-section .field input::placeholder {
+    opacity:1;
+    font-size: 18px;
+  }
+  #mc_embed_signup, {
+    width: auto !important;
+  }
+  #mce-success-response,
+  #mce-responses {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .cancer__edge--logo.main__logo .longevity-life-logo {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 749px) {
+    .member-form-section .field input,
+    .member-form-section .field select {
+        padding: 16px 36px 16px 36px !important;
+    }
+  }
+</style>
+<section class="member-form-section customer section-{{ section.id }}-padding" >
+
+  <div class="pattern-commen-class membership-left-pattern">
+    {% comment %}{% render 'icon-pattern-expert-team-l' %}{% endcomment %}
+    {% render 'icon-pattern-membership-l' %}
+  </div>
+
+  {%- if section.settings.longevity_life_overlay != blank -%}
+    <div class="cancer__edge--logo main__logo">
+      <img src="{{ section.settings.longevity_life_overlay | image_url: width: 1920 }}" alt="{{ section.settings.longevity_life_overlay.alt }}" class="longevity-life-logo" width="{{ section.settings.longevity_life_overlay.width }}" height="{{ section.settings.longevity_life_overlay.height }}">
+    </div>
+  {%- endif -%}
+
+  <div class="page-width">
+    <div class="section-header">
+      <h2 class="section-heading center" style="color: {{ section.settings.heading_color }}">{{ section.settings.form_title }}</h2>
+    </div>
+
+    <form id="memberForm" method="post">
+      <div class="field">
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+        <label for="firstName">First Name *</label>
+      </div>
+
+      <div class="field">
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+        <label for="lastName">Last Name *</label>
+      </div>
+
+      <div class="field">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <label for="email">Email *</label>
+      </div>
+
+
+      <fieldset>
+        <legend>Date of Birth *</legend>
+
+      <div class="field">
+        <input type="date" id="birthDate" name="birthDate" value="2016-01-01" placeholder="Date of Birth" required
+       onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+        <label for="birthDate">Date of Birth *</label>
+      </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Address *</legend>
+        <div class="field">
+          <input type="text" id="street1" name="street1" placeholder="Street 1" required>
+          <label for="street1">Street 1</label>
+        </div>
+        <div class="field">
+          <input type="text" id="street2" name="street2" placeholder="Street 2">
+          <label for="street2">Street 2</label>
+        </div>
+        <div class="field">
+          <input type="text" id="city" name="city" placeholder="City" required>
+          <label for="city">City</label>
+        </div>
+        <div class="field">
+          <label for="stateAbbrev">State (Abbreviation)</label>
+          <select id="stateAbbrev" name="stateAbbrev" required>
+            <option value="AL">Alabama</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CT">Connecticut</option>
+            <option value="GA">Georgia</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="MD">Maryland</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="NE">Nebraska</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="VT">Vermont</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+        </div>
+        <div class="field">
+          <input type="text" id="zip" name="zip" placeholder="ZIP" required>
+          <label for="zip">ZIP Code</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Phone *</legend>
+        <div class="field">
+          <input type="tel" id="phone" name="phone" pattern="[\d\s\-\(\)\+]*" placeholder="Phone Number" required>
+          <label for="phone">Phone Number</label>
+        </div>
+      </fieldset>
+      <input type="hidden" id="policyNumber" name="policyNumber"{% if customer and customer.metafields.custom.member_id != blank %} value="{{ customer.metafields.custom.member_id }}"{% endif %}>
+      <input type="hidden" id="carrierName" name="carrierName" value="Longevity Life">
+      <input type="hidden" id="coverageTypeDescript" name="coverageTypeDescript" value="LongevityLife+">
+      <input type="hidden" id="policyStatus" name="policyStatus" value="Active">
+      <p class="text-error hidden" id="error-message">{{ section.settings.email_error }}</p>
+      <p class="text-error hidden" id="email-validate">{{ section.settings.invalid_email_error }}</p>
+      <button type="submit" name="memberSubmit" id="memberSubmit">Submit</button>
+    </form>
+  </div>
+</section>
+<div id="successPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" id="closePopup">&times;</span>
+    <h3>{{ section.settings.success_title }}</h3>
+    {{ section.settings.success_subtitle }}
+    {% comment %} <div id="mc_embed_shell">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+        <form action="https://longevitylifeplus.us15.list-manage.com/subscribe/post?u=e0170bb6327836bc4004cfc0e&amp;id=bf9d599b96&amp;f_id=009585e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+          <div id="mc_embed_signup_scroll">
+            <h3>Referral box</h3>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+            <div hidden=""><input type="hidden" name="tags" value="1717173"></div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
+            </div>
+            <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_e0170bb6327836bc4004cfc0e_bf9d599b96" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+          </div>
+        </form>
+      </div>
+    </div> {% endcomment %}
+  </div>
+</div>
+<script>
+  const apiURL = 'https://canceredge.ayokay.work', 
+        emailError = document.getElementById("email-validate"), 
+        submitButton = document.getElementById("memberSubmit"), 
+        errorMsg = document.getElementById("error-message");
+
+  let validateEmail = false, lastOrderDate = null;
+
+  // Helper to format date as yyyy-mm-dd
+
+  function getCurrentDateISO() {
+    const d = new Date();
+    return d.toISOString().split('T')[0];
+  }
+
+  function getNextYearDateISO(date) {
+    const d = new Date(date);
+    d.setFullYear(d.getFullYear() + 1);
+    return d.toISOString().split('T')[0];
+  }
+
+  function formatDateToYMD(dateString) {
+    const date = new Date(dateString);
+    const year = date.getUTCFullYear(); // use UTC to avoid timezone issues
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0'); // months are 0-indexed
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    console.log(`${year}-${month}-${day}`);
+    return `${year}-${month}-${day}`;
+  }
+
+  function checkBlank(value) {
+    if (value != "") {
+      return value;
+    } else {
+      return null;
+    }
+  }
+
+  if(document.getElementById("memberForm")) {
+    document.getElementById("email").addEventListener("change", async function(e) {
+      if(checkBlank(e.target.value.trim()) != null) {
+        const payload = {
+          email: e.target.value.trim()
+        }, policyNumber = document.getElementById("policyNumber");
+        try {
+          const res = await fetch(`${apiURL}/api/customer/get`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+          });
+          const result = await res.json();
+          if(result.data.customer != null && result.data.customer.metafield != null) {
+            validateEmail = true;
+            submitButton.disabled = false;
+            policyNumber.value = result.data.customer.metafield.value;
+            if(result.data.customer.orders.edges && result.data.customer.orders.edges.length > 0) {
+              lastOrderDate = formatDateToYMD(result.data.customer.orders.edges.slice(-1)[0].node.createdAt);
+            } else {
+              lastOrderDate = getCurrentDateISO();
+            }
+            emailError.classList.add("hidden");
+          } else {
+            submitButton.disabled = true;
+            emailError.classList.remove("hidden");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("There was an error finding customer.");
+        }
+      }
+    });
+    document.getElementById("memberForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      
+      submitButton.disabled = true;
+  
+      const payload = {
+        firstName: form.firstName.value.trim(),
+        lastName: form.lastName.value.trim(),
+        birthDate: form.birthDate.value,
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        phoneType: "homePhone",
+        street1: form.street1.value.trim(),
+        street2: form.street2.value.trim(),
+        city: form.city.value.trim(),
+        stateAbbrev: form.stateAbbrev.value.trim(),
+        zip: form.zip.value.trim(),
+        addressType: "billing",
+        policyNumber: checkBlank(form.policyNumber.value.trim()),
+        carrierName: checkBlank(form.carrierName.value.trim()),
+        coverageTypeDescript: checkBlank(form.coverageTypeDescript.value.trim()),
+        policyStatus: checkBlank(form.policyStatus.value.trim()),
+        effectiveDate: lastOrderDate,
+        renewalDate: getNextYearDateISO(lastOrderDate)
+      };
+
+      console.log(payload);
+
+      try {
+        const res = await fetch(`${apiURL}/api/member/get`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+  
+        const result = await res.json();
+        if(result.member && result.member[0] && result.member[0].individualID) {
+          submitButton.disabled = false;
+          errorMsg.classList.remove("hidden");
+          return false;
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("There was an error submitting the form.");
+      }
+      try {
+        const res = await fetch(`${apiURL}/api/member/create`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+  
+        const result = await res.json();
+        const response = await fetch("https://longevitylifeplus.us15.list-manage.com/subscribe/post?u=e0170bb6327836bc4004cfc0e&id=bf9d599b96&f_id=009485e0f0", {
+          method: "POST",
+          mode: "no-cors", // Mailchimp doesn’t allow CORS
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: new URLSearchParams({
+            EMAIL: form.email.value.trim(),
+            FID: form.policyNumber.value.trim()
+          })
+        });
+        document.getElementById("successPopup").style.display = "flex";
+        submitButton.disabled = false;
+        errorMsg.classList.add("hidden");
+        emailError.classList.add("hidden")
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1500); // waits 1.5 seconds
+      } catch (error) {
+        console.error("Error:", error);
+        alert("There was an error submitting the form.");
+      }
+    });
+  
+    document.getElementById("closePopup").addEventListener("click", function() {
+      document.getElementById("successPopup").style.display = "none";
+    });
+  }
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" defer></script>
+<script type="text/javascript">
+   (function($) {
+    window.fnames = new Array(); 
+    window.ftypes = new Array(); 
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+    fnames[1]='FNAME';
+    ftypes[1]='text';
+    fnames[2]='LNAME';
+    ftypes[2]='text';
+    fnames[3]='ADDRESS';
+    ftypes[3]='address';
+    fnames[4]='PHONE';
+    ftypes[4]='phone';
+    fnames[5]='BIRTHDAY';
+    ftypes[5]='birthday';
+    fnames[6]='COMPANY';
+    ftypes[6]='text';
+    fnames[7]='FID';
+    ftypes[7]='text';
+  }(jQuery));
+  var $mcj = jQuery.noConflict(true);
+  document.querySelectorAll("form").forEach((form) => {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+    })
+  })
+</script>
+{% schema %}
+{
+  "name": "Member Form",
+  "settings": [
+     {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form title",
+      "default": "Continue Your Next Steps For Your Secure Portal"
+    },
+    {
+      "type": "header",
+      "content": "Error Messages"
+    },
+    {
+      "type": "text",
+      "id": "email_error",
+      "label": "Email error",
+      "default": "A Member already exists with this email."
+    },
+    {
+      "type": "text",
+      "id": "invalid_email_error",
+      "label": "Invalid email error",
+      "default": "Please enter the email address you used for checkout."
+    },
+    {
+      "type": "header",
+      "content": "Success Popup"
+    },
+    {
+      "type": "text",
+      "id": "success_title",
+      "label": "Title",
+      "default": "Form Submitted Successfully!"
+    },
+    {
+      "type": "richtext",
+      "id": "success_subtitle",
+      "label": "Subtitle",
+      "default": "<p>Thank you for your submission. Your information has been received.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "longevity_life_overlay",
+      "label": "Longevity Life+ overlay image"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background",
+      "default": "#D9D9D9"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Text Color",
+      "default": "#2E3490"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Member Form"
+    }
+  ]
+}
+{% endschema %}

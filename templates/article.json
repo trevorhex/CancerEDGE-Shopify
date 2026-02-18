@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "image_height": "medium",
+        "blog_show_date": true,
+        "blog_show_author": false,
+        "show_social": true,
+        "show_comment": true,
+        "padding_top": 160,
+        "padding_bottom": 160,
+        "mobile_padding_top": 48,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "related_blog_posts_Un9Gyq": {
+      "type": "related-blog-posts",
+      "name": "Related Blog Posts",
+      "settings": {
+        "bg_color": "",
+        "bg_image": "shopify://shop_images/FAQs.png",
+        "blog": "learn-the-science-behind-genomics",
+        "post_limit": 2,
+        "heading": "Related Posts",
+        "heading_size": "h2",
+        "heading_color": "#21409a",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 150,
+        "padding_bottom": 150,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related_blog_posts_Un9Gyq"
+  ]
+}

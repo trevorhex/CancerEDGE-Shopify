@@ -1,0 +1,33 @@
+<li class="block-icon{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  {% capture icon_path %}{{ block.settings.icon }}.svg{% endcapture %}
+  <span class="svg-wrapper" aria-hidden="true">{{- icon_path | inline_asset_content -}}</span>
+  {{ block.settings.label }}
+</li>
+
+{% schema %}
+{
+  "name": "t:blocks.icon.label",
+  "settings": [
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:blocks.icon.settings.icon.label",
+      "options": [
+        { "value": "icon-speed", "label": "t:blocks.icon.settings.icon.options__1.label" },
+        { "value": "icon-mag-glass", "label": "t:blocks.icon.settings.icon.options__2.label" },
+        { "value": "icon-evolution", "label": "t:blocks.icon.settings.icon.options__3.label" },
+        { "value": "icon-support", "label": "t:blocks.icon.settings.icon.options__4.label" }
+      ],
+      "default": "icon-speed"
+    },
+    {
+      "type": "richtext",
+      "id": "label",
+      "label": "t:blocks.icon.settings.label.label"
+    }
+  ],
+  "presets": [
+    { "name": "t:blocks.icon.presets.name" }
+  ]
+}
+{% endschema %}
