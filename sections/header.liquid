@@ -259,7 +259,15 @@
     {%- endif -%}
 
     <div class="header__blocks-wrapper">
-      <div class="header__blocks">{% content_for 'blocks' %}</div>
+      <div class="header__blocks">
+        {% if page.metafields.custom.add_to_cart_url != blank %}
+          <a href="{{ page.metafields.custom.add_to_cart_url.value.url }}" class="button-block button--filled button--xsmall">
+            {{ page.metafields.custom.add_to_cart_url.value.text }}
+          </a>
+        {% else %}
+          {% content_for 'blocks' %}
+        {% endif %}
+      </div>
     </div>
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">

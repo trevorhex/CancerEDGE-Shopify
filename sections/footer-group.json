@@ -242,9 +242,7 @@
       "block_order": [
         "container_GPwiUP"
       ],
-      "custom_css": [
-        ".newsletter-a-symbol,.footer__disclosure {display: none;}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-4",
         "footer_gradient_color": "#0e254e",

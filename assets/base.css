@@ -3641,3 +3641,13 @@ dotlottie-player {
   margin-top: 2rem !important;
   font-weight: 500;
 }
+
+.cart__page--items {
+  margin-top: 1rem;
+}
+
+@media (max-width: 749px) {
+  .cart__page--items {
+    margin-top: 4rem;
+  }
+}
