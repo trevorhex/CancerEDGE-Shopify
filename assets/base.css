@@ -3638,6 +3638,6 @@ dotlottie-player {
 }
 
 .future-link {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
   font-weight: 500;
 }
