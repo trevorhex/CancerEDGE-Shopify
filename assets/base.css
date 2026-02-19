@@ -3636,3 +3636,8 @@ dotlottie-player {
   object-position: center;
   pointer-events: none;
 }
+
+.future-link {
+  margin-top: 2rem;
+  font-weight: 500;
+}
