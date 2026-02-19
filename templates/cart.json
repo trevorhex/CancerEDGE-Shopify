@@ -18,8 +18,7 @@
         ".icon.icon-remove {display: none;}"
       ],
       "settings": {
-        "color_scheme": "",
-        "bg_color": "#f2f4fa",
+        "color_scheme": "scheme-590abcec-3a7a-41bf-9cbf-f665f7d385bd",
         "button_url": "/cart/add?id=50603839652142&selling_plan=692496662830",
         "button_text": "Join Longevity"
       }
@@ -54,7 +53,6 @@
         ".tax-note.caption-large.rte {display: none;}"
       ],
       "settings": {
-        "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 40
       }
