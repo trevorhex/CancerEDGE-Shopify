@@ -51,7 +51,7 @@
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </button>
         <div id="FooterDisclosure-{{ section.id }}" class="footer__disclosure-content rte" aria-hidden="true" aria-labelledby="FooterDisclosureButton-{{ section.id }}" role="region">
-          {{ page.metafields.custom.footer_disclaimer }}
+          {{ page.metafields.custom.footer_disclaimer | metafield_tag }}
         </div>
       </div>
     </div>
