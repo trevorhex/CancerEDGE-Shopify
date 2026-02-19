@@ -9,28 +9,41 @@
  */
 {
   "sections": {
-    "hero_8WRWwH": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "bg_img": "shopify://shop_images/1796716907_1.png",
+        "add_overlay": true,
+        "overlay_color": "#0b1933",
+        "overlay_opacity": 0.6,
+        "show_default_content": true,
+        "padding_top": 80,
+        "padding_bottom": 100
+      }
+    },
+    "hero_LrHyeJ": {
       "type": "hero",
       "blocks": {
-        "slide_cJbqyx": {
+        "slide_W7gC4i": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Joan-hero-2x.jpg",
             "image_mobile": "shopify://shop_images/Joan-hero-mobile-2x.jpg",
             "image_overlay_opacity": 0,
             "heading": "“Had I <em><strong>known </strong></em>earlier, my journey might have been different.”",
-            "subheading": "Know & navigate your cancer risk with <strong>CancerEDGE</strong>.",
-            "sub_text": "",
+            "subheading": "Know & navigate your cancer with <strong>CancerEdge</strong>.",
+            "sub_text": "Available to <strong>Wallabe</strong> policyholders, family, and friends.",
             "author_info": "<strong>Joan Lunden</strong> Journalist, author, cancer survivor",
             "heading_mobile": "“Had I <em><strong>known </strong></em>earlier, my journey might have been different.”",
-            "subheading_mobile": "Know & navigate your cancer risk with <strong>CancerEDGE</strong>.",
+            "subheading_mobile": "Know & navigate your cancer with <strong>CancerEdge</strong>.",
             "button_label": "Get Started",
-            "link": "/cart/add?id=42616766398561&selling_plan=7817625697",
+            "link": "/discount/WELLABE_199?redirect=/cart&utm_source=shareable_link&utm_medium=Online&utm_campaign=wellabe",
             "video_url": "",
             "button_style_secondary": false,
             "button_label_2": "Hear From Joan",
             "link_2": "",
-            "video_url_2": "https://vimeo.com/1164800118?fl=tl&fe=ec",
+            "video_url_2": "https://vimeo.com/1164800932?fl=tl&fe=ec",
             "button_style_secondary_2": true,
             "show_text_box": false,
             "box_align": "middle-left",
@@ -41,9 +54,12 @@
         }
       },
       "block_order": [
-        "slide_cJbqyx"
+        "slide_W7gC4i"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".hero-slideshow .slideshow__text {max-width: 52%;}",
+        "@media (max-width: 749px) {.hero-slideshow .slideshow__text {max-width: 100%; }}"
+      ],
       "name": "t:sections.hero.presets.name",
       "settings": {
         "layout": "full_bleed",
@@ -56,10 +72,10 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "page_section_kgViW8": {
+    "page_section_cDYcKF": {
       "type": "page-section",
       "blocks": {
-        "list_YURyEX": {
+        "list_rVikp4": {
           "type": "list",
           "name": "t:blocks.list.presets.name",
           "settings": {
@@ -85,7 +101,7 @@
             "css_class": ""
           },
           "blocks": {
-            "list_item_yxaGE9": {
+            "list_item_hHnCNJ": {
               "type": "_list-item",
               "name": "t:blocks.list-item.presets.name",
               "settings": {
@@ -93,7 +109,7 @@
               },
               "blocks": {}
             },
-            "list_item_CBHFPR": {
+            "list_item_DQ4Q4G": {
               "type": "_list-item",
               "name": "t:blocks.list-item.presets.name",
               "settings": {
@@ -101,7 +117,7 @@
               },
               "blocks": {}
             },
-            "list_item_xwWeMq": {
+            "list_item_DHJXJx": {
               "type": "_list-item",
               "name": "t:blocks.list-item.presets.name",
               "settings": {
@@ -111,14 +127,14 @@
             }
           },
           "block_order": [
-            "list_item_yxaGE9",
-            "list_item_CBHFPR",
-            "list_item_xwWeMq"
+            "list_item_hHnCNJ",
+            "list_item_DQ4Q4G",
+            "list_item_DHJXJx"
           ]
         }
       },
       "block_order": [
-        "list_YURyEX"
+        "list_rVikp4"
       ],
       "name": "t:blocks.page_section.presets.name",
       "settings": {
@@ -134,10 +150,10 @@
         "padding_bottom_mobile": 2.5
       }
     },
-    "page_section_tMGBLX": {
+    "page_section_9mieYm": {
       "type": "page-section",
       "blocks": {
-        "container_zTTBHf": {
+        "container_QF6D6B": {
           "type": "container",
           "name": "t:blocks.container.presets.name",
           "settings": {
@@ -160,7 +176,7 @@
             "css_class": ""
           },
           "blocks": {
-            "image_NhGiRE": {
+            "image_ABjU8n": {
               "type": "image",
               "name": "t:blocks.image.presets.name",
               "settings": {
@@ -172,14 +188,14 @@
                 "add_drop_shadow": true,
                 "border_radius": 20,
                 "link": "",
-                "video_url": "https://vimeo.com/1164814723?fl=tl&fe=ec",
+                "video_url": "https://vimeo.com/1164814918?fl=tl&fe=ec",
                 "open_in_new_window": false,
                 "link_label": "",
                 "css_class": ""
               },
               "blocks": {}
             },
-            "container_nBwLrD": {
+            "container_wXezHi": {
               "type": "container",
               "name": "t:blocks.container.presets.name",
               "settings": {
@@ -202,7 +218,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "text_content_7YbiyN": {
+                "text_content_EQNWaf": {
                   "type": "text-content",
                   "name": "t:blocks.text-content.presets.name",
                   "settings": {
@@ -225,7 +241,7 @@
                   },
                   "blocks": {}
                 },
-                "text_content_eQCNMW": {
+                "text_content_xWHpEg": {
                   "type": "text-content",
                   "name": "t:blocks.text-content.presets.name",
                   "settings": {
@@ -244,11 +260,11 @@
                     "disable_fade_in": false,
                     "rotate_heading": false,
                     "rotate_text": "",
-                    "css_class": "paul-billings-video"
+                    "css_class": ""
                   },
                   "blocks": {}
                 },
-                "container_PWDg7L": {
+                "container_gCcYhJ": {
                   "type": "container",
                   "name": "t:blocks.container.presets.name",
                   "settings": {
@@ -271,12 +287,12 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "button_na9zM8": {
+                    "button_CxMKTW": {
                       "type": "button",
                       "name": "t:blocks.button.presets.name",
                       "settings": {
                         "button_text": "Get Started",
-                        "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                        "button_url": "/discount/WELLABE_199?redirect=/cart&utm_source=shareable_link&utm_medium=Online&utm_campaign=wellabe",
                         "video_url": "",
                         "open_faq_modal": false,
                         "button_style": "filled",
@@ -285,13 +301,13 @@
                       },
                       "blocks": {}
                     },
-                    "button_8Ee7BR": {
+                    "button_mBFmDT": {
                       "type": "button",
                       "name": "t:blocks.button.presets.name",
                       "settings": {
                         "button_text": "Hear From Dr. Billings",
                         "button_url": "",
-                        "video_url": "https://vimeo.com/1164814723?fl=tl&fe=ec",
+                        "video_url": "https://vimeo.com/1164814918?fl=tl&fe=ec",
                         "open_faq_modal": false,
                         "button_style": "outlined",
                         "button_size": "large",
@@ -301,26 +317,26 @@
                     }
                   },
                   "block_order": [
-                    "button_na9zM8",
-                    "button_8Ee7BR"
+                    "button_CxMKTW",
+                    "button_mBFmDT"
                   ]
                 }
               },
               "block_order": [
-                "text_content_7YbiyN",
-                "text_content_eQCNMW",
-                "container_PWDg7L"
+                "text_content_EQNWaf",
+                "text_content_xWHpEg",
+                "container_gCcYhJ"
               ]
             }
           },
           "block_order": [
-            "image_NhGiRE",
-            "container_nBwLrD"
+            "image_ABjU8n",
+            "container_wXezHi"
           ]
         }
       },
       "block_order": [
-        "container_zTTBHf"
+        "container_QF6D6B"
       ],
       "custom_css": [
         "h2 {text-transform: none;}",
@@ -341,10 +357,10 @@
         "padding_bottom_mobile": 6
       }
     },
-    "page_section_UAtjjA": {
+    "page_section_Gy64rW": {
       "type": "page-section",
       "blocks": {
-        "container_9xbAVh": {
+        "container_HqCCtg": {
           "type": "container",
           "name": "t:blocks.container.presets.name",
           "settings": {
@@ -355,19 +371,19 @@
             "flex_grow": "",
             "gap": 6,
             "direction_tablet": "column",
-            "reverse_tablet": true,
+            "reverse_tablet": false,
             "alignment_horizontal_tablet": "center",
             "alignment_vertical_tablet": "center",
             "gap_tablet": 3,
             "direction_mobile": "column",
-            "reverse_mobile": true,
+            "reverse_mobile": false,
             "alignment_horizontal_mobile": "center",
             "alignment_vertical_mobile": "center",
             "gap_mobile": 3,
             "css_class": ""
           },
           "blocks": {
-            "container_wccVn4": {
+            "container_Nk6qV6": {
               "type": "container",
               "name": "t:blocks.container.presets.name",
               "settings": {
@@ -390,7 +406,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "text_content_mQRAgj": {
+                "text_content_wtiVk4": {
                   "type": "text-content",
                   "name": "t:blocks.text-content.presets.name",
                   "settings": {
@@ -413,7 +429,7 @@
                   },
                   "blocks": {}
                 },
-                "slider_8XnQNQ": {
+                "slider_EGbFfe": {
                   "type": "slider",
                   "name": "t:blocks.slider.presets.name",
                   "settings": {
@@ -424,7 +440,7 @@
                     "css_class": "fact-slider"
                   },
                   "blocks": {
-                    "slide_JdN7xy": {
+                    "slide_Whx6AF": {
                       "type": "_slide",
                       "name": "t:blocks.slide.presets.name",
                       "settings": {
@@ -446,7 +462,7 @@
                         "gap_mobile": 2
                       },
                       "blocks": {
-                        "text_content_TNfaAQ": {
+                        "text_content_TWCXe7": {
                           "type": "text-content",
                           "name": "t:blocks.text-content.presets.name",
                           "settings": {
@@ -471,10 +487,10 @@
                         }
                       },
                       "block_order": [
-                        "text_content_TNfaAQ"
+                        "text_content_TWCXe7"
                       ]
                     },
-                    "slide_eDQaNK": {
+                    "slide_PBBt9t": {
                       "type": "_slide",
                       "name": "t:blocks.slide.presets.name",
                       "settings": {
@@ -496,7 +512,7 @@
                         "gap_mobile": 2
                       },
                       "blocks": {
-                        "text_content_Qr79gJ": {
+                        "text_content_HzHakR": {
                           "type": "text-content",
                           "name": "t:blocks.text-content.presets.name",
                           "settings": {
@@ -521,10 +537,10 @@
                         }
                       },
                       "block_order": [
-                        "text_content_Qr79gJ"
+                        "text_content_HzHakR"
                       ]
                     },
-                    "slide_rx6hg6": {
+                    "slide_69BKpN": {
                       "type": "_slide",
                       "name": "t:blocks.slide.presets.name",
                       "settings": {
@@ -546,7 +562,7 @@
                         "gap_mobile": 2
                       },
                       "blocks": {
-                        "text_content_NmFqFH": {
+                        "text_content_nkEWKm": {
                           "type": "text-content",
                           "name": "t:blocks.text-content.presets.name",
                           "settings": {
@@ -571,10 +587,10 @@
                         }
                       },
                       "block_order": [
-                        "text_content_NmFqFH"
+                        "text_content_nkEWKm"
                       ]
                     },
-                    "slide_8gzjjQ": {
+                    "slide_TzJted": {
                       "type": "_slide",
                       "name": "t:blocks.slide.presets.name",
                       "settings": {
@@ -596,7 +612,7 @@
                         "gap_mobile": 2
                       },
                       "blocks": {
-                        "text_content_BVxMKt": {
+                        "text_content_RkqwGM": {
                           "type": "text-content",
                           "name": "t:blocks.text-content.presets.name",
                           "settings": {
@@ -621,10 +637,10 @@
                         }
                       },
                       "block_order": [
-                        "text_content_BVxMKt"
+                        "text_content_RkqwGM"
                       ]
                     },
-                    "slide_ra6t9H": {
+                    "slide_tkkhCa": {
                       "type": "_slide",
                       "name": "t:blocks.slide.presets.name",
                       "settings": {
@@ -646,7 +662,7 @@
                         "gap_mobile": 2
                       },
                       "blocks": {
-                        "text_content_mjzqYB": {
+                        "text_content_yNVQLY": {
                           "type": "text-content",
                           "name": "t:blocks.text-content.presets.name",
                           "settings": {
@@ -671,23 +687,23 @@
                         }
                       },
                       "block_order": [
-                        "text_content_mjzqYB"
+                        "text_content_yNVQLY"
                       ]
                     }
                   },
                   "block_order": [
-                    "slide_JdN7xy",
-                    "slide_eDQaNK",
-                    "slide_rx6hg6",
-                    "slide_8gzjjQ",
-                    "slide_ra6t9H"
+                    "slide_Whx6AF",
+                    "slide_PBBt9t",
+                    "slide_69BKpN",
+                    "slide_TzJted",
+                    "slide_tkkhCa"
                   ]
                 },
-                "text_content_y9xxKd": {
+                "text_content_HQxRRx": {
                   "type": "text-content",
                   "name": "t:blocks.text-content.presets.name",
                   "settings": {
-                    "color_scheme": "",
+                    "color_scheme": "scheme-1",
                     "heading": "",
                     "heading_tag": "h2",
                     "heading_font_size": 20,
@@ -708,12 +724,12 @@
                 }
               },
               "block_order": [
-                "text_content_mQRAgj",
-                "slider_8XnQNQ",
-                "text_content_y9xxKd"
+                "text_content_wtiVk4",
+                "slider_EGbFfe",
+                "text_content_HQxRRx"
               ]
             },
-            "image_tPzBDX": {
+            "image_cpQCee": {
               "type": "image",
               "name": "t:blocks.image.presets.name",
               "settings": {
@@ -735,13 +751,13 @@
             }
           },
           "block_order": [
-            "container_wccVn4",
-            "image_tPzBDX"
+            "container_Nk6qV6",
+            "image_cpQCee"
           ]
         }
       },
       "block_order": [
-        "container_9xbAVh"
+        "container_HqCCtg"
       ],
       "custom_css": [
         ".fact-testimonials h3 p {letter-spacing: 0.4px;}",
@@ -761,10 +777,10 @@
         "padding_bottom_mobile": 6
       }
     },
-    "page_section_ULbLgh": {
+    "page_section_LhBEKE": {
       "type": "page-section",
       "blocks": {
-        "container_7t9zWq": {
+        "container_wgJgGa": {
           "type": "container",
           "name": "t:blocks.container.presets.name",
           "settings": {
@@ -787,7 +803,7 @@
             "css_class": ""
           },
           "blocks": {
-            "animation_FABGXb": {
+            "animation_B6BPCV": {
               "type": "animation",
               "name": "t:blocks.animation.presets.name",
               "settings": {
@@ -800,7 +816,7 @@
               },
               "blocks": {}
             },
-            "container_nXKGVy": {
+            "container_KLNHWW": {
               "type": "container",
               "name": "t:blocks.container.presets.name",
               "settings": {
@@ -823,7 +839,7 @@
                 "css_class": "lifetime-partner"
               },
               "blocks": {
-                "text_content_tVDDyK": {
+                "text_content_zwyHQd": {
                   "type": "text-content",
                   "name": "t:blocks.text-content.presets.name",
                   "settings": {
@@ -846,7 +862,7 @@
                   },
                   "blocks": {}
                 },
-                "container_ibz4tK": {
+                "container_pwjjrQ": {
                   "type": "container",
                   "name": "t:blocks.container.presets.name",
                   "settings": {
@@ -869,12 +885,12 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "button_yzzkTP": {
+                    "button_dkMhbq": {
                       "type": "button",
                       "name": "t:blocks.button.presets.name",
                       "settings": {
                         "button_text": "Get Started",
-                        "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                        "button_url": "/discount/WELLABE_199?redirect=/cart&utm_source=shareable_link&utm_medium=Online&utm_campaign=wellabe",
                         "video_url": "",
                         "open_faq_modal": false,
                         "button_style": "filled",
@@ -883,12 +899,12 @@
                       },
                       "blocks": {}
                     },
-                    "button_E4ef8f": {
+                    "button_7GUERb": {
                       "type": "button",
                       "name": "t:blocks.button.presets.name",
                       "settings": {
                         "button_text": "View FAQs",
-                        "button_url": "shopify://pages/faqs",
+                        "button_url": "shopify://pages/frequently-asked-questions",
                         "video_url": "",
                         "open_faq_modal": true,
                         "button_style": "outlined",
@@ -899,25 +915,25 @@
                     }
                   },
                   "block_order": [
-                    "button_yzzkTP",
-                    "button_E4ef8f"
+                    "button_dkMhbq",
+                    "button_7GUERb"
                   ]
                 }
               },
               "block_order": [
-                "text_content_tVDDyK",
-                "container_ibz4tK"
+                "text_content_zwyHQd",
+                "container_pwjjrQ"
               ]
             }
           },
           "block_order": [
-            "animation_FABGXb",
-            "container_nXKGVy"
+            "animation_B6BPCV",
+            "container_KLNHWW"
           ]
         }
       },
       "block_order": [
-        "container_7t9zWq"
+        "container_wgJgGa"
       ],
       "custom_css": [
         ".shopify-block:has(> .lifetime-partner) {flex: 1 0 42%;}",
@@ -937,10 +953,10 @@
         "padding_bottom_mobile": 6
       }
     },
-    "page_section_ctnkdX": {
+    "page_section_QANBng": {
       "type": "page-section",
       "blocks": {
-        "icons_KYQP3d": {
+        "icons_RtdLWU": {
           "type": "icons",
           "name": "t:blocks.icons.presets.name",
           "settings": {
@@ -971,7 +987,7 @@
             "css_class": ""
           },
           "blocks": {
-            "icon_RxjNMb": {
+            "icon_E4r4BC": {
               "type": "_icon",
               "name": "t:blocks.icon.presets.name",
               "settings": {
@@ -980,7 +996,7 @@
               },
               "blocks": {}
             },
-            "icon_qtKEi9": {
+            "icon_fdQiKA": {
               "type": "_icon",
               "name": "t:blocks.icon.presets.name",
               "settings": {
@@ -989,7 +1005,7 @@
               },
               "blocks": {}
             },
-            "icon_hJgp4J": {
+            "icon_pjzc9x": {
               "type": "_icon",
               "name": "t:blocks.icon.presets.name",
               "settings": {
@@ -998,7 +1014,7 @@
               },
               "blocks": {}
             },
-            "icon_GLYtAA": {
+            "icon_FtEHjN": {
               "type": "_icon",
               "name": "t:blocks.icon.presets.name",
               "settings": {
@@ -1009,15 +1025,15 @@
             }
           },
           "block_order": [
-            "icon_RxjNMb",
-            "icon_qtKEi9",
-            "icon_hJgp4J",
-            "icon_GLYtAA"
+            "icon_E4r4BC",
+            "icon_fdQiKA",
+            "icon_pjzc9x",
+            "icon_FtEHjN"
           ]
         }
       },
       "block_order": [
-        "icons_KYQP3d"
+        "icons_RtdLWU"
       ],
       "name": "t:blocks.page_section.presets.name",
       "settings": {
@@ -1033,10 +1049,10 @@
         "padding_bottom_mobile": 6
       }
     },
-    "page_section_dHbJaX": {
+    "page_section_eEaQWA": {
       "type": "page-section",
       "blocks": {
-        "container_tBfTpk": {
+        "container_qemiTN": {
           "type": "container",
           "name": "t:blocks.container.presets.name",
           "settings": {
@@ -1059,7 +1075,7 @@
             "css_class": ""
           },
           "blocks": {
-            "text_content_a4t3EA": {
+            "text_content_zemt4g": {
               "type": "text-content",
               "name": "t:blocks.text-content.presets.name",
               "settings": {
@@ -1082,7 +1098,7 @@
               },
               "blocks": {}
             },
-            "container_YnLHBN": {
+            "container_49xENm": {
               "type": "container",
               "name": "t:blocks.container.presets.name",
               "settings": {
@@ -1105,7 +1121,7 @@
                 "css_class": ""
               },
               "blocks": {
-                "gallery_VPYKFp": {
+                "gallery_3CMBnx": {
                   "type": "gallery",
                   "name": "t:blocks.gallery.presets.name",
                   "settings": {
@@ -1118,7 +1134,7 @@
                     "css_class": ""
                   },
                   "blocks": {
-                    "gallery_image_UrTVP3": {
+                    "gallery_image_ateLW7": {
                       "type": "_gallery-image",
                       "name": "t:blocks.gallery_image.presets.name",
                       "settings": {
@@ -1129,10 +1145,10 @@
                     }
                   },
                   "block_order": [
-                    "gallery_image_UrTVP3"
+                    "gallery_image_ateLW7"
                   ]
                 },
-                "container_Xj93dG": {
+                "container_aY8MLA": {
                   "type": "container",
                   "name": "t:blocks.container.presets.name",
                   "settings": {
@@ -1155,7 +1171,7 @@
                     "css_class": "membership-faq"
                   },
                   "blocks": {
-                    "text_content_ifHRkx": {
+                    "text_content_NKzHQQ": {
                       "type": "text-content",
                       "name": "t:blocks.text-content.presets.name",
                       "settings": {
@@ -1178,7 +1194,7 @@
                       },
                       "blocks": {}
                     },
-                    "tabs_4Y8nhM": {
+                    "tabs_znmq87": {
                       "type": "tabs",
                       "name": "t:blocks.tabs.presets.name",
                       "settings": {
@@ -1186,7 +1202,7 @@
                         "css_class": "faq-tabs"
                       },
                       "blocks": {
-                        "tab_QXhVRx": {
+                        "tab_mX7TPU": {
                           "type": "_tab",
                           "name": "t:blocks.tab.presets.name",
                           "settings": {
@@ -1208,7 +1224,7 @@
                             "gap_mobile": 2
                           },
                           "blocks": {
-                            "list_ftkAGy": {
+                            "list_h9XdQU": {
                               "type": "list",
                               "name": "t:blocks.list.presets.name",
                               "settings": {
@@ -1234,7 +1250,7 @@
                                 "css_class": ""
                               },
                               "blocks": {
-                                "list_reveal_Bq4Up4": {
+                                "list_reveal_P3z79A": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1243,7 +1259,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_6AWQGj": {
+                                "list_reveal_bPin4p": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1252,7 +1268,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_WHHb7P": {
+                                "list_reveal_U8BAdn": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1261,7 +1277,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_VKBgUX": {
+                                "list_reveal_LfxCc6": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1270,7 +1286,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_3VG9qt": {
+                                "list_reveal_MWr3zf": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1279,7 +1295,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_C7UxtW": {
+                                "list_reveal_KjDaaT": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1288,7 +1304,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_zJarfj": {
+                                "list_reveal_eKbbxD": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1297,7 +1313,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_PQzWyV": {
+                                "list_reveal_yy6VwW": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1308,22 +1324,22 @@
                                 }
                               },
                               "block_order": [
-                                "list_reveal_Bq4Up4",
-                                "list_reveal_6AWQGj",
-                                "list_reveal_WHHb7P",
-                                "list_reveal_VKBgUX",
-                                "list_reveal_3VG9qt",
-                                "list_reveal_C7UxtW",
-                                "list_reveal_zJarfj",
-                                "list_reveal_PQzWyV"
+                                "list_reveal_P3z79A",
+                                "list_reveal_bPin4p",
+                                "list_reveal_U8BAdn",
+                                "list_reveal_LfxCc6",
+                                "list_reveal_MWr3zf",
+                                "list_reveal_KjDaaT",
+                                "list_reveal_eKbbxD",
+                                "list_reveal_yy6VwW"
                               ]
                             }
                           },
                           "block_order": [
-                            "list_ftkAGy"
+                            "list_h9XdQU"
                           ]
                         },
-                        "tab_itrETk": {
+                        "tab_rjDVPd": {
                           "type": "_tab",
                           "name": "t:blocks.tab.presets.name",
                           "settings": {
@@ -1345,7 +1361,7 @@
                             "gap_mobile": 2
                           },
                           "blocks": {
-                            "list_4p9c3q": {
+                            "list_Q47hPW": {
                               "type": "list",
                               "name": "t:blocks.list.presets.name",
                               "settings": {
@@ -1371,7 +1387,7 @@
                                 "css_class": ""
                               },
                               "blocks": {
-                                "list_reveal_66qBUb": {
+                                "list_reveal_TJQECH": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1380,7 +1396,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_3qL7XL": {
+                                "list_reveal_fCh3PU": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1389,7 +1405,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_7cJKy7": {
+                                "list_reveal_UMNrXT": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1398,7 +1414,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "list_reveal_3ByK9y": {
+                                "list_reveal_QjwJMR": {
                                   "type": "_list-reveal",
                                   "name": "t:blocks.list-reveal.presets.name",
                                   "settings": {
@@ -1409,24 +1425,24 @@
                                 }
                               },
                               "block_order": [
-                                "list_reveal_66qBUb",
-                                "list_reveal_3qL7XL",
-                                "list_reveal_7cJKy7",
-                                "list_reveal_3ByK9y"
+                                "list_reveal_TJQECH",
+                                "list_reveal_fCh3PU",
+                                "list_reveal_UMNrXT",
+                                "list_reveal_QjwJMR"
                               ]
                             }
                           },
                           "block_order": [
-                            "list_4p9c3q"
+                            "list_Q47hPW"
                           ]
                         }
                       },
                       "block_order": [
-                        "tab_QXhVRx",
-                        "tab_itrETk"
+                        "tab_mX7TPU",
+                        "tab_rjDVPd"
                       ]
                     },
-                    "text_content_nCwAzr": {
+                    "text_content_VVbcMB": {
                       "type": "text-content",
                       "name": "t:blocks.text-content.presets.name",
                       "settings": {
@@ -1449,12 +1465,35 @@
                       },
                       "blocks": {}
                     },
-                    "button_EdKypx": {
+                    "text_content_BDRTyM": {
+                      "type": "text-content",
+                      "name": "t:blocks.text-content.presets.name",
+                      "settings": {
+                        "color_scheme": "",
+                        "heading": "",
+                        "heading_tag": "h2",
+                        "heading_font_size": 20,
+                        "text": "<p>Retail price is $799, Wellabe members, family friends receive this preferred pricing.</p>",
+                        "text_font_size": 13,
+                        "gap": 2,
+                        "text_alignment": "left",
+                        "gap_tablet": 2,
+                        "text_alignment_tablet": "left",
+                        "gap_mobile": 2,
+                        "text_alignment_mobile": "left",
+                        "disable_fade_in": false,
+                        "rotate_heading": false,
+                        "rotate_text": "",
+                        "css_class": "retail-price border-top"
+                      },
+                      "blocks": {}
+                    },
+                    "button_7XpRWV": {
                       "type": "button",
                       "name": "t:blocks.button.presets.name",
                       "settings": {
                         "button_text": "Become A Member",
-                        "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                        "button_url": "/discount/WELLABE_199?redirect=/cart&utm_source=shareable_link&utm_medium=Online&utm_campaign=wellabe",
                         "video_url": "",
                         "open_faq_modal": false,
                         "button_style": "filled",
@@ -1465,27 +1504,28 @@
                     }
                   },
                   "block_order": [
-                    "text_content_ifHRkx",
-                    "tabs_4Y8nhM",
-                    "text_content_nCwAzr",
-                    "button_EdKypx"
+                    "text_content_NKzHQQ",
+                    "tabs_znmq87",
+                    "text_content_VVbcMB",
+                    "text_content_BDRTyM",
+                    "button_7XpRWV"
                   ]
                 }
               },
               "block_order": [
-                "gallery_VPYKFp",
-                "container_Xj93dG"
+                "gallery_3CMBnx",
+                "container_aY8MLA"
               ]
             }
           },
           "block_order": [
-            "text_content_a4t3EA",
-            "container_YnLHBN"
+            "text_content_zemt4g",
+            "container_49xENm"
           ]
         }
       },
       "block_order": [
-        "container_tBfTpk"
+        "container_qemiTN"
       ],
       "custom_css": [
         ".shopify-block:has(> .membership-faq) {flex: 1 0 45%;}",
@@ -1512,10 +1552,10 @@
         "padding_bottom_mobile": 6
       }
     },
-    "page_section_4BKNm6": {
+    "page_section_WLXw7C": {
       "type": "page-section",
       "blocks": {
-        "container_ULRJQt": {
+        "container_ya9rMV": {
           "type": "container",
           "name": "t:blocks.container.presets.name",
           "settings": {
@@ -1538,7 +1578,7 @@
             "css_class": ""
           },
           "blocks": {
-            "text_content_qfhzPJ": {
+            "text_content_abH3VT": {
               "type": "text-content",
               "name": "t:blocks.text-content.presets.name",
               "settings": {
@@ -1561,7 +1601,7 @@
               },
               "blocks": {}
             },
-            "compare_DQBEyB": {
+            "compare_cxNBKG": {
               "type": "compare",
               "name": "t:blocks.compare.presets.name",
               "settings": {
@@ -1573,7 +1613,7 @@
                 "card_1_content": "",
                 "card_1_source_url": "",
                 "card_1_link_label": "Get Started Today",
-                "card_1_link_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                "card_1_link_url": "",
                 "card_2_color_scheme": "scheme-5",
                 "card_2_image": "shopify://shop_images/Rectangle_14_1.jpg",
                 "card_2_card_cost_1": "<h3><strong>$150,000</strong><em><strong>+</strong></em></h3><p>Cancer<br/>Treatment</p>",
@@ -1586,7 +1626,7 @@
               },
               "blocks": {}
             },
-            "text_content_6EMz36": {
+            "text_content_iCKzfF": {
               "type": "text-content",
               "name": "t:blocks.text-content.presets.name",
               "settings": {
@@ -1611,14 +1651,14 @@
             }
           },
           "block_order": [
-            "text_content_qfhzPJ",
-            "compare_DQBEyB",
-            "text_content_6EMz36"
+            "text_content_abH3VT",
+            "compare_cxNBKG",
+            "text_content_iCKzfF"
           ]
         }
       },
       "block_order": [
-        "container_ULRJQt"
+        "container_ya9rMV"
       ],
       "custom_css": [
         ".rotating-heading h2 p {font-weight: 700;}",
@@ -1638,10 +1678,10 @@
         "padding_bottom_mobile": 12
       }
     },
-    "page_section_a8KiFz": {
+    "page_section_Ltiy8V": {
       "type": "page-section",
       "blocks": {
-        "container_qzL8GK": {
+        "container_8whR4b": {
           "type": "container",
           "name": "t:blocks.container.presets.name",
           "settings": {
@@ -1664,7 +1704,7 @@
             "css_class": "footer-cta-content"
           },
           "blocks": {
-            "text_content_zaHtWT": {
+            "text_content_GULH8g": {
               "type": "text-content",
               "name": "t:blocks.text-content.presets.name",
               "settings": {
@@ -1687,7 +1727,7 @@
               },
               "blocks": {}
             },
-            "container_HAqK4w": {
+            "container_xpAUEW": {
               "type": "container",
               "name": "t:blocks.container.presets.name",
               "settings": {
@@ -1710,12 +1750,12 @@
                 "css_class": ""
               },
               "blocks": {
-                "button_q8inky": {
+                "button_tiUJ9F": {
                   "type": "button",
                   "name": "t:blocks.button.presets.name",
                   "settings": {
                     "button_text": "Get Started",
-                    "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                    "button_url": "/discount/WELLABE_199?redirect=/cart&utm_source=shareable_link&utm_medium=Online&utm_campaign=wellabe",
                     "video_url": "",
                     "open_faq_modal": false,
                     "button_style": "filled",
@@ -1724,12 +1764,12 @@
                   },
                   "blocks": {}
                 },
-                "button_hQpFqE": {
+                "button_UbyRi6": {
                   "type": "button",
                   "name": "t:blocks.button.presets.name",
                   "settings": {
                     "button_text": "View FAQs",
-                    "button_url": "shopify://pages/faqs",
+                    "button_url": "shopify://pages/canceredge-faqs",
                     "video_url": "",
                     "open_faq_modal": true,
                     "button_style": "outlined",
@@ -1740,19 +1780,19 @@
                 }
               },
               "block_order": [
-                "button_q8inky",
-                "button_hQpFqE"
+                "button_tiUJ9F",
+                "button_UbyRi6"
               ]
             }
           },
           "block_order": [
-            "text_content_zaHtWT",
-            "container_HAqK4w"
+            "text_content_GULH8g",
+            "container_xpAUEW"
           ]
         }
       },
       "block_order": [
-        "container_qzL8GK"
+        "container_8whR4b"
       ],
       "custom_css": [
         "h2 {text-transform: none;}",
@@ -1777,14 +1817,15 @@
     }
   },
   "order": [
-    "hero_8WRWwH",
-    "page_section_kgViW8",
-    "page_section_tMGBLX",
-    "page_section_UAtjjA",
-    "page_section_ULbLgh",
-    "page_section_ctnkdX",
-    "page_section_dHbJaX",
-    "page_section_4BKNm6",
-    "page_section_a8KiFz"
+    "main",
+    "hero_LrHyeJ",
+    "page_section_cDYcKF",
+    "page_section_9mieYm",
+    "page_section_Gy64rW",
+    "page_section_LhBEKE",
+    "page_section_QANBng",
+    "page_section_eEaQWA",
+    "page_section_WLXw7C",
+    "page_section_Ltiy8V"
   ]
 }
