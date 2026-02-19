@@ -45,9 +45,7 @@
     <div class="footer__disclosure page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="footer__disclosure-wrapper">
         <button id="FooterDisclosureButton-{{ section.id }}" class="footer__disclosure-header" aria-expanded="false" aria-controls="FooterDisclosure-{{ section.id }}">
-          {% unless section.settings.disclosure_title == blank %}
-            <span class="footer__disclosure-title">Disclaimers</span>
-          {% endunless %}
+          <span class="footer__disclosure-title">Disclaimers</span>
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </button>
         <div id="FooterDisclosure-{{ section.id }}" class="footer__disclosure-content rte" aria-hidden="true" aria-labelledby="FooterDisclosureButton-{{ section.id }}" role="region">
