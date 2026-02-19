@@ -67,10 +67,18 @@ document.addEventListener("DOMContentLoaded", function() {
     agreementCheckboxes.forEach(checkbox => checkbox.checked = isChecked);
 
     // Enable/disable all checkout buttons
-    if(isChecked && window.checkZipCode){
+    if(window.eligibleStates) {
+      if(isChecked && window.checkZipCode) {
       checkoutButtons.forEach(button => button.disabled = false);
+      } else {
+        checkoutButtons.forEach(button => button.disabled = true);
+      }
     } else {
-      checkoutButtons.forEach(button => button.disabled = true);
+      if(isChecked){
+        checkoutButtons.forEach(button => button.disabled = false);
+      } else {
+        checkoutButtons.forEach(button => button.disabled = true);
+      }
     }
 
     // Update value of all agreement fields
