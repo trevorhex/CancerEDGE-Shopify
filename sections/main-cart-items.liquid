@@ -38,7 +38,7 @@
         <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
 
         {% if section.settings.button_url != blank %}
-        <a href="{{ section.settings.button_url }}" class="button-block button--primary button--large">
+        <a href="{{ section.settings.button_url }}" class="button-block button--filled button--large" disabled>
           {{ section.settings.button_text }}
         </a>
         {% endif %}

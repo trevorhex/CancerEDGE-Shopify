@@ -78,6 +78,13 @@
   fill: rgb(var(--color-accent));
 }
 
+.customer button[disabled],
+.button--primary[disabled],
+.button-block[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 @media (min-width: 750px) {
   .customer button:hover,
   .button--primary:hover,
@@ -106,3 +113,4 @@
     padding: 0.85rem 1rem;
   }
 }
+
