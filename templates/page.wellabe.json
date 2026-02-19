@@ -1481,7 +1481,7 @@
                         "text_alignment_tablet": "left",
                         "gap_mobile": 2,
                         "text_alignment_mobile": "left",
-                        "disable_fade_in": false,
+                        "disable_fade_in": true,
                         "rotate_heading": false,
                         "rotate_text": "",
                         "css_class": "retail-price border-top"

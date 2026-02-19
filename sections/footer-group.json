@@ -94,7 +94,7 @@
                         "max_width": "200px",
                         "add_drop_shadow": false,
                         "border_radius": 0,
-                        "link": "https://www.prudential.com",
+                        "link": "/",
                         "video_url": "",
                         "open_in_new_window": true,
                         "link_label": "",
@@ -123,6 +123,7 @@
                     "text_alignment_tablet": "center",
                     "gap_mobile": 2,
                     "text_alignment_mobile": "center",
+                    "disable_fade_in": false,
                     "rotate_heading": false,
                     "rotate_text": "",
                     "css_class": ""

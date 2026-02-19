@@ -41,22 +41,21 @@
   <div class="footer__main page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {% content_for 'blocks' %}
   </div>
-  <div class="footer__disclosure page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="footer__disclosure-wrapper">
-      <button id="FooterDisclosureButton-{{ section.id }}" class="footer__disclosure-header" aria-expanded="false" aria-controls="FooterDisclosure-{{ section.id }}">
-        {% unless section.settings.disclosure_title == blank %}
-          <span class="footer__disclosure-title">{{ section.settings.disclosure_title }}</span>
-        {% endunless %}
-        {{- 'icon-caret.svg' | inline_asset_content -}}
-      </button>
-
-      {% unless section.settings.disclosure_content == blank %}
+  {% if page.metafields.custom.footer_disclaimer != blank %}
+    <div class="footer__disclosure page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <div class="footer__disclosure-wrapper">
+        <button id="FooterDisclosureButton-{{ section.id }}" class="footer__disclosure-header" aria-expanded="false" aria-controls="FooterDisclosure-{{ section.id }}">
+          {% unless section.settings.disclosure_title == blank %}
+            <span class="footer__disclosure-title">Disclaimers</span>
+          {% endunless %}
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </button>
         <div id="FooterDisclosure-{{ section.id }}" class="footer__disclosure-content rte" aria-hidden="true" aria-labelledby="FooterDisclosureButton-{{ section.id }}" role="region">
-          {{ section.settings.disclosure_content }}
+          {{ page.metafields.custom.footer_disclaimer }}
         </div>
-      {% endunless %}
+      </div>
     </div>
-  </div>
+  {% endif %}
 </footer>
 
 {% schema %}
