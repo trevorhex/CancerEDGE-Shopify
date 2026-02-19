@@ -20,7 +20,7 @@
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<div class="section-{{ section.id }}-padding">
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
     
   <cart-items class="isolate{% if cart == empty %} is-empty{% endif %} cart__page--items">
     <div class="page-width">
@@ -465,19 +465,10 @@
   "class": "cart__main--items",
   "settings": [
     {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Background Color"
-    },
-    {
-      "type": "image_picker",
-      "id": "pattern_before", 
-      "label": "Patter Before"
-    },
-    {
-      "type": "image_picker",
-      "id": "pattern_after",
-      "label": "Patter After"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
     },
     {
       "type": "url",

@@ -131,7 +131,7 @@
                 </div>
                 {% endif %}
 
-                <div class="cart__agreement">
+                <div class="cart__agreement" style="margin-bottom: 2rem;">
                   <label for="Cartpage-Agreement" class="cart__agreement-label">
                     <input type="checkbox" id="Cartpage-Agreement" value="" class="cart__agreement-checkbox">
                     <span>
@@ -145,7 +145,7 @@
                 <button
                   type="submit"
                   id="checkout"
-                  class="cart__checkout-button button button--primary"
+                  class="cart__checkout-button button-block button--primary button--large"
                   name="checkout"
                   {% if cart == empty %}
                     disabled

@@ -85,7 +85,7 @@
     {%- unless block.settings.card_2_link_label == blank or block.settings.card_2_link_url == blank -%}
       <a
         href="{{ block.settings.card_2_link_url }}"
-        class="block-button button--filled button--large"
+        class="button-block button--filled button--large"
         {% unless block.settings.card_2_link_url contains request.host %}target="_blank" rel="noopener noreferrer"{% endunless %}
       >
         {{ block.settings.card_2_link_label }}
