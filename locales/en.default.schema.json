@@ -261,7 +261,11 @@
           },
           "label": "Hover effect",
           "info": "Affects cards and buttons"
-        }
+        },
+        "disable_fade_in": {
+          "label": "Disable fade in animation",
+          "info": "Overrides global \"Reveal sections on scroll\" setting for this block"
+        },
       }
     },
     "social-media": {

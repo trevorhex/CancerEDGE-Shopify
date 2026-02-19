@@ -103,7 +103,7 @@
   }
 {% endstyle %}
 
-<div class="block-text-content block-text-content-{{ block.id }} color-{{ block.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}">
+<div class="block-text-content block-text-content-{{ block.id }} color-{{ block.settings.color_scheme }}{% if settings.animations_reveal_on_scroll and block.settings.disable_fade_in == false %} scroll-trigger animate--slide-in{% endif %}{% if block.settings.css_class %} {{ block.settings.css_class }}{% endif %}">
   {%- unless block.settings.heading == blank -%}
     <{{ block.settings.heading_tag }}
       {%- if block.settings.rotate_heading and block.settings.rotate_text != blank -%}
@@ -260,6 +260,12 @@
     {
       "type": "header",
       "content": "t:blocks.text-content.settings.effects.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_fade_in",
+      "label": "t:settings_schema.animations.settings.disable_fade_in.label",
+      "info": "t:settings_schema.animations.settings.disable_fade_in.info"
     },
     {
       "type": "checkbox",
