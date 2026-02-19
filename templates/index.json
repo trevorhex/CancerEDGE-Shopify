@@ -217,6 +217,7 @@
                     "text_alignment_tablet": "left",
                     "gap_mobile": 2,
                     "text_alignment_mobile": "left",
+                    "disable_fade_in": false,
                     "rotate_heading": false,
                     "rotate_text": "",
                     "css_class": ""
@@ -239,6 +240,7 @@
                     "text_alignment_tablet": "left",
                     "gap_mobile": 0.5,
                     "text_alignment_mobile": "left",
+                    "disable_fade_in": false,
                     "rotate_heading": false,
                     "rotate_text": "",
                     "css_class": "paul-billings-video"
@@ -403,6 +405,7 @@
                     "text_alignment_tablet": "left",
                     "gap_mobile": 2,
                     "text_alignment_mobile": "left",
+                    "disable_fade_in": false,
                     "rotate_heading": false,
                     "rotate_text": "",
                     "css_class": ""
@@ -458,6 +461,7 @@
                             "text_alignment_tablet": "left",
                             "gap_mobile": 2,
                             "text_alignment_mobile": "left",
+                            "disable_fade_in": false,
                             "rotate_heading": false,
                             "rotate_text": "",
                             "css_class": ""
@@ -507,6 +511,7 @@
                             "text_alignment_tablet": "left",
                             "gap_mobile": 2,
                             "text_alignment_mobile": "left",
+                            "disable_fade_in": false,
                             "rotate_heading": false,
                             "rotate_text": "",
                             "css_class": ""
@@ -556,6 +561,7 @@
                             "text_alignment_tablet": "left",
                             "gap_mobile": 2,
                             "text_alignment_mobile": "left",
+                            "disable_fade_in": false,
                             "rotate_heading": false,
                             "rotate_text": "",
                             "css_class": ""
@@ -605,6 +611,7 @@
                             "text_alignment_tablet": "left",
                             "gap_mobile": 2,
                             "text_alignment_mobile": "left",
+                            "disable_fade_in": false,
                             "rotate_heading": false,
                             "rotate_text": "",
                             "css_class": ""
@@ -654,6 +661,7 @@
                             "text_alignment_tablet": "left",
                             "gap_mobile": 2,
                             "text_alignment_mobile": "left",
+                            "disable_fade_in": false,
                             "rotate_heading": false,
                             "rotate_text": "",
                             "css_class": ""
@@ -690,6 +698,7 @@
                     "text_alignment_tablet": "left",
                     "gap_mobile": 2,
                     "text_alignment_mobile": "left",
+                    "disable_fade_in": false,
                     "rotate_heading": false,
                     "rotate_text": "",
                     "css_class": ""
@@ -829,6 +838,7 @@
                     "text_alignment_tablet": "left",
                     "gap_mobile": 2,
                     "text_alignment_mobile": "left",
+                    "disable_fade_in": false,
                     "rotate_heading": false,
                     "rotate_text": "",
                     "css_class": ""
@@ -1064,6 +1074,7 @@
                 "text_alignment_tablet": "left",
                 "gap_mobile": 2,
                 "text_alignment_mobile": "left",
+                "disable_fade_in": false,
                 "rotate_heading": false,
                 "rotate_text": "",
                 "css_class": ""
@@ -1159,6 +1170,7 @@
                         "text_alignment_tablet": "left",
                         "gap_mobile": 2,
                         "text_alignment_mobile": "left",
+                        "disable_fade_in": false,
                         "rotate_heading": false,
                         "rotate_text": "",
                         "css_class": ""
@@ -1413,76 +1425,48 @@
                         "tab_itrETk"
                       ]
                     },
-                    "container_XVfctz": {
-                      "type": "container",
-                      "name": "t:blocks.container.presets.name",
+                    "text_content_nCwAzr": {
+                      "type": "text-content",
+                      "name": "t:blocks.text-content.presets.name",
                       "settings": {
-                        "direction": "column",
-                        "reverse": false,
-                        "alignment_horizontal": "flex-start",
-                        "alignment_vertical": "center",
-                        "flex_grow": "",
-                        "gap": 3,
-                        "direction_tablet": "column",
-                        "reverse_tablet": false,
-                        "alignment_horizontal_tablet": "flex-start",
-                        "alignment_vertical_tablet": "center",
-                        "gap_tablet": 3,
-                        "direction_mobile": "column",
-                        "reverse_mobile": false,
-                        "alignment_horizontal_mobile": "flex-start",
-                        "alignment_vertical_mobile": "center",
-                        "gap_mobile": 3,
+                        "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                        "heading": "",
+                        "heading_tag": "h2",
+                        "heading_font_size": 20,
+                        "text": "<p><strong>$2.19</strong> a day · Billed annually at $799 for first year, monthly thereafter.</p>",
+                        "text_font_size": 14,
+                        "gap": 2,
+                        "text_alignment": "left",
+                        "gap_tablet": 2,
+                        "text_alignment_tablet": "left",
+                        "gap_mobile": 2,
+                        "text_alignment_mobile": "left",
+                        "disable_fade_in": true,
+                        "rotate_heading": false,
+                        "rotate_text": "",
                         "css_class": ""
                       },
-                      "blocks": {
-                        "text_content_a9yX6P": {
-                          "type": "text-content",
-                          "name": "t:blocks.text-content.presets.name",
-                          "settings": {
-                            "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
-                            "heading": "",
-                            "heading_tag": "h2",
-                            "heading_font_size": 20,
-                            "text": "<p><strong>$2.19</strong> a day · Billed annually at $799 for first year, monthly thereafter.</p>",
-                            "text_font_size": 14,
-                            "gap": 2,
-                            "text_alignment": "left",
-                            "gap_tablet": 2,
-                            "text_alignment_tablet": "left",
-                            "gap_mobile": 2,
-                            "text_alignment_mobile": "left",
-                            "rotate_heading": false,
-                            "rotate_text": "",
-                            "css_class": ""
-                          },
-                          "blocks": {}
-                        },
-                        "button_DBTrhj": {
-                          "type": "button",
-                          "name": "t:blocks.button.presets.name",
-                          "settings": {
-                            "button_text": "Become A Member",
-                            "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
-                            "video_url": "",
-                            "open_faq_modal": false,
-                            "button_style": "filled",
-                            "button_size": "large",
-                            "css_class": ""
-                          },
-                          "blocks": {}
-                        }
+                      "blocks": {}
+                    },
+                    "button_EdKypx": {
+                      "type": "button",
+                      "name": "t:blocks.button.presets.name",
+                      "settings": {
+                        "button_text": "Become A Member",
+                        "button_url": "/cart/add?id=42616766398561&selling_plan=7817625697",
+                        "open_faq_modal": false,
+                        "button_style": "filled",
+                        "button_size": "large",
+                        "css_class": ""
                       },
-                      "block_order": [
-                        "text_content_a9yX6P",
-                        "button_DBTrhj"
-                      ]
+                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "text_content_ifHRkx",
                     "tabs_4Y8nhM",
-                    "container_XVfctz"
+                    "text_content_nCwAzr",
+                    "button_EdKypx"
                   ]
                 }
               },
@@ -1568,6 +1552,7 @@
                 "text_alignment_tablet": "center",
                 "gap_mobile": 2,
                 "text_alignment_mobile": "left",
+                "disable_fade_in": false,
                 "rotate_heading": true,
                 "rotate_text": "Life,Family,Care,Health,Now",
                 "css_class": "rotating-heading"
@@ -1615,6 +1600,7 @@
                 "text_alignment_tablet": "left",
                 "gap_mobile": 2,
                 "text_alignment_mobile": "left",
+                "disable_fade_in": false,
                 "rotate_heading": false,
                 "rotate_text": "",
                 "css_class": ""
@@ -1692,6 +1678,7 @@
                 "text_alignment_tablet": "left",
                 "gap_mobile": 2,
                 "text_alignment_mobile": "left",
+                "disable_fade_in": false,
                 "rotate_heading": false,
                 "rotate_text": "",
                 "css_class": "now-you-can-know"
