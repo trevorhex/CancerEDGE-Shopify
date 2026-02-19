@@ -18,6 +18,7 @@
         ".icon.icon-remove {display: none;}"
       ],
       "settings": {
+        "color_scheme": "",
         "bg_color": "#f2f4fa",
         "button_url": "/cart/add?id=50603839652142&selling_plan=692496662830",
         "button_text": "Join Longevity"
@@ -28,6 +29,7 @@
       "blocks": {
         "zip_code_checker_w8wEKE": {
           "type": "zip_code_checker",
+          "disabled": true,
           "settings": {
             "title": "Check Your State Eligibility Here",
             "description": "<p>Membership is available in select states. Please check your eligibility before completing your purchase.</p><p><em>State availability: AL, AR, AZ, CT, GA, IL, IN, IA, KS, KY, MD, MN, MS, NE, NJ, NM, ND, OH, PA, SC, SD, VT, WI, WY</em></p>",
@@ -52,6 +54,7 @@
         ".tax-note.caption-large.rte {display: none;}"
       ],
       "settings": {
+        "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 40
       }
