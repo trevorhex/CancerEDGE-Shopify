@@ -61,7 +61,7 @@
         "nav_bar_type_desktop": "contained",
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
-        "menu": "main-menu-new",
+        "menu": "main-nav-menu",
         "menu_aria_label": "Main Navigation Menu",
         "menu_type_desktop": "dropdown",
         "menu_dropdown_icon": "<svg width=\"12\" height=\"9\" viewbox=\"0 0 12 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" role=\"presentation\">\n<path d=\"M0.21418 2.00134L5.33323 8.18251C5.41574 8.28209 5.5181 8.36202 5.63327 8.41682C5.74845 8.47163 5.87371 8.5 6.00048 8.5C6.12725 8.5 6.25252 8.47163 6.3677 8.41682C6.48287 8.36202 6.58523 8.28209 6.66774 8.18251L11.7868 2.00134C12.2753 1.41134 11.8703 0.5 11.1195 0.5H0.879971C0.129216 0.5 -0.275825 1.41134 0.21418 2.00134Z\" fill=\"#3C6179\"></path>\n</svg>",

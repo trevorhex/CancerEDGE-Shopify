@@ -18,11 +18,11 @@
             "image": "shopify://shop_images/Joan-hero-2x.jpg",
             "image_mobile": "shopify://shop_images/Joan-hero-mobile-2x.jpg",
             "image_overlay_opacity": 0,
-            "heading": "“Had I known earlier, I could have <em><strong>avoided</strong></em> a cancer diagnosis.”",
+            "heading": "“Had I <em><strong>known </strong></em>earlier, my journey might have been different.”",
             "subheading": "Know & navigate your cancer risk with <strong>CancerEDGE</strong>.",
             "sub_text": "",
             "author_info": "<strong>Joan Lunden</strong> Journalist, author, cancer survivor",
-            "heading_mobile": "“Had I known earlier, I could have <em><strong>avoided</strong></em> a cancer diagnosis.”",
+            "heading_mobile": "“Had I <em><strong>known </strong></em>earlier, my journey might have been different.”",
             "subheading_mobile": "Know & navigate your cancer risk with <strong>CancerEDGE</strong>.",
             "button_label": "Get Started",
             "link": "/cart/add?id=42616766398561&selling_plan=7817625697",
@@ -821,7 +821,7 @@
                     "heading": "<p><strong>CancerEDGE</strong><br/>Your Lifetime Partner in Cancer Prevention</p>",
                     "heading_tag": "h2",
                     "heading_font_size": 57,
-                    "text": "<p>For the first time, a membership & support team that helps you know, prevent, and navigate your risk. <strong>For life.</strong></p>",
+                    "text": "<p>For the first time, a genomic precision membership & care team that helps you be more informed, take preventive action, provides care when you need it. <strong>For life.</strong></p>",
                     "text_font_size": 19,
                     "gap": 3,
                     "text_alignment": "left",
@@ -1151,7 +1151,7 @@
                         "heading": "<p><strong>CancerEDGE Membership</strong></p>",
                         "heading_tag": "h3",
                         "heading_font_size": 31,
-                        "text": "<p>A genomic disease risk, prevention & diagnosis navigation system designed to support you for life.</p>",
+                        "text": "<p>A genomic precision care membership designed to support you for life.</p>",
                         "text_font_size": 19,
                         "gap": 2,
                         "text_alignment": "left",
@@ -1413,28 +1413,6 @@
                         "tab_itrETk"
                       ]
                     },
-                    "text_content_fWYewT": {
-                      "type": "text-content",
-                      "name": "t:blocks.text-content.presets.name",
-                      "settings": {
-                        "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
-                        "heading": "",
-                        "heading_tag": "h2",
-                        "heading_font_size": 20,
-                        "text": "<p><strong>$1.64</strong> /day · Billed annually at $600 for first year, monthly thereafter.</p>",
-                        "text_font_size": 14,
-                        "gap": 2,
-                        "text_alignment": "left",
-                        "gap_tablet": 2,
-                        "text_alignment_tablet": "left",
-                        "gap_mobile": 2,
-                        "text_alignment_mobile": "left",
-                        "rotate_heading": false,
-                        "rotate_text": "",
-                        "css_class": ""
-                      },
-                      "blocks": {}
-                    },
                     "container_XVfctz": {
                       "type": "container",
                       "name": "t:blocks.container.presets.name",
@@ -1444,20 +1422,42 @@
                         "alignment_horizontal": "flex-start",
                         "alignment_vertical": "center",
                         "flex_grow": "",
-                        "gap": 2,
+                        "gap": 3,
                         "direction_tablet": "column",
                         "reverse_tablet": false,
                         "alignment_horizontal_tablet": "flex-start",
                         "alignment_vertical_tablet": "center",
-                        "gap_tablet": 2,
+                        "gap_tablet": 3,
                         "direction_mobile": "column",
                         "reverse_mobile": false,
                         "alignment_horizontal_mobile": "flex-start",
                         "alignment_vertical_mobile": "center",
-                        "gap_mobile": 2,
+                        "gap_mobile": 3,
                         "css_class": ""
                       },
                       "blocks": {
+                        "text_content_a9yX6P": {
+                          "type": "text-content",
+                          "name": "t:blocks.text-content.presets.name",
+                          "settings": {
+                            "color_scheme": "scheme-afd6e3ba-b99a-43d4-80ba-d611d6c05902",
+                            "heading": "",
+                            "heading_tag": "h2",
+                            "heading_font_size": 20,
+                            "text": "<p><strong>$2.19</strong> a day · Billed annually at $799 for first year, monthly thereafter.</p>",
+                            "text_font_size": 14,
+                            "gap": 2,
+                            "text_alignment": "left",
+                            "gap_tablet": 2,
+                            "text_alignment_tablet": "left",
+                            "gap_mobile": 2,
+                            "text_alignment_mobile": "left",
+                            "rotate_heading": false,
+                            "rotate_text": "",
+                            "css_class": ""
+                          },
+                          "blocks": {}
+                        },
                         "button_DBTrhj": {
                           "type": "button",
                           "name": "t:blocks.button.presets.name",
@@ -1474,6 +1474,7 @@
                         }
                       },
                       "block_order": [
+                        "text_content_a9yX6P",
                         "button_DBTrhj"
                       ]
                     }
@@ -1481,7 +1482,6 @@
                   "block_order": [
                     "text_content_ifHRkx",
                     "tabs_4Y8nhM",
-                    "text_content_fWYewT",
                     "container_XVfctz"
                   ]
                 }
@@ -1581,7 +1581,7 @@
                 "comparison_label": "Vs",
                 "card_1_color_scheme": "scheme-5",
                 "card_1_image": "shopify://shop_images/Rectangle_14.jpg",
-                "card_1_card_cost_1": "<h3><strong>$50</strong>/mo</h3><p>CancerEDGE Membership</p>",
+                "card_1_card_cost_1": "<h3><strong>$67</strong>/mo</h3><p>CancerEDGE Membership</p>",
                 "card_1_card_cost_2": "",
                 "card_1_content": "",
                 "card_1_source_url": "",
