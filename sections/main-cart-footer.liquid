@@ -18,7 +18,7 @@
 {%- endstyle -%}
 
 <div
-  class="{% if cart == empty %} is-empty{% endif %} color-{{ section.settings.color_scheme }}"
+  class="{% if cart == empty %} is-empty{% endif %}"
   id="main-cart-footer"
   data-id="{{ section.id }}"
 >
@@ -51,7 +51,7 @@
                   <p>{{ block.settings.description }}</p>
                 {% endif %}
                 <input type="text" id="zip-input" placeholder="Enter your ZIP code" style="padding:8px; width:200px;">
-                <button id="check-eligibility" class="button button--primary button--small">Check</button>
+                <button id="check-eligibility">Check</button>
                 <p id="eligibility-result" style="margin-top:10px; font-weight:bold;"></p>
               </div>
 
@@ -145,7 +145,7 @@
                 <button
                   type="submit"
                   id="checkout"
-                  class="cart__checkout-button button button--primary button--large"
+                  class="cart__checkout-button button button--primary"
                   name="checkout"
                   {% if cart == empty %}
                     disabled
@@ -174,12 +174,6 @@
   "name": "t:sections.main-cart-footer.name",
   "class": "cart__footer-wrapper",
   "settings": [
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-2"
-    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"

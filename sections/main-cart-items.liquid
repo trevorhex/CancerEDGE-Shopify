@@ -20,7 +20,7 @@
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+<div class="section-{{ section.id }}-padding">
     
   <cart-items class="isolate{% if cart == empty %} is-empty{% endif %} cart__page--items">
     <div class="page-width">
@@ -38,7 +38,7 @@
         <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
 
         {% if section.settings.button_url != blank %}
-        <a href="{{ section.settings.button_url }}" class="button button--primary button--large">
+        <a href="{{ section.settings.button_url }}" class="button button--primary button--small">
           {{ section.settings.button_text }}
         </a>
         {% endif %}
@@ -108,7 +108,7 @@
                         <div class="cart-item__name h4 break">{{ item.product.title | escape }}</div>
   
                         {%- if item.original_price != item.final_price -%}
-                          <div class="cart-item__discounted-prices">
+                          <div class="cart-item__discounted-prices hidden">
                             <span class="visually-hidden">
                               {{ 'products.product.price.regular_price' | t }}
                             </span>
@@ -123,7 +123,7 @@
                             </strong>
                           </div>
                         {%- else -%}
-                          {% comment %} <div class="product-option">
+                          {% comment %} <div class="product-option hidden">
                             {{ item.original_price | money }}
                           </div> {% endcomment %}
                         {%- endif -%}
@@ -452,24 +452,18 @@
         </p>
         <input type="hidden" name="attributes[Birth Date]" value="" class="cart__birthdate-value">
         <input type="hidden" name="attributes[Agreement]" value="" class="cart__agreement-value">
+        {% comment %} <h3 class="future-link">{{ 'sections.cart.invest_future' | t }}</h3> {% endcomment %}
       </form>
     </div>
   </cart-items>
 
 </div>
 <script type="application/json" id="cart-state">{{ cart | json }}</script>
-
 {% schema %}
 {
   "name": "t:sections.main-cart-items.name",
   "class": "cart__main--items",
   "settings": [
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-2"
-    },
     {
       "type": "color",
       "id": "bg_color",
