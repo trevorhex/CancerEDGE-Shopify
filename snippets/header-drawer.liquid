@@ -170,7 +170,11 @@
             <ul class="route-menu">
               <li>
                 <a
-                  href="{{ routes.cart_add_url }}?id=50603839652142&selling_plan=692496662830"
+                  {% if page.handle == 'wellabe' or page.handle == 'wellabe-1' -%}
+                    href="/discount/WELLABE_199?redirect=/cart&utm_source=shareable_link&utm_medium=Online&utm_campaign=wellabe"
+                  {%- else -%}
+                    href="{{ routes.cart_add_url }}?id=42616766398561&selling_plan=7817625697"
+                  {%- endif %}
                   class="button-block button--filled button--large button--full-width"
                 >Get Started</a>
               </li>
