@@ -721,7 +721,7 @@
                 "image_mobile": "shopify://shop_images/Joan-in-treatment-mobile-2x.jpg",
                 "alt_text": "Picture of Joan Lunden smiling with no hair",
                 "caption": "<p><strong>Joan Lunden</strong> when she was going through cancer treatment</p>",
-                "sub_caption": "<p>People Staff. (2014, September 24). Joan Lunden's Breast Cancer Battle: Why I'm Taking Off My Wig. PEOPLE.</p>",
+                "sub_caption": "<p>People magazine cover, Oct 06 2014. Copyright © 2026 by People Inc. Used under license.</p>",
                 "max_width": "390px",
                 "add_drop_shadow": true,
                 "border_radius": 20,
@@ -1669,7 +1669,7 @@
               "name": "t:blocks.text-content.presets.name",
               "settings": {
                 "color_scheme": "scheme-590abcec-3a7a-41bf-9cbf-f665f7d385bd",
-                "heading": "<p><strong>Finally, now you can know.</strong></p>",
+                "heading": "<p><strong>For the first time ever now you can know.</strong></p>",
                 "heading_tag": "h2",
                 "heading_font_size": 57,
                 "text": "<p>This powerful membership will give you and your family peace of mind for a lifetime.</p>",
@@ -1755,7 +1755,7 @@
         "container_qzL8GK"
       ],
       "custom_css": [
-        "h2 {text-transform: none;}",
+        "h2 {text-transform: none; max-width: 650px;}",
         ".now-you-can-know > p {max-width: 440px;}",
         "@media (max-width: 749px) {.footer-cta-content {margin-bottom: 400px; }}"
       ],

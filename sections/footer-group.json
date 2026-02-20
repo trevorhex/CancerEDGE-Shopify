@@ -91,20 +91,40 @@
                         "alt_text": "Prudential",
                         "caption": "",
                         "sub_caption": "",
-                        "max_width": "200px",
+                        "max_width": "170px",
                         "add_drop_shadow": false,
                         "border_radius": 0,
                         "link": "/",
                         "video_url": "",
-                        "open_in_new_window": true,
-                        "link_label": "",
+                        "open_in_new_window": false,
+                        "link_label": "CancerEDGE Home",
                         "css_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "image_dbxbEz": {
+                      "type": "image",
+                      "name": "t:blocks.image.presets.name",
+                      "settings": {
+                        "image": "shopify://shop_images/Wellabe_logo.svg",
+                        "alt_text": "Wellabe",
+                        "caption": "",
+                        "sub_caption": "",
+                        "max_width": "148px",
+                        "add_drop_shadow": false,
+                        "border_radius": 0,
+                        "link": "https://wellabe.com",
+                        "video_url": "",
+                        "open_in_new_window": true,
+                        "link_label": "Wellabe Website",
+                        "css_class": "wellabe-footer-link"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "image_FnN6WM"
+                    "image_FnN6WM",
+                    "image_dbxbEz"
                   ]
                 },
                 "text_content_Hznd8G": {

@@ -588,7 +588,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".shopify-payment-button {display: none;}"
+      ".shopify-payment-button {display: none;}",
+      "body:not(.template--wellabe) .wellabe-footer-link {display: none !important;}"
     ]
   }
 }

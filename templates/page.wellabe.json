@@ -517,7 +517,7 @@
                           "name": "t:blocks.text-content.presets.name",
                           "settings": {
                             "color_scheme": "",
-                            "heading": "<p>If you detect cancer early, about <strong>90%</strong> of people survive at least 5 year.</p>",
+                            "heading": "<p>If you detect cancer early, about <strong>90%</strong> of people survive at least 5 years.</p>",
                             "heading_tag": "h3",
                             "heading_font_size": 19,
                             "text": "<p><em>(NCI Seer Database)</em></p>",
@@ -737,7 +737,7 @@
                 "image_mobile": "shopify://shop_images/Joan-in-treatment-mobile-2x.jpg",
                 "alt_text": "Picture of Joan Lunden smiling with no hair",
                 "caption": "<p><strong>Joan Lunden</strong> when she was going through cancer treatment</p>",
-                "sub_caption": "<p>People Staff. (2014, September 24). Joan Lunden's Breast Cancer Battle: Why I'm Taking Off My Wig. PEOPLE.</p>",
+                "sub_caption": "<p>People magazine cover, Oct 06 2014. Copyright © 2026 by People Inc. Used under license.</p>",
                 "max_width": "390px",
                 "add_drop_shadow": true,
                 "border_radius": 20,
@@ -1450,7 +1450,7 @@
                         "heading": "",
                         "heading_tag": "h2",
                         "heading_font_size": 20,
-                        "text": "<p><strong>$2.19</strong> a day · Billed annually at $799 for first year, monthly thereafter.</p>",
+                        "text": "<p><strong>$1.64</strong> a day · Billed annually at $600 for first year, monthly thereafter.</p>",
                         "text_font_size": 14,
                         "gap": 2,
                         "text_alignment": "left",
@@ -1608,7 +1608,7 @@
                 "comparison_label": "Vs",
                 "card_1_color_scheme": "scheme-5",
                 "card_1_image": "shopify://shop_images/Rectangle_14.jpg",
-                "card_1_card_cost_1": "<h3><strong>$67</strong>/mo</h3><p>CancerEDGE Membership</p>",
+                "card_1_card_cost_1": "<h3><strong>$50</strong>/mo</h3><p>CancerEDGE Membership</p>",
                 "card_1_card_cost_2": "",
                 "card_1_content": "",
                 "card_1_source_url": "",
@@ -1709,7 +1709,7 @@
               "name": "t:blocks.text-content.presets.name",
               "settings": {
                 "color_scheme": "scheme-590abcec-3a7a-41bf-9cbf-f665f7d385bd",
-                "heading": "<p><strong>Finally, now you can know.</strong></p>",
+                "heading": "<p><strong>For the first time ever now you can know.</strong></p>",
                 "heading_tag": "h2",
                 "heading_font_size": 57,
                 "text": "<p>This powerful membership will give you and your family peace of mind for a lifetime.</p>",
@@ -1795,7 +1795,7 @@
         "container_8whR4b"
       ],
       "custom_css": [
-        "h2 {text-transform: none;}",
+        "h2 {text-transform: none; max-width: 650px;}",
         ".now-you-can-know > p {max-width: 440px;}",
         "@media (max-width: 749px) {.footer-cta-content {margin-bottom: 400px; }}"
       ],
